@@ -1,6 +1,10 @@
-const { fireFetch, genUrlSearch, parseUrlSearch } = require("./utils.js");
-const path = require("path");
-const fs = require("fs");
+
+/*
+b站解析
+[task_local]
+6 17 * * * https://raw.githubusercontent.com/moxun33/ql-scripts/main/live_bilibili.js, tag=斗鱼解析, img-url=, enabled=true
+
+*/
 /*
 # 获取哔哩哔哩直播的真实流媒体地址，默认获取直播间提供的最高画质
 # qn=150高清
@@ -10,7 +14,9 @@ const fs = require("fs");
 */
 //单个url解析
 //有些地址无法在PotPlayer播放，建议换个播放器试试
-
+const { fireFetch, genUrlSearch, parseUrlSearch } = require("./utils.js");
+const path = require("path");
+const fs = require("fs");
 /**
  * 1、获取房间的真实id
  */

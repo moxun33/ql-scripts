@@ -1,3 +1,11 @@
+
+/***
+ *
+ * 解析斗鱼 url
+[task_local]
+6 18 * * * https://raw.githubusercontent.com/moxun33/ql-scripts/main/live_douyu.js, tag=斗鱼解析, img-url=, enabled=true
+
+ * */
 const {
   isJSONValid,
   COMM_CONF,
@@ -9,10 +17,6 @@ const {
 const fs = require("fs");
 const { VM, VMScript } = require("vm2");
 const path = require("path");
-/***
- *
- * 解析斗鱼 url
- * */
 const DOMAINS = [
   "hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",
