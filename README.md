@@ -4,6 +4,6 @@
 
 ```bash
 
-ql repo https://github.com/moxun33/ql-scripts.git "live_" "danmu|run-all.*" "ql|sendNotify|utils" "main"
+ql repo https://github.com/moxun33/ql-scripts.git "live_|vercel.sh" "run-all.*" "ql|sendNotify|utils" "main"
 
 ```
