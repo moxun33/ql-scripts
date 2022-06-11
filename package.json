@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "fast-text-encoding": "^1.0.3",
+    "https-proxy-agent": "^5.0.1",
+    "md5": "^2.3.0",
+    "node-fetch": "^2.6.7",
+    "pako": "^2.0.4",
+    "to-arraybuffer": "^1.0.1",
+    "vm2": "^3.9.9",
+    "ws": "^8.6.0"
+  },
+  "name": "ql-scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:moxun33/ql-scripts.git",
+  "author": "moxun33 <mxx0807@gmail.com>",
+  "license": "MIT"
+}
