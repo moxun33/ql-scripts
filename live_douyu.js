@@ -17,6 +17,8 @@ const {
 const fs = require("fs");
 const { VM, VMScript } = require("vm2");
 const path = require("path");
+const {Env}=require('./ql')
+const $=new Env('斗鱼【一起看】')
 const DOMAINS = [
   "hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",

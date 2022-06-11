@@ -17,6 +17,8 @@ b站解析
 const { fireFetch, genUrlSearch, parseUrlSearch } = require("./utils.js");
 const path = require("path");
 const fs = require("fs");
+const {Env}=require('./ql')
+const $=new Env('B站【影音馆】')
 /**
  * 1、获取房间的真实id
  */
