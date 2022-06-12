@@ -1,10 +1,8 @@
 /***
  *
  * 解析斗鱼 url
-
-6 18 * * * l_douyu.js
-
- * */
+0 6 18 * * * l_douyu.js
+*/
 const {
   isJSONValid,
   COMM_CONF,

@@ -2,10 +2,8 @@
  *
  * 新版虎牙解析
  * 
-
-6 0/6 * * * l_huya.js
-
- */
+0 6 0/6 * * * l_huya.js
+*/
 
 const {
   fireFetch,
