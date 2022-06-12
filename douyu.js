@@ -1,4 +1,3 @@
-
 /***
  *
  * 解析斗鱼 url
@@ -15,10 +14,11 @@ const {
   matchHtmlText,
 } = require("./utils.js");
 const fs = require("fs");
-const { VM, VMScript } = require("vm2");
+//const { VM, VMScript } = require("vm2");
 const path = require("path");
-const {Env}=require('./ql')
-const $=new Env('斗鱼【一起看】')
+const nvm = require("node:vm");
+const { Env } = require("./ql");
+const $ = new Env("斗鱼【一起看】");
 const DOMAINS = [
   "hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",
@@ -39,22 +39,34 @@ const getRoomRealId = async (rid) => {
     if (isJSONValid(text)) {
       info.rid = JSON.parse(text)["rid"];
     }
-    const vm = new VM();
+    const ctx1 = {};
+    // const vm = new VM();
     const encFuncStr = matchHtmlText(html, /(function ub98484234.*)\s(var.*)/);
     const ub9FuncRawStr = encFuncStr.replace(/eval.*;}/, "strc;}");
-    const ub9Script = new VMScript(`${ub9FuncRawStr} ub98484234();`);
-    let ub9FuncStr = vm.run(ub9Script);
-    const dyVerMatches = ub9FuncStr.match(/v=\d{12}/);
+    const ub98Str = `${ub9FuncRawStr} ub98484234();`;
+    // const ub9Script = new VMScript(ub98Str);
+    const ub9Script1 = new nvm.Script(ub98Str);
+    nvm.createContext(ctx1);
+    ub9Script1.runInContext(ctx1);
+    let ub9FuncStr1 = ctx1.ub98484234();
+
+    //  let ub9FuncStr = vm.run(ub9Script);
+
+    const dyVerMatches = ub9FuncStr1.match(/v=\d{12}/);
     const v = dyVerMatches.length ? dyVerMatches[0].split("=").pop() : "";
     const rb = encrypt(info.rid + info.did + info.t10 + v);
-    ub9FuncStr = ub9FuncStr
+    ub9FuncStr1 = ub9FuncStr1
       .replace("(function (", "function sign(")
       .replace("CryptoJS.MD5(cb).toString()", `"${rb}"`)
       .replace("rt;})", "rt;};");
-    const signFuncStr = new VMScript(
-      `${ub9FuncStr} sign("${info.rid}","${info.did}","${info.t10}");`
-    );
-    let query = vm.run(signFuncStr);
+    const signInvStr = `${ub9FuncStr1} sign("${info.rid}","${info.did}","${info.t10}");`;
+    //  const signFuncStr = new VMScript(signInvStr);
+    const ctx2 = {};
+    const signFuncStr1 = new nvm.Script(signInvStr);
+    nvm.createContext(ctx2);
+    signFuncStr1.runInContext(ctx2);
+    let query = ctx2.sign(info.rid + "", info.did + "", info.t10 + ""); // vm.run(signFuncStr);
+
     query += `&ver=219032101&rid=${info.rid}&rate=-1`;
     info.query = query;
     // fs.writeFileSync('./douyu.local.html', html)
@@ -152,9 +164,7 @@ const getRoomLiveUrls = async (rid) => {
   return real_url;
 };
 
-/* getRoomLiveUrls(747764).then((res) => {
-  console.log(res);
-}); */
+
 //批量解析房间
 
 const DOUYU_ROOM_IDS = [
@@ -190,9 +200,11 @@ const getLiveRooms = async () => {
   }
   return rooms;
 };
-
+/*getRoomLiveUrls(747764).then((res) => {
+  console.log(res);
+});*/
 (async () => {
-  const jsonList = [],
+    const jsonList = [],
     rooms = await getLiveRooms();
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
@@ -220,7 +232,7 @@ const getLiveRooms = async () => {
     console.log("房间解析结果:", json);
     jsonList.push(json);
   }
-  fs.mkdirSync(path.resolve(__dirname, `./data`),{recursive:true})
+  fs.mkdirSync(path.resolve(__dirname, `./data`), { recursive: true });
 
   fs.writeFileSync(
     path.resolve(__dirname, `./data/douyu.json`),
