@@ -198,7 +198,7 @@ const getYygRooms = async () => {
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
-  sendNotify(`B站【影音馆】直播url解析执行完毕，共${jsonList.length}个`)
+  sendNotify(`B站【影音馆】`,`直播url解析执行完毕，共${jsonList.length}个`)
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {
     const obj = jsonList[i],
