@@ -18,6 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const nvm = require("node:vm");
 const { Env } = require("./ql");
+const { sendNotify } = require("./sendNotify");
 const $ = new Env("斗鱼【一起看】");
 const DOMAINS = [
   "hdltctwk.douyucdn2.cn",
@@ -239,6 +240,7 @@ const getLiveRooms = async () => {
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
+  sendNotify(`斗鱼【一起看】直播url解析执行完毕，共${jsonList.length}个`)
 
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {
