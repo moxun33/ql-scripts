@@ -4,6 +4,6 @@
 
 ```bash
 
-ql repo https://github.com/moxun33/ql-scripts.git "l_" "run-all.*" "ql|sendNotify|utils" "main"
+ql repo https://github.com/moxun33/ql-scripts.git "l_" "" "utils"
 
 ```
