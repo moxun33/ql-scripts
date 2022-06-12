@@ -1,8 +1,8 @@
 
 /*
 b站解析
-[task_local]
-6 17 * * * https://raw.githubusercontent.com/moxun33/ql-scripts/main/live_bilibili.js, tag=斗鱼解析, img-url=, enabled=true
+
+6 17 * * * l_bilibili.js
 
 */
 /*

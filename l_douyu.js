@@ -1,8 +1,8 @@
 /***
  *
  * 解析斗鱼 url
-[task_local]
-6 18 * * * https://raw.githubusercontent.com/moxun33/ql-scripts/main/live_douyu.js, tag=斗鱼解析, img-url=, enabled=true
+
+6 18 * * * l_douyu.js
 
  * */
 const {

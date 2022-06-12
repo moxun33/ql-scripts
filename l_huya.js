@@ -2,8 +2,8 @@
  *
  * 新版虎牙解析
  * 
-[task_local]
-6 0/6 * * * https://raw.githubusercontent.com/moxun33/ql-scripts/main/live_huya.js, tag=虎牙解析, img-url=, enabled=true
+
+6 0/6 * * * l_huya.js
 
  */
 
