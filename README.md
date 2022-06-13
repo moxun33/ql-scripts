@@ -7,3 +7,11 @@
 ql repo https://github.com/moxun33/ql-scripts.git "l_" "" "utils"
 
 ```
+
+docker run -dit \
+  -v $PWD/ql:/ql/data \
+  -p 5705:5700 \
+  --name ql \
+  --hostname ql \
+  --restart unless-stopped \
+  whyour/qinglong:latest
