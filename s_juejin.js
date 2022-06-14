@@ -16,7 +16,7 @@ const $ = new Env("掘金社区");
 const notify = $.isNode() ? require("./sendNotify") : "";
 const fetch = require("node-fetch");
 // const sendMail = require('./sendMail');
-const cookie = process.env.JUEJIN_COOKIE || "--";
+const cookie = process.env.JUEJIN_COOKIE || "";
 
 let score = 0;
 
