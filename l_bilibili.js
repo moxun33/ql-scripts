@@ -1,4 +1,3 @@
-
 /*
 b站解析
 0 6 17 * * * l_bilibili.js
@@ -15,9 +14,9 @@ b站解析
 const { fireFetch, genUrlSearch, parseUrlSearch } = require("./utils.js");
 const path = require("path");
 const fs = require("fs");
-const {Env}=require('./ql')
-const {sendNotify}=require('./sendNotify')
-const $=new Env('B站【影音馆】')
+const { Env } = require("./ql");
+const { sendNotify } = require("./sendNotify");
+const $ = new Env("B站【影音馆】");
 /**
  * 1、获取房间的真实id
  */
@@ -151,7 +150,8 @@ const getYygRooms = async () => {
   while (page < 50 && hasMore) {
     console.log(`获取影音馆-分页 ${page} 的房间列表`);
     const res = await fireFetch(genUrl(page), {}, true);
-    const { data, code } = res;
+    const { code } = res,
+      data = res.data || {};
     if (code === 0) {
       const list = data.list || [];
       const ids = list.map(({ roomid, title, uname, uid }) => ({
@@ -168,9 +168,8 @@ const getYygRooms = async () => {
 
   return rooms;
 };
- 
-(async () => {
 
+(async () => {
   const jsonList = [],
     rooms = await getYygRooms();
   for (let i = 0; i < rooms.length; i++) {
@@ -191,20 +190,23 @@ const getYygRooms = async () => {
       jsonList.push(json);
     }
   }
-  fs.mkdirSync(path.resolve(__dirname, `./data`),{recursive:true})
+  fs.mkdirSync(path.resolve(__dirname, `./data`), { recursive: true });
 
   fs.writeFileSync(
     path.resolve(__dirname, `./data/bilibili.json`),
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
-  sendNotify(`B站【影音馆】`,`直播url解析执行完毕，共${jsonList.length}个`)
+  sendNotify(`B站【影音馆】`, `直播url解析执行完毕，共${jsonList.length}个`);
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {
     const obj = jsonList[i],
       url = obj["url2"] || obj["url1"];
     if (url) {
-      m3u_list.push(`#EXTINF:-1 group-title="B站" tvg-id="${obj.room_id}", ${obj.name}`, url);
+      m3u_list.push(
+        `#EXTINF:-1 group-title="B站" tvg-id="${obj.room_id}", ${obj.name}`,
+        url
+      );
     }
   }
   fs.writeFileSync(

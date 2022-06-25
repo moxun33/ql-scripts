@@ -4,7 +4,7 @@
 
 ```bash
 
-ql repo https://github.com/moxun33/ql-scripts.git "l_|s_" "" "utils"
+ql repo https://github.com/moxun33/ql-scripts.git "l_|s_" "" "utils" "main"
 
 ```
 
