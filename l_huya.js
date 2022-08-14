@@ -1,7 +1,7 @@
 /**
  *
  * 新版虎牙解析
- * 
+ *
 0 6 0/6 * * * l_huya.js
 */
 
@@ -111,7 +111,7 @@ const getHuyaRealUrl = async (roomId, rawUrl = "", type = "flv") => {
       uid,
       ver: 1,
       sv: 2110211124,
-      radio: 2000,
+      radio: 4000,
     };
   // console.log(query);
   const hostname = `https://${host}`;
@@ -220,7 +220,7 @@ const getYqkRooms = async (all = false) => {
   }
   fs.mkdirSync(path.resolve(__dirname, `./data`),{recursive:true})
 
-  
+
   fs.writeFileSync(
     path.resolve(__dirname, `./data/huya.json`),
     JSON.stringify(jsonList)
@@ -244,5 +244,5 @@ const getYqkRooms = async (all = false) => {
     path.resolve(__dirname, `./data/huya.m3u`),
     m3u_list.join("\n")
   );
-  
+
 })();
