@@ -48,16 +48,17 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
   }
   const getStreamData = async (maxQn) => {
     const url =
-        "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo",
-      param = {
-        room_id: realId,
-        protocol: "0,1",
-        format: "0,1,2",
-        codec: "0,1",
-        qn: maxQn,
-        platform: "h5",
-        ptype: 8,
-      };
+            "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo",
+        param = {
+          room_id: realId,
+          protocol: "0,1",
+          format: "0,1,2",
+          codec: "0,1",
+          qn: maxQn,
+          platform: "h5",
+          ptype: 8,
+        };
+
     const res = await fireFetch(url + genUrlSearch(param), {}, true);
     if (res.code !== 0) {
       console.log(rid, res.msg, "获取房间直播信息失败");
@@ -66,11 +67,11 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
     return res.data || {};
   };
   let data = await getStreamData(currentQn),
-    qn_max = 0,
-    streamInfo = data?.playurl_info?.playurl?.stream || [];
+      qn_max = 0,
+      streamInfo = data?.playurl_info?.playurl?.stream || [];
   for (let i = 0; i < streamInfo.length; i++) {
     const item = streamInfo[i],
-      accept_qn = item["format"][0]["codec"][0]["accept_qn"] || [];
+        accept_qn = item["format"][0]["codec"][0]["accept_qn"] || [];
     /*  for (const qn in accept_qn) {
       qn_max = qn > qn_max ? qn : qn_max;
     } */
@@ -85,29 +86,30 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
   for (let i = 0; i < streamInfo.length; i++) {
     const matchFormat = (v) => v === "fmp4" || v === "ts";
     const stream = streamInfo[i],
-      formats = stream.format.filter((item) => matchFormat(item.format_name));
+        formats = stream.format.filter((item) => matchFormat(item.format_name));
     format = formats[formats.length - 1] || {};
 
     if (matchFormat(format.format_name || "")) {
       // console.log( item["format"].pop());
       const codecItem = format["codec"][0] || {},
-        base_url = codecItem["base_url"],
-        url_info = codecItem["url_info"] || [];
+          base_url = codecItem["base_url"],
+          url_info = codecItem["url_info"] || [];
       for (let j = 0; j < url_info.length; j++) {
         const info = url_info[j],
-          host = info["host"],
-          extra = info["extra"],
-          extraObj = parseUrlSearch("?" + extra.substring(1));
+            host = info["host"],
+            extra = info["extra"],
+            extraObj = parseUrlSearch("?" + extra.substring(0)),
+            url = host+base_url.split("?").shift();
         const signs = genUrlSearch(
-          {
-            sign: extraObj.sign,
-            cdn: extraObj.cdn,
-          },
-          true
+            {
+              sign: extraObj.sign,
+              cdn: extraObj.cdn,
+            },
+            true
         );
         streamUrls[`url${j + 1}`] = host.includes("https://cn-")
-          ? `${host}${base_url.split("?").shift()}`
-          : `${host}${base_url}?${genUrlSearch(extraObj)}`;
+            ? url
+            : `${url}${genUrlSearch(extraObj)}`;
       }
     }
   }
