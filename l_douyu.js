@@ -182,7 +182,7 @@ const DOUYU_ROOM_IDS1 = [6566671, 5581257, 6079455];
 //获取【一起看】的直播房间列表
 const getLiveRooms = async () => {
   //const cates = [290], rooms = [];
-  const cates = [290, 2827, 2828, 2829, 2930, 2831, 2832, 2833, 2834],
+  const cates = [290, 2827, 2828, 2829, 2930, 2831, 2832, 2833, 2834,2026,2422,2423,2424,2025],
     rooms = [];
   for (const cateId of cates) {
     console.log(`获取一起看分类 ${cateId} 的房间列表`);
