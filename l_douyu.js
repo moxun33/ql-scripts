@@ -154,15 +154,15 @@ const getRoomLiveUrls = async (rid) => {
   }
   let real_url = { room_id: rid };
   if (prevInfo.key) {
-    const domain = DOMAINS[0];
-
-    real_url["m3u8"] = `https://${domain}/live/${prevInfo.key}.m3u8`;
-    real_url["flv"] = `https://${domain}/live/${prevInfo.key}.flv`;
-    real_url["x-p2p"] = `https://${domain}/live/${prevInfo.key}.xs`;
+    const domain = DOMAINS[0],
+      //默认最高码率
+      key = prevInfo.key?.replace("_900", "");
+    real_url["m3u8"] = `https://${domain}/live/${key}.m3u8`;
+    real_url["flv"] = `https://${domain}/live/${key}.flv`;
+    real_url["x-p2p"] = `https://${domain}/live/${key}.xs`;
   }
   return real_url;
 };
-
 
 //批量解析房间
 
@@ -203,7 +203,7 @@ const getLiveRooms = async () => {
   console.log(res);
 });*/
 (async () => {
-    const jsonList = [],
+  const jsonList = [],
     rooms = await getLiveRooms();
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
@@ -238,7 +238,7 @@ const getLiveRooms = async () => {
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
-  sendNotify(`斗鱼【一起看】`,`直播url解析执行完毕，共${jsonList.length}个`)
+  sendNotify(`斗鱼【一起看】`, `直播url解析执行完毕，共${jsonList.length}个`);
 
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {
