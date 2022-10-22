@@ -201,9 +201,10 @@ const getYygRooms = async () => {
   console.log("当前总数量", jsonList.length);
   sendNotify(`B站【影音馆】`, `直播url解析执行完毕，共${jsonList.length}个`);
   const m3u_list = ["#EXTM3U"];
+  const isPersitUrl=(url)=>url.startsWith('https://cn')
   for (const i in jsonList) {
-    const obj = jsonList[i],
-      url = obj["url2"] || obj["url1"];
+    const obj = jsonList[i];
+      url = isPersitUrl( obj["url1"])? obj["url1"] : obj["url2"];
     if (url) {
       m3u_list.push(
         `#EXTINF:-1 group-title="B站" tvg-id="${obj.room_id}", ${obj.name}`,
