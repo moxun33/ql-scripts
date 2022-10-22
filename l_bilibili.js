@@ -55,7 +55,7 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
           format: "0,1,2",
           codec: "0,1",
           qn: maxQn,
-          platform: "h5",
+          platform: "web",
           ptype: 8,
         };
 
