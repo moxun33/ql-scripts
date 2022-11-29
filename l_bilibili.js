@@ -184,8 +184,7 @@ const getYygRooms = async () => {
 };
 
 (async () => {
-  const jsonList = [],
-       DEF_ROOMS=[{roomid:23125843,}];
+  const  DEF_ROOMS=[{roomid:23125843,}];
   const jsonList = [],dynamicRooms=await getYygRooms(),
     rooms = [...DEF_ROOMS,...dynamicRooms];
   for (let i = 0; i < rooms.length; i++) {
