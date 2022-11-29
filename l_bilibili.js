@@ -17,6 +17,17 @@ const fs = require("fs");
 const { Env } = require("./ql");
 const { sendNotify } = require("./sendNotify");
 const $ = new Env("B站【影音馆】");
+
+//判断json是否有效
+const isJSONValid = (str) => {
+    try {
+        JSON.parse(str);
+        return true;
+    } catch (e) {
+        return false;
+    }
+};
+
 /**
  * 1、获取房间的真实id
  */
@@ -122,7 +133,8 @@ async function getRoomInfo(rid) {
   const url = `https://api.live.bilibili.com/room/v1/Room/get_info?room_id=${rid}`;
   const res = await fireFetch(url);
 
-  return res.code === 0 ? res.data || {} : {};
+  return isJSONValid(res)?  JSON.parse(res).data : {} ;
+
 }
 //根据user id获取信息
 async function getUserInfo(uid) {
@@ -173,7 +185,9 @@ const getYygRooms = async () => {
 
 (async () => {
   const jsonList = [],
-    rooms = await getYygRooms();
+     const DEF_ROOMS=[{roomid:23125843,}];
+  const jsonList = [],dynamicRooms=await getYygRooms(),
+    rooms = [...DEF_ROOMS,...dynamicRooms];
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.roomid;
