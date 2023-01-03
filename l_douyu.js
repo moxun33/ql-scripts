@@ -203,8 +203,8 @@ const getLiveRooms = async () => {
   console.log(res);
 });*/
 (async () => {
-  const jsonList = [],
-    rooms = await getLiveRooms();
+  const jsonList = [],DEF_ROOMS=[{room_id:'9249162'}],dynamicRooms=await getLiveRooms(),
+    rooms = [...DEF_ROOMS,...dynamicRooms];
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.room_id;
