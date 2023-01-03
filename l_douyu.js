@@ -203,8 +203,8 @@ const getLiveRooms = async () => {
   console.log(res);
 });*/
 (async () => {
-  const jsonList = [],
-    rooms = await getLiveRooms();
+  const jsonList = [],DEF_ROOMS=[{room_id:'9249162'}],dynamicRooms=await getLiveRooms(),
+    rooms = [...DEF_ROOMS,...dynamicRooms];
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.room_id;
@@ -244,10 +244,12 @@ const getLiveRooms = async () => {
   for (const i in jsonList) {
     const obj = jsonList[i],
       url = obj["m3u8"] || obj["flv"] || obj["x-p2p"];
-    m3u_list.push(
-      `#EXTINF:-1 group-title="斗鱼" tvg-id="${obj.room_id}", ${obj.name}`,
-      url
-    );
+    if (url) {
+      m3u_list.push(
+        `#EXTINF:-1 group-title="斗鱼" tvg-id="${obj.room_id}", ${obj.name}`,
+        url
+      );
+    }
   }
 
   fs.writeFileSync(

@@ -140,8 +140,9 @@ async function getRoomInfo(rid) {
 async function getUserInfo(uid) {
   const res = await fireFetch(
     `https://api.bilibili.com/x/space/acc/info?mid=${uid}`
-  );
-  return res.code === 0 ? res.data || {} : {};
+  ,{},true);
+
+  return +res.code === 0 ? res.data || {} : {};
 }
 //测试单个live url，
 /* getRoomLiveUrl(10375360).then((res) => {
@@ -185,7 +186,7 @@ const getYygRooms = async () => {
 
 (async () => {
   const  DEF_ROOMS=[{roomid:23125843,}];
-  const jsonList = [],dynamicRooms=await getYygRooms(),
+  const jsonList = [],dynamicRooms= await getYygRooms(),
     rooms = [...DEF_ROOMS,...dynamicRooms];
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
