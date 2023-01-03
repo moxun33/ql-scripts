@@ -166,6 +166,7 @@ function getM3uTvgAttr(line, attr = "group-title", def = "") {
         name: name.trim(),
         group: getM3uTvgAttr(info, "group-title", "未分组"),
         tvgId: getM3uTvgAttr(info, "tvg-id"),
+        tvgName: getM3uTvgAttr(info, "tvg-name"),
         tvgLogo: getM3uTvgAttr(info, "tvg-logo"),
       });
     }
