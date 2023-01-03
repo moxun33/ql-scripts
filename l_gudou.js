@@ -126,6 +126,7 @@ function m3uPReader() {
     const url = await getRealUrl(n.id);
     jsonList.push({ ...n, url, id: n.id });
   }
+  fs.mkdirSync(path.resolve(__dirname, `./data`), { recursive: true });
   fs.writeFileSync(
     path.resolve(__dirname, `./data/gudou.json`),
     JSON.stringify(jsonList)

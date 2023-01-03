@@ -244,10 +244,12 @@ const getLiveRooms = async () => {
   for (const i in jsonList) {
     const obj = jsonList[i],
       url = obj["m3u8"] || obj["flv"] || obj["x-p2p"];
-    m3u_list.push(
-      `#EXTINF:-1 group-title="斗鱼" tvg-id="${obj.room_id}", ${obj.name}`,
-      url
-    );
+    if (url) {
+      m3u_list.push(
+        `#EXTINF:-1 group-title="斗鱼" tvg-id="${obj.room_id}", ${obj.name}`,
+        url
+      );
+    }
   }
 
   fs.writeFileSync(
