@@ -26,7 +26,7 @@ const DOMAINS = [
 ];
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
-const getRoomRealId = async (rid) => {
+const getRoomRealId = async rid => {
   try {
     const info = {};
     info.did = "10000000000000000000000000001501";
@@ -139,7 +139,7 @@ async function getUrlKey(initInfo) {
 }
 
 //解析url
-const getRoomLiveUrls = async (rid) => {
+const getRoomLiveUrls = async rid => {
   const prevInfo = await getRoomPreviewInfo(rid);
 
   if (prevInfo.error !== 0) {
@@ -182,7 +182,10 @@ const DOUYU_ROOM_IDS1 = [6566671, 5581257, 6079455];
 //获取【一起看】的直播房间列表
 const getLiveRooms = async () => {
   //const cates = [290], rooms = [];
-  const cates = [290, 2827, 2828, 2829, 2930, 2831, 2832, 2833, 2834,2026,2422,2423,2424,2025],
+  const cates = [
+      290, 2827, 2828, 2829, 2930, 2831, 2832, 2833, 2834, 2026, 2422, 2423,
+      2424, 2025,
+    ],
     rooms = [];
   for (const cateId of cates) {
     console.log(`获取一起看分类 ${cateId} 的房间列表`);
@@ -199,12 +202,22 @@ const getLiveRooms = async () => {
   }
   return rooms;
 };
+const pickUrl = urlInfo => {
+  return (
+    urlInfo[urlInfo.mediaType] ||
+    urlInfo["m3u8"] ||
+    urlInfo["flv"] ||
+    urlInfo["x-p2p"]
+  );
+};
 /*getRoomLiveUrls(747764).then((res) => {
   console.log(res);
 });*/
 (async () => {
-  const jsonList = [],DEF_ROOMS=[{room_id:'9249162'}],dynamicRooms=await getLiveRooms(),
-    rooms = [...DEF_ROOMS,...dynamicRooms];
+  const jsonList = [],
+    DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
+    dynamicRooms = await getLiveRooms(),
+    rooms = [...DEF_ROOMS, ...dynamicRooms];
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.room_id;
@@ -228,6 +241,7 @@ const getLiveRooms = async () => {
         roomInfo["room"]["room_name"];
     // console.log(name);
     json.name = name || "未知名称";
+    json.mediaType = room.mediaType || "m3u8";
     console.log("房间解析结果:", json);
     jsonList.push(json);
   }
@@ -243,7 +257,7 @@ const getLiveRooms = async () => {
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {
     const obj = jsonList[i],
-      url = obj["m3u8"] || obj["flv"] || obj["x-p2p"];
+      url = pickUrl(obj);
     if (url) {
       m3u_list.push(
         `#EXTINF:-1 group-title="斗鱼" tvg-id="${obj.room_id}", ${obj.name}`,
