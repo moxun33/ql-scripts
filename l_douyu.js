@@ -17,7 +17,7 @@ const path = require("path");
 const nvm = require("node:vm");
 const { Env } = require("./ql");
 const { sendNotify } = require("./sendNotify");
-const $ = new Env("斗鱼【一起看】");
+const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
   "hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",
@@ -180,7 +180,7 @@ const DOUYU_ROOM_IDS = [
 const DOUYU_ROOM_IDS1 = [6566671, 5581257, 6079455];
 
 //获取【一起看】的直播房间列表
-const getLiveRooms = async () => {
+const getYqkLiveRooms = async () => {
   //const cates = [290], rooms = [];
   const cates = [
       290, 2827, 2828, 2829, 2930, 2831, 2832, 2833, 2834, 2026, 2422, 2423,
@@ -192,15 +192,43 @@ const getLiveRooms = async () => {
     const url = `https://capi.douyucdn.cn/api/v1/getThreeList?cate_id=${cateId}&offset=0&limit=100&client_sys=android`,
       res = await fireFetch(url, {}, true);
     if (res.error === 0 && Array.isArray(res.data)) {
-      const list = res.data.map(({ nickname, room_id, room_name }) => ({
-        nickname,
-        room_id,
-        room_name,
-      }));
+      const list = res.data.map(
+        ({ nickname, room_id, room_name, game_name }) => ({
+          nickname,
+          room_id,
+          room_name,
+          game_name,
+        })
+      );
       rooms.push(...list);
     }
   }
   return rooms;
+};
+//获取当前所有直播间
+const getAllLiveRooms = async () => {
+  const genUrl = (o = 0) => `http://capi.douyucdn.cn/api/v1/live?offset=${o}`;
+  let offset = 0,
+    hasMore = true;
+  const rooms = [];
+  while (hasMore) {
+    console.log(`正在获取第${offset + 1}页房间列表`);
+    res = await fireFetch(genUrl(offset), {}, true);
+    if (res.error === 0 && Array.isArray(res.data)) {
+      const list = res.data.map(
+        ({ nickname, room_id, room_name, game_name }) => ({
+          nickname,
+          room_id,
+          room_name,
+          game_name,
+        })
+      );
+      rooms.push(...list);
+      hasMore =false// res.data.length > 0;
+      offset++;
+    }
+  }
+  console.log(rooms)
 };
 const pickUrl = urlInfo => {
   return (
@@ -214,10 +242,12 @@ const pickUrl = urlInfo => {
   console.log(res);
 });*/
 (async () => {
+  
   const jsonList = [],
     DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
-    dynamicRooms = await getLiveRooms(),
+    dynamicRooms = await getYqkLiveRooms(),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
+
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.room_id;
@@ -242,6 +272,7 @@ const pickUrl = urlInfo => {
     // console.log(name);
     json.name = name || "未知名称";
     json.mediaType = room.mediaType || "m3u8";
+    json.group = `斗鱼${room.game_name ? "【" + room.game_name + "】" : ""}`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
   }
@@ -260,7 +291,7 @@ const pickUrl = urlInfo => {
       url = pickUrl(obj);
     if (url) {
       m3u_list.push(
-        `#EXTINF:-1 group-title="斗鱼" tvg-id="${obj.room_id}", ${obj.name}`,
+        `#EXTINF:-1 group-title="${obj.group}" tvg-id="${obj.room_id}", ${obj.name}`,
         url
       );
     }

@@ -8,7 +8,7 @@ specifiers:
   pako: ^2.0.4
   to-arraybuffer: ^1.0.1
   vm2: ^3.9.9
-  ws: ^8.6.0
+  ws: ^8.8.0
 
 dependencies:
   fast-text-encoding: 1.0.3

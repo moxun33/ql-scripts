@@ -169,11 +169,11 @@ const getYygRooms = async () => {
       data = res.data || {};
     if (code === 0) {
       const list = data.list || [];
-      const ids = list.map(({ roomid, title, uname, uid }) => ({
+      const ids = list.map(({ roomid, title, uname, uid,area_name }) => ({
         roomid,
         title,
         uname,
-        uid,
+        uid,area_name
       }));
       rooms.push(...ids);
     }
@@ -187,7 +187,8 @@ const getYygRooms = async () => {
 (async () => {
   const  DEF_ROOMS=[{roomid:23125843,}];
   const jsonList = [],dynamicRooms= await getYygRooms(),
-    rooms = [...DEF_ROOMS,...dynamicRooms];
+    rooms = [...DEF_ROOMS, ...dynamicRooms];
+  
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.roomid;
@@ -202,6 +203,7 @@ const getYygRooms = async () => {
         rname = room.title || user?.live_room?.title;
       json.room_id = key;
       json.name = `【${uname}】${rname}` || "未知名称";
+      json.group=`虎牙${room.area_name?'【'+room.area_name+'】':''}`
       console.log("房间解析结果:", json);
       jsonList.push(json);
     }

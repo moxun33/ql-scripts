@@ -132,7 +132,7 @@ const getHuyaLiveInfo = async (roomId) => {
 };
 
 //一起看的房间
-const getYqkRooms = async (all = false) => {
+const getYqkRooms = async (all = true) => {
   //const tmpIds = [4201];
   const tmpIds = [4201, 4183, 2067, 4061, 2079];
 
@@ -161,11 +161,11 @@ const getYqkRooms = async (all = false) => {
         totalPage = data.totalPage;
         page++;
         const list = data.datas || [];
-        const rs = list.map(({ profileRoom, introduction, nick, uid }) => ({
+        const rs = list.map(({ profileRoom, introduction, nick, uid,gameFullName}) => ({
           roomid: profileRoom,
           introduction,
           nick,
-          uid,
+          uid,gameFullName
         }));
         rooms.push(...rs);
       }
@@ -185,11 +185,11 @@ const getYqkRooms = async (all = false) => {
       const { data, status } = res;
       if (status === 200) {
         const list = data.datas || [];
-        const rs = list.map(({ profileRoom, introduction, nick, uid }) => ({
+        const rs = list.map(({ profileRoom, introduction, nick, uid,gameFullName  }) => ({
           roomid: profileRoom,
           introduction,
           nick,
-          uid,
+          uid,gameFullName
         }));
         rooms.push(...rs);
       }
@@ -206,7 +206,7 @@ const getYqkRooms = async (all = false) => {
 
   const jsonList = [],
     rooms = [...(await getYqkRooms())];
-
+ 
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.roomid;
@@ -215,6 +215,7 @@ const getYqkRooms = async (all = false) => {
     json.name = room.nick
       ? `【${room.nick}】${room.introduction}`
       : json.name || "未知名称";
+    json.group=`虎牙${room.gameFullName?'【'+room.gameFullName+'】':''}`
     console.log("房间解析结果:", json);
     jsonList.push(json);
   }
@@ -234,7 +235,7 @@ const getYqkRooms = async (all = false) => {
       url = obj["url1"] || obj["url2"] || obj["url"];
     if (url) {
       m3u_list.push(
-        `#EXTINF:-1 group-title="虎牙" tvg-id="${obj.room_id}", ${obj.name}`,
+        `#EXTINF:-1 group-title="${obj.group}" tvg-id="${obj.room_id}", ${obj.name}`,
         url
       );
     }
