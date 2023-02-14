@@ -209,10 +209,11 @@ const getYqkLiveRooms = async () => {
 const getAllLiveRooms = async () => {
   const genUrl = (o = 0) => `http://capi.douyucdn.cn/api/v1/live?offset=${o}`;
   let offset = 0,
+    page = 1,
     hasMore = true;
   const rooms = [];
   while (hasMore) {
-    console.log(`正在获取第${offset + 1}页房间列表`);
+    console.log(`正在获取第${page}页房间列表`);
     res = await fireFetch(genUrl(offset), {}, true);
     if (res.error === 0 && Array.isArray(res.data)) {
       const list = res.data.map(
@@ -224,11 +225,12 @@ const getAllLiveRooms = async () => {
         })
       );
       rooms.push(...list);
-      hasMore =false// res.data.length > 0;
-      offset++;
     }
+    hasMore = res.data?.length > 0;
+    offset = page * 30;
+    page++;
   }
-  console.log(rooms)
+  return rooms;
 };
 const pickUrl = urlInfo => {
   return (
@@ -242,10 +244,10 @@ const pickUrl = urlInfo => {
   console.log(res);
 });*/
 (async () => {
-  
-  const jsonList = [],
+  const all = process?.env?.DOUYU_ALL,
+    jsonList = [],
     DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
-    dynamicRooms = await getYqkLiveRooms(),
+    dynamicRooms = await (!all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
   for (let i = 0; i < rooms.length; i++) {
@@ -283,7 +285,10 @@ const pickUrl = urlInfo => {
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
-  sendNotify(`斗鱼【一起看】`, `直播url解析执行完毕，共${jsonList.length}个`);
+  sendNotify(
+    `斗鱼${!all ? "【一起看】" : ""}`,
+    `直播url解析执行完毕，共${jsonList.length}个`
+  );
 
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {

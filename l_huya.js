@@ -16,9 +16,9 @@ const {
 //批量
 const fs = require("fs");
 const path = require("path");
-const {Env}=require('./ql')
-const {sendNotify}=require('./sendNotify')
-const $=new Env('虎牙【一起看】')
+const { Env } = require("./ql");
+const { sendNotify } = require("./sendNotify");
+const $ = new Env("虎牙【一起看】");
 const CONFIG = {
   headers: {
     "User-Agent": COMM_CONF.MOBILE_USER_AGENT,
@@ -41,7 +41,7 @@ const extractLiveLineUrl = async (roomId, all = false) => {
   const { data } = res,
     multiLine = data?.stream?.hls.multiLine || [],
     liveUrl = multiLine
-      .map((item) => item.url)
+      .map(item => item.url)
       .filter(Boolean)
       .pop();
 
@@ -119,10 +119,10 @@ const getHuyaRealUrl = async (roomId, rawUrl = "", type = "flv") => {
 };
 
 //获取url和名称
-const getHuyaLiveInfo = async (roomId) => {
+const getHuyaLiveInfo = async roomId => {
   const info = await extractLiveLineUrl(roomId, true),
     multiLine = info?.stream?.flv.multiLine || [],
-    rawUrl = multiLine.map((item) => item.url).shift(),
+    rawUrl = multiLine.map(item => item.url).shift(),
     roomLiveInfo = info?.roomInfo?.tLiveInfo || info?.liveData || {},
     name = `【${roomLiveInfo.sNick || roomLiveInfo.nick}】${
       roomLiveInfo.sRoomName || roomLiveInfo.roomName
@@ -131,69 +131,50 @@ const getHuyaLiveInfo = async (roomId) => {
   return { url: await getHuyaRealUrl(roomId, rawUrl), name, room_id: roomId };
 };
 
-//一起看的房间
-const getYqkRooms = async (all = true) => {
+//当前直播的房间
+const getRooms = async all => {
+  //否则只获取 一起看 的房间
   //const tmpIds = [4201];
   const tmpIds = [4201, 4183, 2067, 4061, 2079];
 
-  const genUrl = (t) =>
+  const genUrl = t =>
     `https://live.cdn.huya.com/livelist/game/tagLivelist?gameId=2135&tmpId=${t}&callback=getLiveListJsonpCallback&page=1`;
 
-  const genAllUrl = (t) =>
-    `https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&gameId=2135&tagAll=0&callback=getLiveListJsonpCallback&page=${t}`;
+  const genAllUrl = t =>
+    `https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage${
+      all ? "" : "&gameId=2135"
+    }&tagAll=0&callback=getLiveListJsonpCallback&page=${t}`;
   const rooms = [];
-  if (all) {
-    let page = 1,
-      totalPage = 1;
-    while (page <= totalPage) {
-      console.log(`获取【一起看】第${page}页 的房间列表`);
-      let resTxt = await fireFetch(
-        genAllUrl(page),
-        { data: { datas: [] } },
-        false
-      );
-      resTxt = resTxt
-        .replace("getLiveListJsonpCallback(", "")
-        .replace("}})", "}}");
-      const res = JSON.parse(resTxt);
-      const { data, status } = res;
-      if (status === 200) {
-        totalPage = data.totalPage;
-        page++;
-        const list = data.datas || [];
-        const rs = list.map(({ profileRoom, introduction, nick, uid,gameFullName}) => ({
+
+  let page = 1,
+    totalPage = 1;
+  while (page <= totalPage) {
+    console.log(`获取${!all ? "【一起看】" : ""}第${page}页 的房间列表`);
+    let resTxt = await fireFetch(
+      genAllUrl(page),
+      { data: { datas: [] } },
+      false
+    );
+    resTxt = resTxt
+      .replace("getLiveListJsonpCallback(", "")
+      .replace("}})", "}}");
+    const res = JSON.parse(resTxt);
+    const { data, status } = res;
+    if (status === 200) {
+      const list = data.datas || [];
+      const rs = list.map(
+        ({ profileRoom, introduction, nick, uid, gameFullName }) => ({
           roomid: profileRoom,
           introduction,
           nick,
-          uid,gameFullName
-        }));
-        rooms.push(...rs);
-      }
-    }
-  } else {
-    for (const tmpId of tmpIds) {
-      console.log(`获取【一起看】 ${tmpId} 子分区  的房间列表`);
-      let resTxt = await fireFetch(
-        genUrl(tmpId),
-        { data: { datas: [] } },
-        false
+          uid,
+          gameFullName,
+        })
       );
-      resTxt = resTxt
-        .replace("getLiveListJsonpCallback(", "")
-        .replace("}})", "}}");
-      const res = JSON.parse(resTxt);
-      const { data, status } = res;
-      if (status === 200) {
-        const list = data.datas || [];
-        const rs = list.map(({ profileRoom, introduction, nick, uid,gameFullName  }) => ({
-          roomid: profileRoom,
-          introduction,
-          nick,
-          uid,gameFullName
-        }));
-        rooms.push(...rs);
-      }
+      rooms.push(...rs);
     }
+    totalPage = data.totalPage;
+    page++;
   }
 
   return rooms;
@@ -203,10 +184,10 @@ const getYqkRooms = async (all = true) => {
   /* getHuyaLiveInfo("11352944").then((url) => {
         console.log(url);
       });  */
-
+  const all = process?.env?.HUYA_ALL;
   const jsonList = [],
-    rooms = [...(await getYqkRooms())];
- 
+    rooms = await getRooms(all);
+
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.roomid;
@@ -215,19 +196,23 @@ const getYqkRooms = async (all = true) => {
     json.name = room.nick
       ? `【${room.nick}】${room.introduction}`
       : json.name || "未知名称";
-    json.group=`虎牙${room.gameFullName?'【'+room.gameFullName+'】':''}`
+    json.group = `虎牙${
+      room.gameFullName ? "【" + room.gameFullName + "】" : ""
+    }`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
   }
-  fs.mkdirSync(path.resolve(__dirname, `./data`),{recursive:true})
-
+  fs.mkdirSync(path.resolve(__dirname, `./data`), { recursive: true });
 
   fs.writeFileSync(
     path.resolve(__dirname, `./data/huya.json`),
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
-  sendNotify(`虎牙【一起看】`,`直播url解析执行完毕，共${jsonList.length}个`)
+  sendNotify(
+    `虎牙${!all ? "【一起看】" : ""}`,
+    `直播url解析执行完毕，共${jsonList.length}个`
+  );
 
   const m3u_list = ["#EXTM3U"];
   for (const i in jsonList) {
@@ -245,5 +230,4 @@ const getYqkRooms = async (all = true) => {
     path.resolve(__dirname, `./data/huya.m3u`),
     m3u_list.join("\n")
   );
-
 })();

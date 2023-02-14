@@ -19,13 +19,13 @@ const { sendNotify } = require("./sendNotify");
 const $ = new Env("B站【影音馆】");
 
 //判断json是否有效
-const isJSONValid = (str) => {
-    try {
-        JSON.parse(str);
-        return true;
-    } catch (e) {
-        return false;
-    }
+const isJSONValid = str => {
+  try {
+    JSON.parse(str);
+    return true;
+  } catch (e) {
+    return false;
+  }
 };
 
 /**
@@ -57,18 +57,18 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
   if (!realId) {
     return {};
   }
-  const getStreamData = async (maxQn) => {
+  const getStreamData = async maxQn => {
     const url =
-            "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo",
-        param = {
-          room_id: realId,
-          protocol: "0,1",
-          format: "0,1,2",
-          codec: "0,1",
-          qn: maxQn,
-          platform: "web",
-          ptype: 8,
-        };
+        "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo",
+      param = {
+        room_id: realId,
+        protocol: "0,1",
+        format: "0,1,2",
+        codec: "0,1",
+        qn: maxQn,
+        platform: "web",
+        ptype: 8,
+      };
 
     const res = await fireFetch(url + genUrlSearch(param), {}, true);
     if (res.code !== 0) {
@@ -78,11 +78,11 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
     return res.data || {};
   };
   let data = await getStreamData(currentQn),
-      qn_max = 0,
-      streamInfo = data?.playurl_info?.playurl?.stream || [];
+    qn_max = 0,
+    streamInfo = data?.playurl_info?.playurl?.stream || [];
   for (let i = 0; i < streamInfo.length; i++) {
     const item = streamInfo[i],
-        accept_qn = item["format"][0]["codec"][0]["accept_qn"] || [];
+      accept_qn = item["format"][0]["codec"][0]["accept_qn"] || [];
     /*  for (const qn in accept_qn) {
       qn_max = qn > qn_max ? qn : qn_max;
     } */
@@ -95,32 +95,32 @@ async function getRoomLiveUrl(rid, currentQn = 10000) {
   const streamUrls = {};
   // flv流无法播放，暂修改成获取hls格式的流
   for (let i = 0; i < streamInfo.length; i++) {
-    const matchFormat = (v) => v === "fmp4" || v === "ts";
+    const matchFormat = v => v === "fmp4" || v === "ts";
     const stream = streamInfo[i],
-        formats = stream.format.filter((item) => matchFormat(item.format_name));
+      formats = stream.format.filter(item => matchFormat(item.format_name));
     format = formats[formats.length - 1] || {};
 
     if (matchFormat(format.format_name || "")) {
       // console.log( item["format"].pop());
       const codecItem = format["codec"][0] || {},
-          base_url = codecItem["base_url"],
-          url_info = codecItem["url_info"] || [];
+        base_url = codecItem["base_url"],
+        url_info = codecItem["url_info"] || [];
       for (let j = 0; j < url_info.length; j++) {
         const info = url_info[j],
-            host = info["host"],
-            extra = info["extra"],
-            extraObj = parseUrlSearch("?" + extra.substring(0)),
-            url = host+base_url.split("?").shift();
+          host = info["host"],
+          extra = info["extra"],
+          extraObj = parseUrlSearch("?" + extra.substring(0)),
+          url = host + base_url.split("?").shift();
         const signs = genUrlSearch(
-            {
-              sign: extraObj.sign,
-              cdn: extraObj.cdn,
-            },
-            true
+          {
+            sign: extraObj.sign,
+            cdn: extraObj.cdn,
+          },
+          true
         );
         streamUrls[`url${j + 1}`] = host.includes("https://cn-")
-            ? url
-            : `${url}${genUrlSearch(extraObj)}`;
+          ? url
+          : `${url}${genUrlSearch(extraObj)}`;
       }
     }
   }
@@ -133,14 +133,15 @@ async function getRoomInfo(rid) {
   const url = `https://api.live.bilibili.com/room/v1/Room/get_info?room_id=${rid}`;
   const res = await fireFetch(url);
 
-  return isJSONValid(res)?  JSON.parse(res).data : {} ;
-
+  return isJSONValid(res) ? JSON.parse(res).data : {};
 }
 //根据user id获取信息
 async function getUserInfo(uid) {
   const res = await fireFetch(
-    `https://api.bilibili.com/x/space/acc/info?mid=${uid}`
-  ,{},true);
+    `https://api.bilibili.com/x/space/acc/info?mid=${uid}`,
+    {},
+    true
+  );
 
   return +res.code === 0 ? res.data || {} : {};
 }
@@ -152,28 +153,45 @@ async function getUserInfo(uid) {
 //批量
 const BILI_ROOM_IDS = [22621344, 23150921, 21715386, 23169468, 23285297];
 const BILI_ROOM_IDS1 = [22621344];
-
-//获取影音馆的所有房间
-const getYygRooms = async () => {
+//获取所有分区
+const getAllAreas = async () => {
+  const res = await fireFetch(
+    "https://api.live.bilibili.com/room/v1/Area/getList",
+    {},
+    true
+  );
+  if (!(res.code == 0 && Array.isArray(res.data))) return [];
+  let lists = [];
+  for (let i = 0; i < res.data.length; i++) {
+    const subs = Array.isArray(res.data[i].list) ? res.data[i].list : [];
+    lists.push(...subs);
+  }
+  return lists;
+};
+//获取分区下的房间列表
+const getAreaRooms = async (pid, id, name = "") => {
   const baseUrl =
       "https://api.live.bilibili.com/xlive/web-interface/v1/second/getList",
     genUrl = (p = 1) =>
-      `${baseUrl}?platform=web&parent_area_id=10&area_id=33&sort_type=online&page=${p}`;
+      `${baseUrl}?platform=web&parent_area_id=${pid}&area_id=${id}&sort_type=online&page=${p}`;
+
+  const rooms = [];
   let page = 1,
     hasMore = true;
-  const rooms = [];
-  while (page < 50 && hasMore) {
-    console.log(`获取影音馆-分页 ${page} 的房间列表`);
+
+  while (hasMore) {
+    console.log(`获取分区${pid} - ${id} ${name}-分页 ${page} 的房间列表`);
     const res = await fireFetch(genUrl(page), {}, true);
     const { code } = res,
       data = res.data || {};
     if (code === 0) {
       const list = data.list || [];
-      const ids = list.map(({ roomid, title, uname, uid,area_name }) => ({
+      const ids = list.map(({ roomid, title, uname, uid, area_name }) => ({
         roomid,
         title,
         uname,
-        uid,area_name
+        uid,
+        area_name,
       }));
       rooms.push(...ids);
     }
@@ -183,12 +201,35 @@ const getYygRooms = async () => {
 
   return rooms;
 };
+//获取直播的房间
+//all=false只获取影音馆
+const getRooms = async all => {
+  const baseUrl =
+      "https://api.live.bilibili.com/xlive/web-interface/v1/second/getList",
+    genUrl = (pid, id, p = 1) =>
+      `${baseUrl}?platform=web&parent_area_id=${
+        all ? pid : "10"
+      }&area_id=all?pid:'33'&sort_type=online&page=${p}`;
+  const areas = all
+    ? await getAllAreas()
+    : [{ id: "33", parent_id: "10", name: "影音馆" }];
+  const rooms = [];
+  for (let i = 0; i < areas.length; i++) {
+    const obj = areas[i],
+      _rs = await getAreaRooms(obj.parent_id, obj.id, obj.name);
+
+    rooms.push(..._rs);
+  }
+  return rooms;
+};
 
 (async () => {
-  const  DEF_ROOMS=[{roomid:23125843,}];
-  const jsonList = [],dynamicRooms= await getYygRooms(),
+  const all = process?.env?.BILIBILI_ALL,
+    DEF_ROOMS = [{ roomid: 23125843 }],
+    jsonList = [],
+    dynamicRooms = await getRooms(all),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
-  
+
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.roomid;
@@ -203,7 +244,7 @@ const getYygRooms = async () => {
         rname = room.title || user?.live_room?.title;
       json.room_id = key;
       json.name = `【${uname}】${rname}` || "未知名称";
-      json.group=`B站${room.area_name?'【'+room.area_name+'】':''}`
+      json.group = `B站${room.area_name ? "【" + room.area_name + "】" : ""}`;
       console.log("房间解析结果:", json);
       jsonList.push(json);
     }
@@ -215,12 +256,15 @@ const getYygRooms = async () => {
     JSON.stringify(jsonList)
   );
   console.log("当前总数量", jsonList.length);
-  sendNotify(`B站【影音馆】`, `直播url解析执行完毕，共${jsonList.length}个`);
+  sendNotify(
+    `B站${!all ? "【影音馆】" : ""}`,
+    `直播url解析执行完毕，共${jsonList.length}个`
+  );
   const m3u_list = ["#EXTM3U"];
-  const isPersitUrl=(url)=>url.startsWith('https://cn')
+  const isPersitUrl = url => url.startsWith("https://cn");
   for (const i in jsonList) {
     const obj = jsonList[i];
-      url = isPersitUrl( obj["url1"])? obj["url1"] : obj["url2"];
+    url = isPersitUrl(obj["url1"]) ? obj["url1"] : obj["url2"];
     if (url) {
       m3u_list.push(
         `#EXTINF:-1 group-title="${obj.group}" tvg-id="${obj.room_id}", ${obj.name}`,
