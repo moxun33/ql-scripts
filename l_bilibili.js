@@ -203,7 +203,7 @@ const getYygRooms = async () => {
         rname = room.title || user?.live_room?.title;
       json.room_id = key;
       json.name = `【${uname}】${rname}` || "未知名称";
-      json.group=`虎牙${room.area_name?'【'+room.area_name+'】':''}`
+      json.group=`B站${room.area_name?'【'+room.area_name+'】':''}`
       console.log("房间解析结果:", json);
       jsonList.push(json);
     }
@@ -223,7 +223,7 @@ const getYygRooms = async () => {
       url = isPersitUrl( obj["url1"])? obj["url1"] : obj["url2"];
     if (url) {
       m3u_list.push(
-        `#EXTINF:-1 group-title="B站" tvg-id="${obj.room_id}", ${obj.name}`,
+        `#EXTINF:-1 group-title="${obj.group}" tvg-id="${obj.room_id}", ${obj.name}`,
         url
       );
     }
