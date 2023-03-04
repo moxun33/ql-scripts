@@ -19,10 +19,9 @@ const { Env } = require("./ql");
 const { sendNotify } = require("./sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
+  "hdltc1.douyucdn.cn",
+  "hw-tct.douyucdn.cn",
   "hdltctwk.douyucdn2.cn",
-  "akm-tct.douyucdn.cn",
-  "tc-tct1.douyucdn.cn",
-  "vplay1a.douyucdn.cn",
 ];
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
@@ -157,9 +156,9 @@ const getRoomLiveUrls = async rid => {
     const domain = DOMAINS[0],
       //默认最高码率
       key = prevInfo.key?.replace("_900", "");
-    real_url["m3u8"] = `https://${domain}/live/${key}.m3u8`;
-    real_url["flv"] = `https://${domain}/live/${key}.flv`;
-    real_url["x-p2p"] = `https://${domain}/live/${key}.xs`;
+    real_url["m3u8"] = `https://${domain}/live/${key}.m3u8?uuid=`;
+    real_url["flv"] = `https://${domain}/live/${key}.flv?uuid=`;
+    real_url["x-p2p"] = `https://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
 };
@@ -247,7 +246,7 @@ const pickUrl = urlInfo => {
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
-    dynamicRooms = await (!all ? getAllLiveRooms() : getYqkLiveRooms()),
+    dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
   for (let i = 0; i < rooms.length; i++) {
