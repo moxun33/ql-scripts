@@ -19,8 +19,8 @@ const { Env } = require("./ql");
 const { sendNotify } = require("./sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hdltc1.douyucdn.cn",
   "hw-tct.douyucdn.cn",
+  "hdltc1.douyucdn.cn",
   "hdltctwk.douyucdn2.cn",
 ];
 //获取房间真实id,等初始信息
