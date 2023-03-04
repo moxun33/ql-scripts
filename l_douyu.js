@@ -19,8 +19,8 @@ const { Env } = require("./ql");
 const { sendNotify } = require("./sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hw-tct.douyucdn.cn",
   "hdltc1.douyucdn.cn",
+  "hw-tct.douyucdn.cn",
   "hdltctwk.douyucdn2.cn",
 ];
 //获取房间真实id,等初始信息
@@ -156,9 +156,9 @@ const getRoomLiveUrls = async rid => {
     const domain = DOMAINS[0],
       //默认最高码率
       key = prevInfo.key?.replace("_900", "");
-    real_url["m3u8"] = `https://${domain}/live/${key}.m3u8?uuid=`;
-    real_url["flv"] = `https://${domain}/live/${key}.flv?uuid=`;
-    real_url["x-p2p"] = `https://${domain}/live/${key}.xs?uuid=`;
+    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8?uuid=`;
+    real_url["flv"] = `http://${domain}/live/${key}.flv?uuid=`;
+    real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
 };
