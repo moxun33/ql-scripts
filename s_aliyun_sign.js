@@ -1,12 +1,14 @@
 /**
  * Created by wxun on 2023/3/17 18:00.
  * description: s_aliyun_sign
- */
-/*
-cron "0 9 * * *" s_aliyun_sign.js, tag=阿里云盘签到
+ *
+ * cron "0 9 * * *" s_aliyun_sign.js, tag=阿里云盘签到
 */
+const { Env } = require("./ql");
 
-const notify = require("./sendNotify");
+const $ = new Env("阿里云盘签到");
+const notify = $.isNode() ? require("./sendNotify") : "";
+
 const { AliyunDrive } = require("./u_aliyun");
 
 !(async () => {

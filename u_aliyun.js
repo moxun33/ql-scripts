@@ -10,18 +10,18 @@ class AliyunDrive {
   }
   tokenURL = "https://auth.aliyundrive.com/v2/account/token";
   signinURL = "https://member.aliyundrive.com/v1/activity/sign_in_list";
-  baseApi = "https://api.aliyundrive.com/v2";
+  baseApi = "https://api.aliyundrive.com";
   //用户信息
   userInfo = {};
-  //access token
-  token = null;
+
   //qinglong 接口
   qlApi;
   //统一请求, 更新token和signin除外
   async _fetch(url, opts = {}, isJson = true) {
-    let token = this.token;
+    let token = this.userInfo?.access_token;
     if (!token) {
-      token = await this.updateAccesssToken();
+      const info = await this.updateAccesssToken();
+      token = info.access_token;
     }
 
     const heads = opts?.headers || {};
@@ -32,7 +32,7 @@ class AliyunDrive {
         headers: {
           "Content-Type": "application/json;charset=UTF-8",
           ...heads,
-          Authorization: "Bearer " + token,
+          Authorization: `${this.userInfo?.token_type} ${token}`,
         },
       },
       isJson
@@ -99,7 +99,7 @@ class AliyunDrive {
     )
       .then((d) => {
         this.userInfo = d;
-        const { code, message, access_token } = d;
+        const { code, message } = d;
         if (code) {
           if (
             code === "RefreshTokenExpired" ||
@@ -109,7 +109,6 @@ class AliyunDrive {
           else errorMessage.push(message);
           return Promise.reject(errorMessage.join(", "));
         }
-        this.token = access_token;
         return d;
       })
       .catch((e) => {
@@ -118,7 +117,7 @@ class AliyunDrive {
       });
   }
   //签到
-  async sign_in(refreshToken,  remarks) {
+  async sign_in(refreshToken, remarks) {
     const queryBody = {
       grant_type: "refresh_token",
       refresh_token: refreshToken.value || refreshToken,
@@ -130,7 +129,7 @@ class AliyunDrive {
         method: "POST",
         body: JSON.stringify(queryBody),
         headers: {
-          Authorization: "Bearer " + this.token,
+          Authorization: `${this.userInfo?.token_type} ${this.userInfo?.access_token}`,
           "Content-Type": "application/json",
         },
       },
@@ -169,17 +168,13 @@ class AliyunDrive {
       });
   }
   //清空指定目录
-  async clearFolder(id, queryBody, access_token, remarks) {
-    const sendMessage = [remarks];
-    return fireFetch(
-      this.signinURL,
+  async clearFolder(id) {
+    const body = {};
+    return this._fetch(
+      "/clear/batch",
       {
         method: "POST",
-        body: JSON.stringify(queryBody),
-        headers: {
-          Authorization: "Bearer " + access_token,
-          "Content-Type": "application/json",
-        },
+        body: JSON.stringify(body),
       },
       true
     );

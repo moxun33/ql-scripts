@@ -1,13 +1,15 @@
 /**
  * Created by wxun on 2023/3/17 18:00.
  * description: s_aliyun_auto_clear 阿里云盘自动清空指定目录, 用于xiaoya laist转存观看清空
- */
-/*
-cron "0 5 * * *" s_aliyun_auto_clear.js, tag=阿里云盘清空目录
+ *
+ *
+ * cron "0 5 * * *" s_aliyun_auto_clear.js, tag=阿里云盘清空目录
 */
 
+const { Env } = require("./ql");
 
-const notify = require("./sendNotify");
+const $ = new Env("阿里云盘清空转存目录");
+const notify = $.isNode() ? require("./sendNotify") : "";
 const { AliyunDrive } = require("./u_aliyun");
 
 !(async () => {
