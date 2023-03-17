@@ -3,7 +3,7 @@
  * description: s_aliyun_auto_clear 阿里云盘自动清空指定目录, 用于xiaoya laist转存观看清空
  *
  *
- * cron "0 5 * * *" s_aliyun_auto_clear.js, tag=阿里云盘清空目录
+ * cron "0 5 * * *" s_aliyun_auto_clear.js
 */
 
 const { Env } = require("./ql");

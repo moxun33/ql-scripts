@@ -2,14 +2,6 @@
  * Created by wxun on 2023/3/17 18:01.
  * description: ql_api
  */
-/*
- * @Author: chenghao
- * @Date: 2022-02-14 10:19:21
- * @Last Modified by: chenghao
- * @Last Modified time: 2022-03-20 13:57:10
- * @Desc: 青龙依赖
- * @From: https://github.com/whyour/qinglong/issues/1369
- */
 
 const fetch = require("node-fetch");
 const { genUrlSearch, fireFetch } = require("./utils");
