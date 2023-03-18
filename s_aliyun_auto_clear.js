@@ -14,7 +14,7 @@ const {fileSizeUnit} = require("./utils");
 !(async () => {
   const client = new AliyunDrive();
   const refreshTokenArray =  await client.getRefreshToken();
-  const folderIds = await client.getClearFolderId()
+  const folderIds = await client.getQlEnvs("aliyunClearFolder")
   const message = [];
   let index = 1;
   for (const info of refreshTokenArray) {

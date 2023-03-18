@@ -57,12 +57,10 @@ class AliyunDrive {
   async getRefreshToken() {
     return await this.getQlEnvs("aliyunRefreshToken");
   }
-  // 获取aliyun 需要清空的目录id
-  async getClearFolderId() {
-    return await this.getQlEnvs("aliyunClearFolder");
-  }
+
   //更新qinglong变量
   async updateQlEnv(info = {}, refresh_token, remark = "") {
+    if(!info.name) return;
     // 更新环境变量
 
     let params = {
@@ -78,7 +76,7 @@ class AliyunDrive {
     if (info._id) {
       params._id = info._id;
     }
-    await this.qlApi.updateCkEnv(params);
+    return this.qlApi.updateCkEnv(params);
   }
   // 使用 refresh_token 更新 access_token
   // login, 需要初始化调用
