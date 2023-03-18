@@ -34,7 +34,7 @@ const {fileSizeUnit} = require("./utils");
       for (const id of folderIds) {
         const clearRes = await client.clearFolder(id.value||id);
         const rt = `已删除目录【${id.value||id}】的${
-          clearRes.response?.length || 0
+          clearRes.responses?.length || 0
         }个文件到回收站, 共${fileSizeUnit(client.sumFilesSize(clearRes.files))}\n`;
         sendMessage = sendMessage + rt;
       }
