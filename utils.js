@@ -1,6 +1,6 @@
 const { createHash } = require("crypto");
 const fetch = require("node-fetch");
-//const HttpsProxyAgent = require("https-proxy-agent");
+const HttpsProxyAgent = require("https-proxy-agent");
 const fs = require("fs");
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
@@ -16,8 +16,8 @@ const fireFetch = async (url, opts = {}, isJson = false) => {
   try {
     const heads = opts.headers || opts.Headers || {};
     const res = await fetch(url, {
-     // agent: HttpsProxyAgent(COMM_CONF.PROXY_URL),
-      timeout:30000,
+      agent: HttpsProxyAgent(COMM_CONF.PROXY_URL),
+      timeout: 30000,
       ...opts,
       mode: "same-origin",
       credentials: "same-origin",
@@ -26,9 +26,10 @@ const fireFetch = async (url, opts = {}, isJson = false) => {
         "Content-Type": COMM_CONF.URLENCODED_FORM_TYPE,
         ...heads,
       },
-    }).then((res) => {
-     // console.log(res.status, "fetch status");
-      return isJson ? res.json() : res.text();
+    }).then(async (res) => {
+      const text = await res.text();
+      // console.log(res.status, "fetch status");
+      return isJson && isJSONValid(text) ? JSON.parse(text) : text;
     });
 
     return res;
@@ -130,10 +131,10 @@ const genUrlSearch = (obj, noPrefix = false) => {
 };
 
 //逐行读取文件
-  function readFileLines(filename) {
+function readFileLines(filename) {
   try {
-    const content =   fs.readFileSync(filename,{encoding:'utf8', flag:'r'});
-      //console.log(content)
+    const content = fs.readFileSync(filename, { encoding: "utf8", flag: "r" });
+    //console.log(content)
     const lines = content.split(/\r?\n/).filter(Boolean);
     return lines;
   } catch (e) {
@@ -151,7 +152,7 @@ function getM3uTvgAttr(line, attr = "group-title", def = "") {
   return arr.length > 1 ? arr[1].replace(/"/g, "").trim() : def;
 }
 //根据已读取的m3u行文本解析播放列表
- function parseM3uLines(lines) {
+function parseM3uLines(lines) {
   if (!(lines.length > 0 && lines[0].includes("#EXTM3U"))) {
     return [];
   }
@@ -174,6 +175,27 @@ function getM3uTvgAttr(line, attr = "group-title", def = "") {
   }
   return list;
 }
+// 求次幂
+function pow1024(num) {
+  return Math.pow(1024, num)
+}
+/**
+ * 文件大小 字节转换单位
+ * @param size
+ * @returns {string|*}
+ */
+ const fileSizeUnit = (size) => {
+  if (!size) return '';
+  return size < 1024 ? size + ' B' :
+      size < pow1024(2) ? (size / 1024).toFixed(2) + ' KB' :
+          size < pow1024(3) ? (size / pow1024(2)).toFixed(2) + ' MB' :
+              size < pow1024(4) ? (size / pow1024(3)).toFixed(2) + ' GB' :
+                  (size / pow1024(4)).toFixed(2) + ' TB'
+}
+
+
+
+
 module.exports = {
   COMM_CONF,
   getRandomInt,
@@ -185,5 +207,5 @@ module.exports = {
   matchHtmlText,
   readFileLines,
   getM3uTvgAttr,
-  parseM3uLines,
+  parseM3uLines,fileSizeUnit
 };

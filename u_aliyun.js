@@ -2,7 +2,7 @@
  * Created by wxun on 2023/3/17 19:16.
  * description: s_aliyun
  */
-const { fireFetch } = require("./utils");
+const { fireFetch, fileSizeUnit} = require("./utils");
 const { QlApi } = require("./u_qlApi");
 class AliyunDrive {
   constructor() {
@@ -167,17 +167,63 @@ class AliyunDrive {
         return Promise.reject(sendMessage.join(", "));
       });
   }
+  //获取目录文件
+  async listFiles(folderId) {
+    if (!folderId) return [];
+    const body = {
+      drive_id: this.userInfo?.default_drive_id,
+      parent_file_id: folderId,
+      limit: 100,
+      all: false,
+      url_expire_sec: 14400,
+      fields: "*",
+      order_by: "updated_at",
+      order_direction: "ASC",
+    };
+    const res = await this._fetch("/adrive/v3/file/list", {
+      method: "post",
+      body: JSON.stringify(body),
+    });
+    return Array.isArray(res.items) ? res.items : [];
+  }
   //清空指定目录
   async clearFolder(id) {
-    const body = {};
-    return this._fetch(
-      "/clear/batch",
+    const files = await this.listFiles(id);
+
+    if (!files.length) return { files, responses: [] };
+    const filesReq = files.map((f) => {
+      return {
+        body: {
+          drive_id: f.drive_id,
+          file_id: f.file_id,
+        },
+        headers: {
+          "Content-Type": "application/json",
+        },
+        id: f.file_id,
+        method: "POST",
+        url: "/recyclebin/trash",
+      };
+    });
+    const body = {
+      requests: filesReq,
+      resource: "file",
+    };
+    const res = await this._fetch(
+      "/v2/batch",
       {
         method: "POST",
         body: JSON.stringify(body),
       },
       true
     );
+    res.files = files;
+    return res;
+  }
+  //计算文件列表的总大小
+  sumFilesSize(files=[]){
+return files.reduce((total,cur)=>cur.size+total,0)
+
   }
 }
 
