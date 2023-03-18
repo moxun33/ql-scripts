@@ -6,10 +6,10 @@
  * Created by wxun on 2023/1/2 21:23.
  * description: l_gudou
  */
-const { Env } = require("./ql");
-const { sendNotify } = require("./sendNotify");
+const { Env } = require("./utils/ql");
+const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("谷豆");
-const { encrypt, fireFetch, readFileLines, parseM3uLines } = require("./utils");
+const { encrypt, fireFetch, readFileLines, parseM3uLines } = require("./utils/utils");
 const path = require("path");
 const fs = require("fs");
 

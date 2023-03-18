@@ -11,11 +11,11 @@ b站解析
 */
 //单个url解析
 //有些地址无法在PotPlayer播放，建议换个播放器试试
-const { fireFetch, genUrlSearch, parseUrlSearch } = require("./utils.js");
+const { fireFetch, genUrlSearch, parseUrlSearch } = require("./utils/utils.js");
 const path = require("path");
 const fs = require("fs");
-const { Env } = require("./ql");
-const { sendNotify } = require("./sendNotify");
+const { Env } = require("./utils/ql");
+const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("B站【影音馆】");
 
 //判断json是否有效

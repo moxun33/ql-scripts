@@ -3,7 +3,7 @@
  * description: s_aliyun
  */
 const { fireFetch, fileSizeUnit} = require("./utils");
-const { QlApi } = require("./u_qlApi");
+const { QlApi } = require("./qlApi");
 class AliyunDrive {
   constructor() {
     this.qlApi = new QlApi();

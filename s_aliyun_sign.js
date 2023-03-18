@@ -1,16 +1,20 @@
+/*
+阿里云盘签到
+33 11 * * * s_aliyun_sign.js
+*/
 /**
- * cron 33 11 * * * s_aliyun_sign.js
+ *
  * Created by wxun on 2023/3/17 18:00.
  * description: s_aliyun_sign
  *
  *
 */
-const { Env } = require("./ql");
+const { Env } = require("./utils/ql");
 
 const $ = new Env("阿里云盘签到");
-const notify = $.isNode() ? require("./sendNotify") : "";
+const notify = $.isNode() ? require("./utils/sendNotify") : "";
 
-const { AliyunDrive } = require("./u_aliyun");
+const { AliyunDrive } = require("./utils/aliyun");
 
 !(async () => {
   const client = new AliyunDrive();

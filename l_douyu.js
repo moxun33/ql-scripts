@@ -10,13 +10,13 @@ const {
   encrypt,
   genUrlSearch,
   matchHtmlText,
-} = require("./utils.js");
+} = require("./utils/utils.js");
 const fs = require("fs");
 //const { VM, VMScript } = require("vm2"); //vm2在qinglong中莫名错误
 const path = require("path");
 const nvm = require("node:vm");
-const { Env } = require("./ql");
-const { sendNotify } = require("./sendNotify");
+const { Env } = require("./utils/ql");
+const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
   "hdltc1.douyucdn.cn",

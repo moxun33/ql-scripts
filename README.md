@@ -1,10 +1,10 @@
-# 自用青龙脚本
+# 自用[青龙](https://github.com/whyour/qinglong)脚本 
 
 ## 拉库
 
 ```bash
 
-ql repo https://github.com/moxun33/ql-scripts.git "l_|s_|u_" "" "utils|ql" "main"
+ql repo https://github.com/moxun33/ql-scripts.git "l_|s_|u_" "" "utils" "main"
 
 ```
 ## 环境变量

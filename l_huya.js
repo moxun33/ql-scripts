@@ -12,12 +12,12 @@ const {
   encrypt,
   parseUrlSearch,
   genUrlSearch,
-} = require("./utils.js");
+} = require("./utils/utils.js");
 //批量
 const fs = require("fs");
 const path = require("path");
-const { Env } = require("./ql");
-const { sendNotify } = require("./sendNotify");
+const { Env } = require("./utils/ql");
+const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("虎牙【一起看】");
 const CONFIG = {
   headers: {

@@ -11,9 +11,9 @@
   感谢原作者 harry27 https://github.com/HarrylXue/public_actions
 
  */
-const { Env } = require("./ql");
+const { Env } = require("./utils/ql");
 const $ = new Env("掘金社区");
-const notify = $.isNode() ? require("./sendNotify") : "";
+const notify = $.isNode() ? require("./utils/sendNotify") : "";
 const fetch = require("node-fetch");
 // const sendMail = require('./sendMail');
 const cookie = process.env.JUEJIN_COOKIE || "";
