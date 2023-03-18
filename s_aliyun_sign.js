@@ -1,5 +1,5 @@
 /**
- * cron 0 9 * * * s_aliyun_sign.js
+ * cron 33 11 * * * s_aliyun_sign.js
  * Created by wxun on 2023/3/17 18:00.
  * description: s_aliyun_sign
  *
