@@ -14,7 +14,4 @@
   "repository": "git@github.com:moxun33/ql-scripts.git",
   "author": "moxun33 <mxx0807@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": ">=14&<=18"
-  }
 }
