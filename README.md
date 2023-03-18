@@ -14,7 +14,7 @@ ql repo https://github.com/moxun33/ql-scripts.git "l_|s_|u_" "" "utils|ql" "main
 - 获取B站当前所有直播，设置环境变量``BILIBILI_ALL``为``true``，解析耗时会很长
 - 掘进签到，设置环境变量``JUEJIN_COOKIE``
 - 阿里云盘签到，设置环境变量``aliyunRefreshToken``, 获取方法参考 https://github.com/mrabit/aliyundriveDailyCheck
-- 阿里云盘清空指定目录，设置环境变量``aliyunClearFolder``，目录id
+- 阿里云盘清空指定目录，设置环境变量``aliyunRefreshToken``（refresh_token）和``aliyunClearFolder``（目录id）
 
 ## 青龙面板需要安装的依赖
 ```json
