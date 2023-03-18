@@ -1,5 +1,5 @@
 /**
- * cron 33 5 * * *  s_aliyun_auto_clear.js
+ * cron 38 5 * * *  s_aliyun_auto_clear.js
  * Created by wxun on 2023/3/17 18:00.
  * description: s_aliyun_auto_clear 阿里云盘自动清空指定目录, 用于xiaoya laist转存观看清空
  */
