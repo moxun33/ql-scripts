@@ -185,7 +185,8 @@ class AliyunDrive {
     return Array.isArray(res.items) ? res.items : [];
   }
   //清空指定目录
-  async clearFolder(id) {
+  //toTrash 0: 直接彻底删除 1: 移除到回收站
+  async clearFolder(id,toTrash=false) {
     const files = await this.listFiles(id);
 
     if (!files.length) return { files, responses: [] };
@@ -200,7 +201,7 @@ class AliyunDrive {
         },
         id: f.file_id,
         method: "POST",
-        url: "/recyclebin/trash",
+        url: toTrash?"/recyclebin/trash":'/file/delete',
       };
     });
     const body = {
