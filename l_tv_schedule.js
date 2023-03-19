@@ -1,5 +1,6 @@
 /*
-cron 31 8 * * *  l_tv_schedule.js, tag:电视剧每日更新推送
+cron 31 8 * * *  l_tv_schedule.js
+电视剧每日更新推送
 */
 /**
  * Created by wxun on 2023/3/19 16:49.
