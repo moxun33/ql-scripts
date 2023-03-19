@@ -18,11 +18,15 @@ const { Assrt } = require("./utils/assrt");
   const yysub = new Yysub(),
     subhd = new Subhd(),
     assrt = new Assrt();
-  const yylist = await yysub.gettTodaySchedule(),
-    subhdList = await subhd.gettTodaySchedule(),
-    assList =await assrt.gettTodaySchedule(),
+  const subhdList = await subhd.gettTodaySchedule(),
+    assList = await assrt.gettTodaySchedule(),
+    yylist = (await yysub.gettTodaySchedule()).filter((s) =>
+      assList.filter((a) => a.includes(s.split('').shift())).length<1
+    ),
     list = [...yylist, ...subhdList, ...assList];
+
   if (list.length === 0) return;
   const msgs = [`${yysub.today} 今日共${list.length}部影视播出\n`, ...list];
+  console.log(msgs)
   await notify.sendNotify("📺︎电视剧播出表通知", msgs.join("\n"));
 })();
