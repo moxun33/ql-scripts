@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cheerio": "1.0.0-rc.12",
     "fast-text-encoding": "^1.0.3",
     "https-proxy-agent": "^5.0.1",
     "md5": "^2.3.0",
