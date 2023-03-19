@@ -17,6 +17,6 @@ const {Yysub} = require("./utils/yysub");
     const yysub=new Yysub()
     const list=await yysub.gettTodaySchedule()
     if(list.length === 0) return;
-    const msgs=[`${yysub.today} 今日共${list}部电视剧播出`,...list]
+    const msgs=[`${yysub.today} 今日共${list.length}部电视剧播出\n`,...list]
     await notify.sendNotify('📺︎电视剧播出表通知',msgs.join('\n'));
 })()
