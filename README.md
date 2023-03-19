@@ -19,6 +19,7 @@ ql repo https://github.com/moxun33/ql-scripts.git "l_|s_|u_" "" "utils" "main"
 ## 青龙面板需要安装的依赖
 ```json
 {
+  "cheerio": "1.0.0-rc.12",
     "fast-text-encoding": "^1.0.3",
     "md5": "^2.3.0",
     "node-fetch": "^2.6.7",

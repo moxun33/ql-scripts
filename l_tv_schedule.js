@@ -1,6 +1,5 @@
 /*
-电视剧每日更新推送
-31 8 * * *  l_tv_schedule.js
+cron 31 8 * * *  l_tv_schedule.js, tag:电视剧每日更新推送
 */
 /**
  * Created by wxun on 2023/3/19 16:49.
@@ -18,5 +17,5 @@ const {Yysub} = require("./utils/yysub");
     const list=await yysub.gettTodaySchedule()
     if(list.length === 0) return;
     const msgs=[`${yysub.today} 今日共${list}部电视剧播出`,...list]
-    await notify.sendNotify('电视剧播出表通知',msgs.join('\n'));
+    await notify.sendNotify('📺︎电视剧播出表通知',msgs.join('\n'));
 })()
