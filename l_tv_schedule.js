@@ -21,7 +21,7 @@ const { Assrt } = require("./utils/assrt");
   const subhdList = await subhd.gettTodaySchedule(),
     assList = await assrt.gettTodaySchedule(),
     yylist = (await yysub.gettTodaySchedule()).filter((s) =>
-      assList.filter((a) => a.includes(s.split('').shift())).length<1
+      assList.filter((a) => a.includes(s.split(' ').shift())).length<1
     ),
     list = [...yylist, ...subhdList, ...assList].map(e=>`✅  ${e}`);
 
