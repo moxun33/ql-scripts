@@ -26,7 +26,7 @@ const { Assrt } = require("./utils/assrt");
     list = [...yylist, ...subhdList, ...assList].map(e=>`✅  ${e}`);
 
   if (list.length === 0) return;
-  const msgs = [`📅${yysub.today} 共${list.length}部影视播出\n\n`, ...list];
+  const msgs = [`${yysub.today} 共${list.length}部影视播出\n\n`, ...list];
   console.log(msgs)
   await notify.sendNotify("📺︎电视剧播出表通知", msgs.join("\n"));
 })();
