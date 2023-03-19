@@ -11,7 +11,7 @@ class Yysub {
 
     get today(){
         const d=new Date()
-        return `${d.getFullYear()}-${d.getMonth().toString().padStart(2,'0')}-${d.getDate().toString().padStart(2,'0')}`
+        return `${d.getFullYear()}-${`${d.getMonth()+1}`.padStart(2,'0')}-${d.getDate().toString().padStart(2,'0')}`
     }
 
     //美剧时间表
