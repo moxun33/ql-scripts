@@ -1,6 +1,6 @@
 /**
  * Created by wxun on 2023/3/19 16:28.
- * description: yysub 人人字幕组
+ * description:   subhd字幕组
  */
 
 const { fireFetch } = require("./utils");
@@ -40,13 +40,11 @@ class Subhd {
           .text()
           .trim();
       if (md === date) {
-          list.push(text+` 【${type||'电视剧'}】`)
+        list.push(text + ` 【${type || "电视剧"}】`);
       }
-
     });
-
+    console.log("subhd", list);
     return list;
   }
 }
 module.exports = { Subhd };
-
