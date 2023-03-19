@@ -1,5 +1,5 @@
 /*
-cron 31 8 * * *  l_tv_schedule.js
+cron "31 8 * * *"  l_tv_schedule.js
 ︎电视剧播出表通知
 */
 /**
