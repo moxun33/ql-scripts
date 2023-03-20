@@ -38,6 +38,7 @@ let SCKEY = '';
 //此处填你申请的PushDeer KEY.
 //(环境变量名 DEER_KEY)
 let PUSHDEER_KEY = '';
+let PUSHDEER_URL = '';
 
 // =======================================Synology Chat通知设置区域===========================================
 //此处填你申请的CHAT_URL与CHAT_TOKEN
@@ -151,6 +152,7 @@ if (process.env.PUSH_KEY) {
 
 if (process.env.DEER_KEY) {
   PUSHDEER_KEY = process.env.DEER_KEY;
+  PUSHDEER_URL = process.env.DEER_URL;
 }
 
 if (process.env.CHAT_URL) {
@@ -171,8 +173,8 @@ if (process.env.QQ_MODE) {
 
 if (process.env.BARK_PUSH) {
   if (
-    process.env.BARK_PUSH.indexOf('https') > -1 ||
-    process.env.BARK_PUSH.indexOf('http') > -1
+      process.env.BARK_PUSH.indexOf('https') > -1 ||
+      process.env.BARK_PUSH.indexOf('http') > -1
   ) {
     //兼容BARK自建用户
     BARK_PUSH = process.env.BARK_PUSH;
@@ -190,9 +192,9 @@ if (process.env.BARK_PUSH) {
   }
 } else {
   if (
-    BARK_PUSH &&
-    BARK_PUSH.indexOf('https') === -1 &&
-    BARK_PUSH.indexOf('http') === -1
+      BARK_PUSH &&
+      BARK_PUSH.indexOf('https') === -1 &&
+      BARK_PUSH.indexOf('http') === -1
   ) {
     //兼容BARK本地用户只填写设备码的情况
     BARK_PUSH = `https://api.day.app/${BARK_PUSH}`;
@@ -259,10 +261,10 @@ if (process.env.FSKEY) {
  * @returns {Promise<unknown>}
  */
 async function sendNotify(
-  text,
-  desp,
-  params = {},
-  author = '\n\n本通知 By：https://github.com/whyour/qinglong',
+    text,
+    desp,
+    params = {},
+    author = '\n\n本通知 By：https://github.com/whyour/qinglong',
 ) {
   //提供6种通知
   desp += author; //增加作者信息，防止被贩卖等
@@ -294,7 +296,7 @@ function gotifyNotify(text, desp) {
       const options = {
         url: `${GOTIFY_URL}/message?token=${GOTIFY_TOKEN}`,
         body: `title=${encodeURIComponent(text)}&message=${encodeURIComponent(
-          desp,
+            desp,
         )}&priority=${GOTIFY_PRIORITY}`,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -370,8 +372,8 @@ function serverNotify(text, desp) {
       desp = desp.replace(/[\n\r]/g, '\n\n');
       const options = {
         url: SCKEY.includes('SCT')
-          ? `https://sctapi.ftqq.com/${SCKEY}.send`
-          : `https://sc.ftqq.com/${SCKEY}.send`,
+            ? `https://sctapi.ftqq.com/${SCKEY}.send`
+            : `https://sc.ftqq.com/${SCKEY}.send`,
         body: `text=${text}&desp=${desp}`,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -413,7 +415,7 @@ function PushDeerNotify(text, desp) {
       // PushDeer 建议对消息内容进行 urlencode
       desp = encodeURI(desp);
       const options = {
-        url: `https://api2.pushdeer.com/message/push`,
+        url: PUSHDEER_URL || `https://api2.pushdeer.com/message/push`,
         body: `pushkey=${PUSHDEER_KEY}&text=${text}&desp=${desp}&type=markdown`,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -429,8 +431,8 @@ function PushDeerNotify(text, desp) {
             data = JSON.parse(data);
             // 通过返回的result的长度来判断是否成功
             if (
-              data.content.result.length !== undefined &&
-              data.content.result.length > 0
+                data.content.result.length !== undefined &&
+                data.content.result.length > 0
             ) {
               console.log('PushDeer发送通知消息成功🎉\n');
             } else {
@@ -491,9 +493,9 @@ function BarkNotify(text, desp, params = {}) {
     if (BARK_PUSH) {
       const options = {
         url: `${BARK_PUSH}/${encodeURIComponent(text)}/${encodeURIComponent(
-          desp,
+            desp,
         )}?icon=${BARK_ICON}?sound=${BARK_SOUND}&group=${BARK_GROUP}&${querystring.stringify(
-          params,
+            params,
         )}`,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -564,7 +566,7 @@ function tgBotNotify(text, desp) {
               console.log('Telegram发送通知消息成功🎉。\n');
             } else if (data.error_code === 400) {
               console.log(
-                '请主动给bot发送一条消息并检查接收用户ID是否正确。\n',
+                  '请主动给bot发送一条消息并检查接收用户ID是否正确。\n',
               );
             } else if (data.error_code === 401) {
               console.log('Telegram bot token 填写错误。\n');
@@ -794,7 +796,7 @@ function qywxamNotify(text, desp) {
           try {
             if (err) {
               console.log(
-                '成员ID:' +
+                  '成员ID:' +
                   ChangeUserId(desp) +
                   '企业微信应用消息发送通知消息失败！！\n',
               );
@@ -803,7 +805,7 @@ function qywxamNotify(text, desp) {
               data = JSON.parse(data);
               if (data.errcode === 0) {
                 console.log(
-                  '成员ID:' +
+                    '成员ID:' +
                     ChangeUserId(desp) +
                     '企业微信应用消息发送通知消息成功🎉。\n',
                 );
@@ -889,24 +891,24 @@ function pushPlusNotify(text, desp) {
         try {
           if (err) {
             console.log(
-              `push+发送${
-                PUSH_PLUS_USER ? '一对多' : '一对一'
-              }通知消息失败！！\n`,
+                `push+发送${
+                    PUSH_PLUS_USER ? '一对多' : '一对一'
+                }通知消息失败！！\n`,
             );
             console.log(err);
           } else {
             data = JSON.parse(data);
             if (data.code === 200) {
               console.log(
-                `push+发送${
-                  PUSH_PLUS_USER ? '一对多' : '一对一'
-                }通知消息完成。\n`,
+                  `push+发送${
+                      PUSH_PLUS_USER ? '一对多' : '一对一'
+                  }通知消息完成。\n`,
               );
             } else {
               console.log(
-                `push+发送${
-                  PUSH_PLUS_USER ? '一对多' : '一对一'
-                }通知消息失败：${data.msg}\n`,
+                  `push+发送${
+                      PUSH_PLUS_USER ? '一对多' : '一对一'
+                  }通知消息失败：${data.msg}\n`,
               );
             }
           }
@@ -978,6 +980,8 @@ function aibotkNotify(text, desp) {
           resolve(data);
         }
       });
+    } else {
+      resolve();
     }
   });
 }

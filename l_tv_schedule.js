@@ -1,5 +1,5 @@
 /*
-cron "31 8 * * *"  l_tv_schedule.js
+7 31 8 * * *  l_tv_schedule.js
 ︎电视剧播出表通知
 */
 /**
@@ -13,6 +13,7 @@ const notify = $.isNode() ? require("./utils/sendNotify") : "";
 const { Yysub } = require("./utils/yysub");
 const { Subhd } = require("./utils/subhd");
 const { Assrt } = require("./utils/assrt");
+const {today} = require("./utils/utils");
 
 !(async () => {
   const yysub = new Yysub(),
@@ -26,7 +27,7 @@ const { Assrt } = require("./utils/assrt");
     list = [...yylist, ...subhdList, ...assList].map(e=>`✅  ${e}`);
 
   if (list.length === 0) return;
-  const msgs = [`${yysub.today} 共${list.length}部影视播出\n\n`, ...list];
+  const msgs = [`${today()} 共${list.length}部影视播出\n\n`, ...list];
   console.log(msgs)
   await notify.sendNotify("📺︎电视剧播出表通知", msgs.join("\n"));
 })();

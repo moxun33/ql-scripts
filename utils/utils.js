@@ -193,8 +193,14 @@ function pow1024(num) {
                   (size / pow1024(4)).toFixed(2) + ' TB'
 }
 
-
-
+//今天
+function today() {
+  const d = new Date();
+  return `${d.getFullYear()}-${`${d.getMonth() + 1}`.padStart(2, "0")}-${d
+      .getDate()
+      .toString()
+      .padStart(2, "0")}`;
+}
 
 module.exports = {
   COMM_CONF,
@@ -207,5 +213,5 @@ module.exports = {
   matchHtmlText,
   readFileLines,
   getM3uTvgAttr,
-  parseM3uLines,fileSizeUnit
+  parseM3uLines,fileSizeUnit,today
 };

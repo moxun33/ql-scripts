@@ -6,13 +6,7 @@
 const { fireFetch } = require("./utils");
 const cheerio = require("cheerio");
 class Subhd {
-  get today() {
-    const d = new Date();
-    return `${d.getFullYear()}-${`${d.getMonth() + 1}`.padStart(2, "0")}-${d
-      .getDate()
-      .toString()
-      .padStart(2, "0")}`;
-  }
+
   get _monthDate() {
     const d = new Date();
     return `${d.getMonth() + 1}月${d.getDate()}日`;
