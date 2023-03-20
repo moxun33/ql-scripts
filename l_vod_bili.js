@@ -31,6 +31,7 @@ async function getUserVideos(mid) {
   const msgs = [];
   for (const userId of userIds) {
     const res = await getUserVideos(userId);
+    console.log(JSON.stringify(res))
     if (
       res.code === 0 &&
       Array.isArray(res.data?.list?.vlist) &&
