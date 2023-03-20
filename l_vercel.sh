@@ -7,6 +7,7 @@ node l_douyu.js
 node l_huya.js
 node l_bilibili.js
 node l_gudou.js
+node utils/m3uMerge.js
 cd data
 ls -la
 npx vercel -t ${VERCEL_TOKEN} --prod

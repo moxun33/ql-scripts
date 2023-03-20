@@ -4,16 +4,16 @@ const fs = require("fs");
 const path = require("path");
 
 const gudouM3u = fs
-  .readFileSync(path.resolve(__dirname, "./data/gudou.m3u"))
+  .readFileSync(path.resolve(__dirname, "../data/gudou.m3u"))
   .toString();
 const douyuM3u = fs
-  .readFileSync(path.resolve(__dirname, "./data/douyu.m3u"))
+  .readFileSync(path.resolve(__dirname, "../data/douyu.m3u"))
   .toString();
 const biliM3u = fs
-  .readFileSync(path.resolve(__dirname, "./data/bilibili.m3u"))
+  .readFileSync(path.resolve(__dirname, "../data/bilibili.m3u"))
   .toString();
 const huyaM3u = fs
-  .readFileSync(path.resolve(__dirname, "./data/huya.m3u"))
+  .readFileSync(path.resolve(__dirname, "../data/huya.m3u"))
   .toString();
 const allM3u =
   gudouM3u +
