@@ -15,7 +15,7 @@ ql repo https://github.com/moxun33/ql-scripts.git "l_|s_|u_" "" "utils" "main"
 - 掘进签到，设置环境变量``JUEJIN_COOKIE``
 - 阿里云盘签到，设置环境变量``aliyunRefreshToken``, 获取方法参考 https://github.com/mrabit/aliyundriveDailyCheck
 - 阿里云盘清空指定目录，设置环境变量``aliyunRefreshToken``（refresh_token）和``aliyunClearFolder``（目录id）
-
+- B站up主投稿更新提醒，设置环境变量``BILI_USER_IDS`` 用英文逗号隔开多个ID
 ## 青龙面板需要安装的依赖
 ```json
 {

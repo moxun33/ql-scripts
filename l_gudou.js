@@ -1,6 +1,6 @@
 /*
 谷豆解析
-0 19 0/5 * * * l_gudou.js
+cron 0 19 0/5 * * * l_gudou.js
 */
 /**
  * Created by wxun on 2023/1/2 21:23.

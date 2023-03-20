@@ -1,6 +1,6 @@
 /*
 阿里云盘清空转存目录
-4 38 5 * * *  s_aliyun_auto_clear.js
+cron 4 38 5 * * *  s_aliyun_auto_clear.js
 */
 /**
  *

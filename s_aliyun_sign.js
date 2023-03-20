@@ -1,6 +1,6 @@
 /*
 阿里云盘签到
-9 33 11 * * * s_aliyun_sign.js
+cron 9 33 11 * * * s_aliyun_sign.js
 */
 /**
  *
