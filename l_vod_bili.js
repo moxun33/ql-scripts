@@ -1,6 +1,6 @@
 /*
 B站Up主视频更新通知
-7 31 0/1  * * *  l_vod_bili.js
+7 31 0/1 * * *  l_vod_bili.js
 */
 /**
  * Created by wxun on 2023/3/19 16:49.
