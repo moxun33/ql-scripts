@@ -25,9 +25,8 @@ async function getUserVideos(mid) {
 }
 !(async () => {
   const userIds = (process.env.BILIBILI_USER_IDS || "").split(","),
-    bvBaseUrl = "https://www.bilibili.com/video/",fsAtAll="<at user_id='all'>所有人<\\/at> ";
+    bvBaseUrl = "https://www.bilibili.com/video/",fsAtAll="<at user_id='all'>所有人<\/at> ";
   if (!userIds.length) return;
-  const list = [];
 
   const msgs = [];
   for (const userId of userIds) {
@@ -40,12 +39,14 @@ async function getUserVideos(mid) {
       const video = res.data?.list?.vlist[0];
      // console.log(video)
       //只关注一小时内的投稿
+
       if(video.created*1000>=Date.now()-3600*1000){
         const text=`😄  【${video.author}】在${new Date(video.created*1000).toLocaleString()} 更新了视频 【${video.title}】 地址：${bvBaseUrl+video.bvid}`
         msgs.push(text)
       }
     }
   }
+  if(!msgs.length) return;
   console.log(msgs);
   await notify.sendNotify(fsAtAll+"B站Up主视频更新通知", msgs.join("\n"));
 })();
