@@ -24,7 +24,7 @@ async function getUserVideos(mid) {
   return res;
 }
 !(async () => {
-  const userIds = [487511093],//(process.env.BILIBILI_USER_IDS || "").split(","),
+  const userIds = (process.env.BILIBILI_USER_IDS || "").split(","),
     bvBaseUrl = "https://www.bilibili.com/video/";
   if (!userIds.length) return;
   const list = [];
