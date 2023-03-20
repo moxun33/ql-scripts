@@ -25,7 +25,7 @@ async function getUserVideos(mid) {
 }
 !(async () => {
   const userIds = (process.env.BILIBILI_USER_IDS || "").split(","),
-    bvBaseUrl = "https://www.bilibili.com/video/";
+    bvBaseUrl = "https://www.bilibili.com/video/",fsAtAll="<at user_id='all'>所有人<\\/at> ";
   if (!userIds.length) return;
   const list = [];
 
@@ -47,6 +47,6 @@ async function getUserVideos(mid) {
     }
   }
   console.log(msgs);
-  await notify.sendNotify("B站Up主视频更新通知", msgs.join("\n"));
+  await notify.sendNotify(fsAtAll+"B站Up主视频更新通知", msgs.join("\n"));
 })();
 

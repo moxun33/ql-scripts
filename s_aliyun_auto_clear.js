@@ -1,5 +1,6 @@
 /*
-cron "38 5 * * *"  s_aliyun_auto_clear.js, tag:阿里云盘自动清空指定目录
+阿里云盘清空转存目录
+4 38 5 * * *  s_aliyun_auto_clear.js
 */
 /**
  *

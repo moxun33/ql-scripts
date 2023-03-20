@@ -1,6 +1,6 @@
 /*
-7 31 8 * * *  l_tv_schedule.js
-︎电视剧播出表通知
+电视剧播出表通知
+0 7 31 8 * * *  l_tv_schedule.js
 */
 /**
  * Created by wxun on 2023/3/19 16:49.
