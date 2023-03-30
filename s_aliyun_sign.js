@@ -8,26 +8,31 @@ cron 9 33 11 * * * s_aliyun_sign.js
  * description: s_aliyun_sign
  *
  *
-*/
+ */
 const { Env } = require("./utils/ql");
 
 const $ = new Env("阿里云盘签到");
 const notify = $.isNode() ? require("./utils/sendNotify") : "";
 
 const { AliyunDrive } = require("./utils/aliyun");
+const { delay } = require("./utils/utils");
 
 !(async () => {
   const client = new AliyunDrive();
   const refreshTokenArray = await client.getRefreshToken();
-
+  const t = Math.random() * 200000;
+  console.log("延时", t / 1000, "秒");
+  await delay(t);
   const message = [];
   let index = 1;
   for (let info of refreshTokenArray) {
     let remarks = info.remarks || `账号${index}`;
 
     try {
-      const { nick_name, refresh_token,   } =
-        await client.updateAccesssToken(info.value||info, remarks);
+      const { nick_name, refresh_token } = await client.updateAccesssToken(
+        info.value || info,
+        remarks
+      );
 
       if (nick_name && nick_name !== remarks)
         remarks = `${nick_name}(${remarks})`;

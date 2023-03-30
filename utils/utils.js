@@ -16,7 +16,7 @@ const fireFetch = async (url, opts = {}, isJson = false) => {
   try {
     const heads = opts.headers || opts.Headers || {};
     const res = await fetch(url, {
-     // agent: HttpsProxyAgent(COMM_CONF.PROXY_URL),
+      // agent: HttpsProxyAgent(COMM_CONF.PROXY_URL),
       timeout: 30000,
       ...opts,
       mode: "same-origin",
@@ -177,31 +177,42 @@ function parseM3uLines(lines) {
 }
 // 求次幂
 function pow1024(num) {
-  return Math.pow(1024, num)
+  return Math.pow(1024, num);
 }
 /**
  * 文件大小 字节转换单位
  * @param size
  * @returns {string|*}
  */
- const fileSizeUnit = (size) => {
-  if (!size) return '';
-  return size < 1024 ? size + ' B' :
-      size < pow1024(2) ? (size / 1024).toFixed(2) + ' KB' :
-          size < pow1024(3) ? (size / pow1024(2)).toFixed(2) + ' MB' :
-              size < pow1024(4) ? (size / pow1024(3)).toFixed(2) + ' GB' :
-                  (size / pow1024(4)).toFixed(2) + ' TB'
-}
+const fileSizeUnit = (size) => {
+  if (!size) return "";
+  return size < 1024
+    ? size + " B"
+    : size < pow1024(2)
+    ? (size / 1024).toFixed(2) + " KB"
+    : size < pow1024(3)
+    ? (size / pow1024(2)).toFixed(2) + " MB"
+    : size < pow1024(4)
+    ? (size / pow1024(3)).toFixed(2) + " GB"
+    : (size / pow1024(4)).toFixed(2) + " TB";
+};
 
 //今天
 function today() {
   const d = new Date();
   return `${d.getFullYear()}-${`${d.getMonth() + 1}`.padStart(2, "0")}-${d
-      .getDate()
-      .toString()
-      .padStart(2, "0")}`;
+    .getDate()
+    .toString()
+    .padStart(2, "0")}`;
 }
-
+//延时
+function delay(t = 5000) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, t);
+  });
+}
 module.exports = {
   COMM_CONF,
   getRandomInt,
@@ -213,5 +224,7 @@ module.exports = {
   matchHtmlText,
   readFileLines,
   getM3uTvgAttr,
-  parseM3uLines,fileSizeUnit,today
+  parseM3uLines,
+  fileSizeUnit,
+  today,delay
 };
