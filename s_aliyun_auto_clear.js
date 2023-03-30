@@ -15,7 +15,7 @@ const notify = $.isNode() ? require("./utils/sendNotify") : "";
 const { AliyunDrive } = require("./utils/aliyun");
 const {fileSizeUnit} = require("./utils/utils");
 
-!(async () => {
+(async () => {
   const client = new AliyunDrive();
   const refreshTokenArray =  await client.getRefreshToken();
   const folderIds = await client.getQlEnvs("aliyunClearFolder")

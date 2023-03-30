@@ -17,7 +17,7 @@ const notify = $.isNode() ? require("./utils/sendNotify") : "";
 const { AliyunDrive } = require("./utils/aliyun");
 const { delay } = require("./utils/utils");
 
-!(async () => {
+(async () => {
   const client = new AliyunDrive();
   const refreshTokenArray = await client.getRefreshToken();
   const t = Math.random() * 200000;

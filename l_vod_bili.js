@@ -23,7 +23,7 @@ async function getUserVideos(mid) {
   );
   return res;
 }
-!(async () => {
+(async () => {
   const userIds = (process.env.BILIBILI_USER_IDS || "").split(","),
     bvBaseUrl = "https://www.bilibili.com/video/",fsAtAll="<at user_id='all'>所有人<\/at> ";
   if (!userIds.length) return;
