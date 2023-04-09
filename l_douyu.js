@@ -108,32 +108,36 @@ async function getRoomPreviewInfo(rid) {
   }
   return { error, key, initInfo };
 }
-
-//根据html文件提取func_ub9,并运行
-async function getUrlKey(initInfo) {
+//获取stream信息
+async function getRateStream(initInfo){
   try {
     const query = initInfo?.query + "";
     // console.log(query)
     const url = "https://m.douyu.com/api/room/ratestream";
     const res = await fireFetch(
-      `${url}?${query}`,
-      {
-        method: "post",
-      },
-      true
+        `${url}?${query}`,
+        {
+          method: "post",
+        },
+        true
     );
 
     if (res.code !== 0) {
       console.log(res);
-      return "";
+      return {};
     }
-    const pUrl = res?.data?.url || "";
-    const key = pUrl.split("?").shift().split("/").pop().split(".").shift();
-    return key;
+
+    return res?.data||{};
   } catch (e) {
-    console.log(e, "get url key error");
-    return "";
+    console.log(e, "get getRateStream error");
+    return {};
   }
+}
+//根据html文件提取func_ub9,并运行
+async function parseUrlKey(rateSteam={}) {
+
+  const pUrl = rateSteam?.url || "";
+ return pUrl.split("?").shift().split("/").pop().split(".").shift();
 }
 
 //解析url
@@ -146,8 +150,9 @@ const getRoomLiveUrls = async rid => {
     } else if (prevInfo.error === 104) {
       console.log("房间未开播");
     } else {
+      const data=await getRateStream(prevInfo.initInfo)
       // console.log('重新获取 url key')
-      prevInfo.key = await getUrlKey(prevInfo.initInfo);
+      prevInfo.key = await parseUrlKey(data);
     }
   }
   let real_url = { room_id: rid };
