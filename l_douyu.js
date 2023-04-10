@@ -18,13 +18,14 @@ const { Env } = require("./utils/ql");
 const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hdltc1.douyucdn.cn",
   "hw-tct.douyucdn.cn",
+  "hdltc1.douyucdn.cn",
+
   "hdltctwk.douyucdn2.cn",
 ];
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
-const getRoomRealId = async rid => {
+const getRoomRealId = async (rid) => {
   try {
     const info = {};
     info.did = "10000000000000000000000000001501";
@@ -109,17 +110,17 @@ async function getRoomPreviewInfo(rid) {
   return { error, key, initInfo };
 }
 //获取stream信息
-async function getRateStream(initInfo){
+async function getRateStream(initInfo) {
   try {
     const query = initInfo?.query + "";
     // console.log(query)
     const url = "https://m.douyu.com/api/room/ratestream";
     const res = await fireFetch(
-        `${url}?${query}`,
-        {
-          method: "post",
-        },
-        true
+      `${url}?${query}`,
+      {
+        method: "post",
+      },
+      true
     );
 
     if (res.code !== 0) {
@@ -127,21 +128,20 @@ async function getRateStream(initInfo){
       return {};
     }
 
-    return res?.data||{};
+    return res?.data || {};
   } catch (e) {
     console.log(e, "get getRateStream error");
     return {};
   }
 }
 //根据html文件提取func_ub9,并运行
-async function parseUrlKey(rateSteam={}) {
-
+async function parseUrlKey(rateSteam = {}) {
   const pUrl = rateSteam?.url || "";
- return pUrl.split("?").shift().split("/").pop().split(".").shift();
+  return pUrl.split("?").shift().split("/").pop().split(".").shift();
 }
 
 //解析url
-const getRoomLiveUrls = async rid => {
+const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
 
   if (prevInfo.error !== 0) {
@@ -150,7 +150,7 @@ const getRoomLiveUrls = async rid => {
     } else if (prevInfo.error === 104) {
       console.log("房间未开播");
     } else {
-      const data=await getRateStream(prevInfo.initInfo)
+      const data = await getRateStream(prevInfo.initInfo);
       // console.log('重新获取 url key')
       prevInfo.key = await parseUrlKey(data);
     }
@@ -235,11 +235,11 @@ const getAllLiveRooms = async () => {
   }
   return rooms;
 };
-const pickUrl = urlInfo => {
+const pickUrl = (urlInfo) => {
   return (
     urlInfo[urlInfo.mediaType] ||
-    urlInfo["m3u8"] ||
     urlInfo["flv"] ||
+    urlInfo["m3u8"] ||
     urlInfo["x-p2p"]
   );
 };
