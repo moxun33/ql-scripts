@@ -20,8 +20,10 @@ const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
   "hw-tct.douyucdn.cn",
   "hdltc1.douyucdn.cn",
-
   "hdltctwk.douyucdn2.cn",
+  "akm-tct.douyucdn.cn",
+  "tc-tct1.douyucdn.cn",
+  "vplay1a.douyucdn.cn",
 ];
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
@@ -276,7 +278,7 @@ const pickUrl = (urlInfo) => {
         roomInfo["room"]["room_name"];
     // console.log(name);
     json.name = name || "未知名称";
-    json.mediaType = room.mediaType || "m3u8";
+    json.mediaType = room.mediaType || "flv";
     json.group = `斗鱼${room.game_name ? "【" + room.game_name + "】" : ""}`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
