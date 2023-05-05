@@ -20,7 +20,7 @@ const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
   "hw-tct.douyucdn.cn",
   "hdltc1.douyucdn.cn",
-  "hdltctwk.douyucdn2.cn",
+  //"hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",
   "tc-tct1.douyucdn.cn",
   "vplay1a.douyucdn.cn",
@@ -159,7 +159,7 @@ const getRoomLiveUrls = async (rid) => {
   }
   let real_url = { room_id: rid };
   if (prevInfo.key) {
-    const domain = DOMAINS[0],
+    const domain = DOMAINS[1],
       //默认最高码率
       key = prevInfo.key?.replace("_900", "");
     real_url["m3u8"] = `http://${domain}/live/${key}.m3u8?uuid=`;
@@ -245,13 +245,13 @@ const pickUrl = (urlInfo) => {
     urlInfo["x-p2p"]
   );
 };
-/*getRoomLiveUrls(747764).then((res) => {
+/*getRoomLiveUrls(431460).then((res) => {
   console.log(res);
 });*/
 (async () => {
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
-    DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
+    DEF_ROOMS = [/*{ room_id: "9249162", mediaType: "flv" }*/],
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
