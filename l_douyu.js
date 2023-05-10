@@ -166,10 +166,10 @@ const getRoomLiveUrls = async (rid) => {
     const domain = DOMAINS[0],
       //默认最高码率
       key = prevInfo.key?.replace("_900", ""),
-      query = genUrlSearch(rPlQuery);
+      query ='' //genUrlSearch(rPlQuery);
 
-    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8${query}`;
-    real_url["flv"] = `http://${domain}/live/${key}.flv${query}`;
+    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8`;
+    real_url["flv"] = `http://${domain}/live/${key}.flv`;
     // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
