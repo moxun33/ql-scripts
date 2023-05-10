@@ -16,13 +16,15 @@ const path = require("path");
 const nvm = require("node:vm");
 const { Env } = require("./utils/ql");
 const { sendNotify } = require("./utils/sendNotify");
+const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
+  "tc-tct1.douyucdn.cn",
   "hw-tct.douyucdn.cn",
   "hdltc1.douyucdn.cn",
   //"hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",
-  "tc-tct1.douyucdn.cn",
+
   "vplay1a.douyucdn.cn",
 ];
 //获取房间真实id,等初始信息
@@ -44,13 +46,10 @@ const getRoomRealId = async (rid) => {
     const encFuncStr = matchHtmlText(html, /(function ub98484234.*)\s(var.*)/);
     const ub9FuncRawStr = encFuncStr.replace(/eval.*;}/, "strc;}");
     const ub98Str = `${ub9FuncRawStr} ub98484234();`;
-    // const ub9Script = new VMScript(ub98Str);
     const ub9Script1 = new nvm.Script(ub98Str);
     nvm.createContext(ctx1);
     ub9Script1.runInContext(ctx1);
     let ub9FuncStr1 = ctx1.ub98484234();
-
-    //  let ub9FuncStr = vm.run(ub9Script);
 
     const dyVerMatches = ub9FuncStr1.match(/v=\d{12}/);
     const v = dyVerMatches.length ? dyVerMatches[0].split("=").pop() : "";
@@ -66,7 +65,7 @@ const getRoomRealId = async (rid) => {
     nvm.createContext(ctx2);
     signFuncStr1.runInContext(ctx2);
     let query = ctx2.sign(info.rid + "", info.did + "", info.t10 + ""); // vm.run(signFuncStr);
-
+    console.log(query, "sign query");
     query += `&ver=219032101&rid=${info.rid}&rate=-1`;
     info.query = query;
     // fs.writeFileSync('./douyu.local.html', html)
@@ -81,11 +80,11 @@ const getRoomRealId = async (rid) => {
 async function getRoomPreviewInfo(rid) {
   const initInfo = (await getRoomRealId(rid)) || {};
 
-   if (!initInfo.rid) {
+  if (!initInfo.rid) {
     return {};
   }
   const realId = initInfo.rid + "",
-    url = "https://playweb.douyucdn.cn/lapi/live/getH5Play/" + realId,
+    url = "https://playweb.douyucdn.cn/lapi/live/hlsH5Preview/" + realId,
     body = {
       rid: realId,
       did: initInfo.did,
@@ -107,18 +106,17 @@ async function getRoomPreviewInfo(rid) {
     data = res["data"],
     key = "";
   if (data) {
-    console.log(data["rtmp_url"]+data["rtmp_live"])
-    const rtmp_live = data["rtmp_live"] || "";
-    key = rtmp_live.split("?").shift().split("/").pop().split(".").shift();
+     const rtmp_live = data.rtmp_live || "";
+    key = getRKey(rtmp_live);
   }
-  return { error, key, initInfo };
+  return { error, key, initInfo ,rtmp_url:data.rtmp_url,rtmp_live:data.rtmp_live};
 }
 //获取stream信息
 async function getRateStream(initInfo) {
   try {
     const query = initInfo?.query + "";
     if (!query) return {};
-    // console.log(query)
+    // console.log(query);
     const url = "https://m.douyu.com/api/room/ratestream";
     const res = await fireFetch(
       `${url}?${query}`,
@@ -140,33 +138,38 @@ async function getRateStream(initInfo) {
   }
 }
 //根据html文件提取func_ub9,并运行
-async function parseUrlKey(rateSteam = {}) {
-  const pUrl = rateSteam?.url || "";
+function getRKey(url = {}) {
+  const pUrl = url || "";
   return pUrl.split("?").shift().split("/").pop().split(".").shift();
 }
 
 //解析url
 const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
-  const data = await getRateStream(prevInfo.initInfo);
+  let data = {};
   if (prevInfo.error !== 0) {
     if (prevInfo.error === 102) {
       console.log("房间不存在");
     } else if (prevInfo.error === 104) {
       console.log("房间未开播");
     } else {
-     console.log('重新获取 url key',prevInfo)
-      prevInfo.key = await parseUrlKey(data);
+      console.log("重新获取 url key");
+      data = await getRateStream(prevInfo.initInfo);
+
+      prevInfo.key = getRKey(data);
     }
   }
- // prevInfo.key = await parseUrlKey(data);
+   const plQuery = parseUrlSearch(prevInfo.rtmp_live || data["url"]),
+    { txSecret, txTime, ...rPlQuery } = plQuery;
   let real_url = { room_id: rid };
   if (prevInfo.key) {
-    const domain = DOMAINS[1],
+    const domain = DOMAINS[0],
       //默认最高码率
-      key = prevInfo.key?.replace("_900", "");
-    real_url["m3u8"] =  `http://${domain}/live/${key}.m3u8?uuid=`;
-    real_url["flv"] =  `http://${domain}/live/${key}.flv?uuid=`;
+      key = prevInfo.key?.replace("_900", ""),
+      query = genUrlSearch(rPlQuery);
+
+    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8${query}`;
+    real_url["flv"] = `http://${domain}/live/${key}.flv${query}`;
     // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
