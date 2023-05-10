@@ -80,12 +80,12 @@ const getRoomRealId = async (rid) => {
 //房间预览信息
 async function getRoomPreviewInfo(rid) {
   const initInfo = (await getRoomRealId(rid)) || {};
-  return { initInfo };
-  /*  if (!initInfo.rid) {
+
+   if (!initInfo.rid) {
     return {};
   }
   const realId = initInfo.rid + "",
-    url = "https://playweb.douyucdn.cn/lapi/live/hlsH5Preview/" + realId,
+    url = "https://playweb.douyucdn.cn/lapi/live/getH5Play/" + realId,
     body = {
       rid: realId,
       did: initInfo.did,
@@ -111,7 +111,7 @@ async function getRoomPreviewInfo(rid) {
     const rtmp_live = data["rtmp_live"] || "";
     key = rtmp_live.split("?").shift().split("/").pop().split(".").shift();
   }
-  return { error, key, initInfo };*/
+  return { error, key, initInfo };
 }
 //获取stream信息
 async function getRateStream(initInfo) {
@@ -149,26 +149,24 @@ async function parseUrlKey(rateSteam = {}) {
 const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
   const data = await getRateStream(prevInfo.initInfo);
-  /* if (prevInfo.error !== 0) {
+  if (prevInfo.error !== 0) {
     if (prevInfo.error === 102) {
       console.log("房间不存在");
     } else if (prevInfo.error === 104) {
       console.log("房间未开播");
     } else {
-      // console.log('重新获取 url key')
+     console.log('重新获取 url key',prevInfo)
       prevInfo.key = await parseUrlKey(data);
     }
-  } */
-  prevInfo.key = await parseUrlKey(data);
+  }
+ // prevInfo.key = await parseUrlKey(data);
   let real_url = { room_id: rid };
   if (prevInfo.key) {
     const domain = DOMAINS[1],
       //默认最高码率
       key = prevInfo.key?.replace("_900", "");
-    real_url["m3u8"] = data.url || `http://${domain}/live/${key}.m3u8?uuid=`;
-    real_url["flv"] = data.url
-      ? data.url.replace(".m3u8", ".flv")
-      : `http://${domain}/live/${key}.flv?uuid=`;
+    real_url["m3u8"] =  `http://${domain}/live/${key}.m3u8?uuid=`;
+    real_url["flv"] =  `http://${domain}/live/${key}.flv?uuid=`;
     // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
@@ -245,11 +243,11 @@ const getAllLiveRooms = async () => {
 const pickUrl = (urlInfo) => {
   return urlInfo[urlInfo.mediaType] || urlInfo["m3u8"] || urlInfo["flv"];
 };
-getRoomLiveUrls(431460).then((res) => {
+/*getRoomLiveUrls(431460).then((res) => {
   console.log(res);
-});
+});*/
 (async () => {
-  return;
+
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [
