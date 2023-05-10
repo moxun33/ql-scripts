@@ -80,7 +80,8 @@ const getRoomRealId = async (rid) => {
 //房间预览信息
 async function getRoomPreviewInfo(rid) {
   const initInfo = (await getRoomRealId(rid)) || {};
-  if (!initInfo.rid) {
+  return { initInfo };
+  /*  if (!initInfo.rid) {
     return {};
   }
   const realId = initInfo.rid + "",
@@ -106,15 +107,17 @@ async function getRoomPreviewInfo(rid) {
     data = res["data"],
     key = "";
   if (data) {
+    console.log(data["rtmp_url"]+data["rtmp_live"])
     const rtmp_live = data["rtmp_live"] || "";
     key = rtmp_live.split("?").shift().split("/").pop().split(".").shift();
   }
-  return { error, key, initInfo };
+  return { error, key, initInfo };*/
 }
 //获取stream信息
 async function getRateStream(initInfo) {
   try {
     const query = initInfo?.query + "";
+    if (!query) return {};
     // console.log(query)
     const url = "https://m.douyu.com/api/room/ratestream";
     const res = await fireFetch(
@@ -145,26 +148,28 @@ async function parseUrlKey(rateSteam = {}) {
 //解析url
 const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
-
-  if (prevInfo.error !== 0) {
+  const data = await getRateStream(prevInfo.initInfo);
+  /* if (prevInfo.error !== 0) {
     if (prevInfo.error === 102) {
       console.log("房间不存在");
     } else if (prevInfo.error === 104) {
       console.log("房间未开播");
     } else {
-      const data = await getRateStream(prevInfo.initInfo);
       // console.log('重新获取 url key')
       prevInfo.key = await parseUrlKey(data);
     }
-  }
+  } */
+  prevInfo.key = await parseUrlKey(data);
   let real_url = { room_id: rid };
   if (prevInfo.key) {
     const domain = DOMAINS[1],
       //默认最高码率
       key = prevInfo.key?.replace("_900", "");
-    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8?uuid=`;
-    real_url["flv"] = `http://${domain}/live/${key}.flv?uuid=`;
-    real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
+    real_url["m3u8"] = data.url || `http://${domain}/live/${key}.m3u8?uuid=`;
+    real_url["flv"] = data.url
+      ? data.url.replace(".m3u8", ".flv")
+      : `http://${domain}/live/${key}.flv?uuid=`;
+    // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
 };
@@ -238,20 +243,18 @@ const getAllLiveRooms = async () => {
   return rooms;
 };
 const pickUrl = (urlInfo) => {
-  return (
-    urlInfo[urlInfo.mediaType] ||
-    urlInfo["flv"] ||
-    urlInfo["m3u8"] ||
-    urlInfo["x-p2p"]
-  );
+  return urlInfo[urlInfo.mediaType] || urlInfo["m3u8"] || urlInfo["flv"];
 };
-/*getRoomLiveUrls(431460).then((res) => {
+getRoomLiveUrls(431460).then((res) => {
   console.log(res);
-});*/
+});
 (async () => {
+  return;
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
-    DEF_ROOMS = [/*{ room_id: "9249162", mediaType: "flv" }*/],
+    DEF_ROOMS = [
+      /*{ room_id: "9249162", mediaType: "flv" }*/
+    ],
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
@@ -278,7 +281,7 @@ const pickUrl = (urlInfo) => {
         roomInfo["room"]["room_name"];
     // console.log(name);
     json.name = name || "未知名称";
-    json.mediaType = room.mediaType || "flv";
+    json.mediaType = room.mediaType || "m3u8";
     json.group = `斗鱼${room.game_name ? "【" + room.game_name + "】" : ""}`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
