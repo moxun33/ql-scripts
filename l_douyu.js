@@ -24,9 +24,10 @@ const DOMAINS = [
   "hlsa-akm.douyucdn.cn",//m3u8
   "hls3-akm.douyucdn.cn",//m3u8
   "tc-tct1.douyucdn.cn",//m3u8
-  "hw-tct.douyucdn.cn",//
-  "hdltc1.douyucdn.cn",//
-  "akm-tct.douyucdn.cn",//
+  "hdltctwk.douyucdn2.cn",//m3u8
+  "hw-tct.douyucdn.cn",//failed
+  "hdltc1.douyucdn.cn",//failed
+  "akm-tct.douyucdn.cn",//failed
 ];
 const CUR_DOMAIN=DOMAINS[0]
 //获取房间真实id,等初始信息
