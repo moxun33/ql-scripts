@@ -19,10 +19,14 @@ const { sendNotify } = require("./utils/sendNotify");
 const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "tc-tct1.douyucdn.cn",
-  "hw-tct.douyucdn.cn",
-  "hdltc1.douyucdn.cn",
-  "akm-tct.douyucdn.cn",
+  "hls1a-akm.douyucdn.cn",//m3u8
+  "hls3a-akm.douyucdn.cn",//m3u8
+  "hlsa-akm.douyucdn.cn",//m3u8
+  "hls3-akm.douyucdn.cn",//m3u8
+  "tc-tct1.douyucdn.cn",//m3u8
+  "hw-tct.douyucdn.cn",//
+  "hdltc1.douyucdn.cn",//
+  "akm-tct.douyucdn.cn",//
 ];
 const CUR_DOMAIN=DOMAINS[0]
 //获取房间真实id,等初始信息
