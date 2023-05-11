@@ -22,11 +22,9 @@ const DOMAINS = [
   "tc-tct1.douyucdn.cn",
   "hw-tct.douyucdn.cn",
   "hdltc1.douyucdn.cn",
-  //"hdltctwk.douyucdn2.cn",
   "akm-tct.douyucdn.cn",
-
-  "vplay1a.douyucdn.cn",
 ];
+const CUR_DOMAIN=DOMAINS[0]
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
 const getRoomRealId = async (rid) => {
@@ -65,7 +63,7 @@ const getRoomRealId = async (rid) => {
     nvm.createContext(ctx2);
     signFuncStr1.runInContext(ctx2);
     let query = ctx2.sign(info.rid + "", info.did + "", info.t10 + ""); // vm.run(signFuncStr);
-    console.log(query, "sign query");
+   // console.log(query, "sign query");
     query += `&ver=219032101&rid=${info.rid}&rate=-1`;
     info.query = query;
     // fs.writeFileSync('./douyu.local.html', html)
@@ -137,8 +135,7 @@ async function getRateStream(initInfo) {
     return {};
   }
 }
-//根据html文件提取func_ub9,并运行
-function getRKey(url = {}) {
+function getRKey(url = '') {
   const pUrl = url || "";
   return pUrl.split("?").shift().split("/").pop().split(".").shift();
 }
@@ -156,14 +153,14 @@ const getRoomLiveUrls = async (rid) => {
       console.log("重新获取 url key");
       data = await getRateStream(prevInfo.initInfo);
 
-      prevInfo.key = getRKey(data);
+      prevInfo.key = getRKey(data.url);
     }
   }
    const plQuery = parseUrlSearch(prevInfo.rtmp_live || data["url"]),
     { txSecret, txTime, ...rPlQuery } = plQuery;
   let real_url = { room_id: rid };
   if (prevInfo.key) {
-    const domain = DOMAINS[0],
+    const domain = CUR_DOMAIN,
       //默认最高码率
       key = prevInfo.key?.replace("_900", ""),
       query ='' //genUrlSearch(rPlQuery);
