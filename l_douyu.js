@@ -19,17 +19,18 @@ const { sendNotify } = require("./utils/sendNotify");
 const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hls1a-akm.douyucdn.cn",//m3u8
-  "hls3a-akm.douyucdn.cn",//m3u8
-  "hlsa-akm.douyucdn.cn",//m3u8
-  "hls3-akm.douyucdn.cn",//m3u8
-  "tc-tct1.douyucdn.cn",//m3u8
-  "hdltctwk.douyucdn2.cn",//m3u8
-  "hw-tct.douyucdn.cn",//failed
-  "hdltc1.douyucdn.cn",//failed
-  "akm-tct.douyucdn.cn",//failed
+  "hdltctwk.douyucdn2.cn", //m3u8
+  "hls1a-akm.douyucdn.cn", //m3u8 海外
+  "hls3a-akm.douyucdn.cn", //m3u8 海外
+  "hlsa-akm.douyucdn.cn", //m3u8 海外
+  "hls3-akm.douyucdn.cn", //m3u8 海外
+  "tc-tct1.douyucdn.cn", //m3u8
+
+  "hw-tct.douyucdn.cn", //failed
+  "hdltc1.douyucdn.cn", //failed
+  "akm-tct.douyucdn.cn", //failed
 ];
-const CUR_DOMAIN=DOMAINS[0]
+const CUR_DOMAIN = DOMAINS[0];
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
 const getRoomRealId = async (rid) => {
@@ -68,7 +69,7 @@ const getRoomRealId = async (rid) => {
     nvm.createContext(ctx2);
     signFuncStr1.runInContext(ctx2);
     let query = ctx2.sign(info.rid + "", info.did + "", info.t10 + ""); // vm.run(signFuncStr);
-   // console.log(query, "sign query");
+    // console.log(query, "sign query");
     query += `&ver=219032101&rid=${info.rid}&rate=-1`;
     info.query = query;
     // fs.writeFileSync('./douyu.local.html', html)
@@ -109,10 +110,16 @@ async function getRoomPreviewInfo(rid) {
     data = res["data"],
     key = "";
   if (data) {
-     const rtmp_live = data.rtmp_live || "";
+    const rtmp_live = data.rtmp_live || "";
     key = getRKey(rtmp_live);
   }
-  return { error, key, initInfo ,rtmp_url:data.rtmp_url,rtmp_live:data.rtmp_live};
+  return {
+    error,
+    key,
+    initInfo,
+    rtmp_url: data.rtmp_url,
+    rtmp_live: data.rtmp_live,
+  };
 }
 //获取stream信息
 async function getRateStream(initInfo) {
@@ -140,7 +147,7 @@ async function getRateStream(initInfo) {
     return {};
   }
 }
-function getRKey(url = '') {
+function getRKey(url = "") {
   const pUrl = url || "";
   return pUrl.split("?").shift().split("/").pop().split(".").shift();
 }
@@ -161,14 +168,14 @@ const getRoomLiveUrls = async (rid) => {
       prevInfo.key = getRKey(data.url);
     }
   }
-   const plQuery = parseUrlSearch(prevInfo.rtmp_live || data["url"]),
+  const plQuery = parseUrlSearch(prevInfo.rtmp_live || data["url"]),
     { txSecret, txTime, ...rPlQuery } = plQuery;
   let real_url = { room_id: rid };
   if (prevInfo.key) {
     const domain = CUR_DOMAIN,
       //默认最高码率
       key = prevInfo.key?.replace("_900", ""),
-      query ='' //genUrlSearch(rPlQuery);
+      query = ""; //genUrlSearch(rPlQuery);
 
     real_url["m3u8"] = `http://${domain}/live/${key}.m3u8`;
     real_url["flv"] = `http://${domain}/live/${key}.flv`;
@@ -252,7 +259,6 @@ const pickUrl = (urlInfo) => {
   console.log(res);
 });*/
 (async () => {
-
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [
