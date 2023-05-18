@@ -19,7 +19,7 @@ const { sendNotify } = require("./utils/sendNotify");
 const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hdltctwk.douyucdn2.cn", //m3u8
+  "hdltctwk.douyucdn2.cn",
   "hls1a-akm.douyucdn.cn", //m3u8 海外
   "hls3a-akm.douyucdn.cn", //m3u8 海外
   "hlsa-akm.douyucdn.cn", //m3u8 海外
@@ -290,7 +290,7 @@ const pickUrl = (urlInfo) => {
         roomInfo["room"]["room_name"];
     // console.log(name);
     json.name = name || "未知名称";
-    json.mediaType = room.mediaType || "m3u8";
+    json.mediaType = room.mediaType || "flv";
     json.group = `斗鱼${room.game_name ? "【" + room.game_name + "】" : ""}`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
