@@ -19,7 +19,7 @@ const { sendNotify } = require("./utils/sendNotify");
 const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hdltctwk.douyucdn2.cn",
+  "hdltctwk.douyucdn2.cn",//flv
   "hls1a-akm.douyucdn.cn", //m3u8 海外
   "hls3a-akm.douyucdn.cn", //m3u8 海外
   "hlsa-akm.douyucdn.cn", //m3u8 海外
@@ -177,8 +177,8 @@ const getRoomLiveUrls = async (rid) => {
       key = prevInfo.key?.replace("_900", ""),
       query = ""; //genUrlSearch(rPlQuery);
 
-    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8`;
-    real_url["flv"] = `http://${domain}/live/${key}.flv`;
+    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8?uuid=`;
+    real_url["flv"] = `http://${domain}/live/${key}.flv?uuid=`;
     // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
@@ -259,6 +259,7 @@ const pickUrl = (urlInfo) => {
   console.log(res);
 });*/
 (async () => {
+
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [
