@@ -19,13 +19,12 @@ const { sendNotify } = require("./utils/sendNotify");
 const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-  "hdltctwk.douyucdn2.cn",//flv
   "hls1a-akm.douyucdn.cn", //m3u8 海外
   "hls3a-akm.douyucdn.cn", //m3u8 海外
   "hlsa-akm.douyucdn.cn", //m3u8 海外
   "hls3-akm.douyucdn.cn", //m3u8 海外
-  "tc-tct1.douyucdn.cn", //m3u8
-
+  "tc-tct1.douyucdn.cn", //m3u8 falied
+  "hdltctwk.douyucdn2.cn", //flv falied
   "hw-tct.douyucdn.cn", //failed
   "hdltc1.douyucdn.cn", //failed
   "akm-tct.douyucdn.cn", //failed
@@ -107,7 +106,7 @@ async function getRoomPreviewInfo(rid) {
     true
   );
   let error = res["error"],
-    data = res["data"],
+    data = res["data"]||{},
     key = "";
   if (data) {
     const rtmp_live = data.rtmp_live || "";
@@ -155,30 +154,33 @@ function getRKey(url = "") {
 //解析url
 const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
-  let data = {};
-  if (prevInfo.error !== 0) {
+  let data = await getRateStream(prevInfo.initInfo);
+  /* if (prevInfo.error !== 0) {
     if (prevInfo.error === 102) {
       console.log("房间不存在");
     } else if (prevInfo.error === 104) {
       console.log("房间未开播");
     } else {
       console.log("重新获取 url key");
-      data = await getRateStream(prevInfo.initInfo);
+
 
       prevInfo.key = getRKey(data.url);
     }
-  }
-  const plQuery = parseUrlSearch(prevInfo.rtmp_live || data["url"]),
-    { txSecret, txTime, ...rPlQuery } = plQuery;
+  }*/
+  prevInfo.key = getRKey(data.url);
   let real_url = { room_id: rid };
+
+  // console.log(liveUrlObj);
   if (prevInfo.key) {
+    const liveUrlObj = new URL(data.url || `http://${CUR_DOMAIN}`);
+
     const domain = CUR_DOMAIN,
       //默认最高码率
       key = prevInfo.key?.replace("_900", ""),
       query = ""; //genUrlSearch(rPlQuery);
 
-    real_url["m3u8"] = `http://${domain}/live/${key}.m3u8?uuid=`;
-    real_url["flv"] = `http://${domain}/live/${key}.flv?uuid=`;
+    real_url["m3u8"] = `${liveUrlObj.origin}/live/${key}.m3u8?uuid=`;
+    real_url["flv"] = `${liveUrlObj.origin}/live/${key}.flv?uuid=`;
     // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
   }
   return real_url;
@@ -259,7 +261,6 @@ const pickUrl = (urlInfo) => {
   console.log(res);
 });*/
 (async () => {
-
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [
@@ -291,7 +292,7 @@ const pickUrl = (urlInfo) => {
         roomInfo["room"]["room_name"];
     // console.log(name);
     json.name = name || "未知名称";
-    json.mediaType = room.mediaType || "flv";
+    json.mediaType = room.mediaType || "m3u8";
     json.group = `斗鱼${room.game_name ? "【" + room.game_name + "】" : ""}`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
