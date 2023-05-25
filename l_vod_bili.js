@@ -26,6 +26,7 @@ function getMixinKey(ae) {
 }
 
 // 获取 w_rid wts
+// https://github.com/SocialSisterYi/bilibili-API-collect/issues/664
 async function encWbi(params_in) {
   const params = { ...params_in };
   const { data } = await fireFetch(
@@ -33,13 +34,13 @@ async function encWbi(params_in) {
     {},
     true
   );
-  console.log(data);
+//  console.log(data);
   const wbi_img = data.wbi_img;
   const me = getMixinKey(
     wbi_img.img_url.split("/").pop().split(".").shift() +
       wbi_img.sub_url.split("/").pop().split(".").shift()
   );
-  const wts = parseInt(Date.now() / 1000);
+  const wts = Date.now() / 1000;
   params.wts = wts;
   const sortedParams = Object.fromEntries(Object.entries(params).sort());
   const Ae = Object.entries(sortedParams)
@@ -74,13 +75,16 @@ async function getUserVideos(mid) {
   return res;
 }
 (async () => {
-  const userIds = (process.env.BILIBILI_USER_IDS || "").split(","),
+  const userIds = (process.env.BILIBILI_USER_IDS || "").split(",").filter(Boolean),
     bvBaseUrl = "https://www.bilibili.com/video/",
     fsAtAll = "<at user_id='all'>所有人</at> ";
-  if (!userIds.length) return;
+  if (!userIds.length) {
+    throw new Error('没有Up的Id')
+  }
 
   const msgs = [];
   for (const userId of userIds) {
+
     const res = await getUserVideos(userId);
     console.log(JSON.stringify(res));
     if (
