@@ -104,5 +104,5 @@ async function getUserVideos(mid) {
   }
   if (!msgs.length) return;
   console.log(msgs);
-  await notify.sendNotify(fsAtAll + "B站Up主视频更新通知", msgs.join("\n"));
+  await notify.sendNotify( "B站Up主视频更新通知 "+fsAtAll, msgs.join("\n"));
 })();
