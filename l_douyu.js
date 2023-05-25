@@ -264,7 +264,7 @@ const pickUrl = (urlInfo) => {
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [
-      /*{ room_id: "9249162", mediaType: "flv" }*/
+      { room_id: "9249162", mediaType: "flv" }
     ],
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
