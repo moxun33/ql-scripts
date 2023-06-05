@@ -102,6 +102,7 @@ async function getUserVideos(mid) {
         ).toLocaleString()} 更新了视频 【${video.title}】 地址：${
           bvBaseUrl + video.bvid
         }`;
+        console.log(text,userId)
         msgs.push(text);
       }
     }
