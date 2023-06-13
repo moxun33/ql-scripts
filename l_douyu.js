@@ -1,6 +1,6 @@
 /*
  解析斗鱼 url
- cron 0 6 18 * * * l_douyu.js
+ cron 0 6 0-22/2 * * * l_douyu.js
 */
 const {
   isJSONValid,
@@ -16,7 +16,6 @@ const path = require("path");
 const nvm = require("node:vm");
 const { Env } = require("./utils/ql");
 const { sendNotify } = require("./utils/sendNotify");
-const { parseUrlSearch } = require("./utils/utils");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
   "hls1a-akm.douyucdn.cn", //m3u8 海外
@@ -30,11 +29,33 @@ const DOMAINS = [
   "akm-tct.douyucdn.cn", //failed
 ];
 const CUR_DOMAIN = DOMAINS[0];
+
+async function getDid() {
+  try {
+    const timeStamp = new Date().getTime();
+    const url = `https://passport.douyu.com/lapi/did/api/get?client_id=25&_=${timeStamp}&callback=axiosJsonpCallback1`;
+
+    const resp = await fireFetch(url, {
+      headers: {
+        referer: "https://m.douyu.com/",
+      },
+    });
+
+    const re = /axiosJsonpCallback1\((.*)\)/;
+    const match = re.exec(resp);
+    const result = JSON.parse(match[1]);
+
+    return result.data.did;
+  } catch (e) {
+    return "";
+  }
+}
 //获取房间真实id,等初始信息
 // 房间号通常为1~8位纯数字，浏览器地址栏中看到的房间号不一定是真实rid
 const getRoomRealId = async (rid) => {
   try {
-    const info = {};
+    const info = {},
+      did = ""; //await getDid();
     info.did = "10000000000000000000000000001501";
     info.t10 = parseInt(Date.now() / 1000 + "") + "";
     info.t13 = Date.now() + "";
@@ -106,7 +127,7 @@ async function getRoomPreviewInfo(rid) {
     true
   );
   let error = res["error"],
-    data = res["data"]||{},
+    data = res["data"] || {},
     key = "";
   if (data) {
     const rtmp_live = data.rtmp_live || "";
@@ -120,6 +141,7 @@ async function getRoomPreviewInfo(rid) {
     rtmp_live: data.rtmp_live,
   };
 }
+
 //获取stream信息
 async function getRateStream(initInfo) {
   try {
@@ -170,36 +192,19 @@ const getRoomLiveUrls = async (rid) => {
   prevInfo.key = getRKey(data.url);
   let real_url = { room_id: rid };
 
-  // console.log(liveUrlObj);
+  // console.log(data);
   if (prevInfo.key) {
     const liveUrlObj = new URL(data.url || `http://${CUR_DOMAIN}`);
-
-    const domain = CUR_DOMAIN,
-      //默认最高码率
-      key = prevInfo.key?.replace("_900", ""),
-      query = ""; //genUrlSearch(rPlQuery);
-
-    real_url["m3u8"] = `${liveUrlObj.origin}/live/${key}.m3u8?uuid=`;
-    real_url["flv"] = `${liveUrlObj.origin}/live/${key}.flv?uuid=`;
-    // real_url["x-p2p"] = `http://${domain}/live/${key}.xs?uuid=`;
+    const key = prevInfo.key?.replace("_900", ""),
+      dir = liveUrlObj.pathname.split("/").filter(Boolean).shift() || "live",
+      query = liveUrlObj.search;
+    //暂时使用临时url，2小时失效，配合定时器2小时运行一次
+    real_url["m3u8"] = `${liveUrlObj.origin}/${dir}/${key}.m3u8${query}`;
+    real_url["flv"] = `${liveUrlObj.origin}/${dir}/${key}.flv${query}`;
+    real_url["xs"] = `${liveUrlObj.origin}/${dir}/${key}.xs${query}`;
   }
   return real_url;
 };
-
-//批量解析房间
-
-const DOUYU_ROOM_IDS = [
-  9249162, 218859, 5581257, 9275635, 6655271, 122402, 252802, 20415, 248753,
-  5033502, 5581257, 5423, 2793084, 1226741, 7882691, 562225, 6763930, 2436390,
-  4290711, 5522351, 5127679, 7412199, 4246519, 2935323, 310926, 2337939, 4332,
-  434971, 6566671, 85894, 2793084, 7494871, 8722254, 3637765, 223521, 7305938,
-  431460, 2436390, 7270927, 7116591, 6079455, 4360438, 454867, 1339207, 4549169,
-  9292503, 7701735, 6537888, 323876, 263824, 5423, 9611578, 9292499, 248753,
-  20415, 3637778, 252802, 96577, 3637726, 315457, 10011042, 6140589, 8986148,
-  2516864, 9650887, 8770422, 7356023, 413573, 36337, 8814650, 74374, 9826611,
-  315131, 5129261, 4282654, 1165374, 3928, 1504768, 9292492, 6763930, 9683979,
-];
-const DOUYU_ROOM_IDS1 = [6566671, 5581257, 6079455];
 
 //获取【一起看】的直播房间列表
 const getYqkLiveRooms = async () => {
@@ -261,11 +266,9 @@ const pickUrl = (urlInfo) => {
   console.log(res);
 });*/
 (async () => {
-  const all = process?.env?.DOUYU_ALL,
+   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
-    DEF_ROOMS = [
-      { room_id: "9249162", mediaType: "flv" }
-    ],
+    DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
