@@ -1,6 +1,6 @@
 /*
  解析斗鱼 url
- cron 0 6 0-22/2 * * * l_douyu.js
+ cron 0 6 0/2 * * * l_douyu.js
 */
 const {
   isJSONValid,
