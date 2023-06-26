@@ -266,13 +266,13 @@ const pickUrl = (urlInfo) => {
   console.log(res);
 });*/
 (async () => {
-   const all = process?.env?.DOUYU_ALL,
+  const all = process?.env?.DOUYU_ALL,
     jsonList = [],
     DEF_ROOMS = [{ room_id: "9249162", mediaType: "flv" }],
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
-  for (let i = 0; i < rooms.length; i++) {
+  for (let i = 0; i <3; i++) {
     const room = rooms[i],
       key = room.room_id;
 
@@ -311,21 +311,32 @@ const pickUrl = (urlInfo) => {
     `斗鱼${!all ? "【一起看】" : ""}`,
     `直播url解析执行完毕，共${jsonList.length}个`
   );
-
-  const m3u_list = ["#EXTM3U"];
+  const genTitle = (obj) =>
+    `#EXTINF:-1 group-title="${obj.group}-pr" tvg-id="${obj.room_id}", ${obj.name}`;
+  const m3u_list = ["#EXTM3U"],
+    m3uPrList = ["#EXTM3U"];
   for (const i in jsonList) {
     const obj = jsonList[i],
       url = pickUrl(obj);
+    m3uPrList.push(
+      genTitle(obj),
+      `${
+        process.env.LIVE_PROXY
+          ? process.env.LIVE_PROXY
+          : "http://192.168.3.7:35455"
+      }/douyu/${obj.room_id}`
+    );
     if (url) {
-      m3u_list.push(
-        `#EXTINF:-1 group-title="${obj.group}" tvg-id="${obj.room_id}", ${obj.name}`,
-        url
-      );
+      m3u_list.push(genTitle(obj), url);
     }
   }
 
   fs.writeFileSync(
     path.resolve(__dirname, `./data/douyu.m3u`),
     m3u_list.join("\n")
+  );
+  fs.writeFileSync(
+    path.resolve(__dirname, `./data/douyuPr.m3u`),
+    m3uPrList.join("\n")
   );
 })();

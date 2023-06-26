@@ -1,0 +1,7 @@
+#EXTM3U
+#EXTINF:-1 group-title="斗鱼" tvg-id="9249162", 【UHD杜比视界】【极清4K】7.1声道杜比全景声
+http://192.168.3.7:35455/douyu/9249162
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4549169", 【橙記Orange丶】「橙記」「最人气港剧直播间」
+http://192.168.3.7:35455/douyu/4549169
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="431460", 【baby丶贝贝】【贝贝】AI补帧 军旅 历史 喜剧 动作
+http://192.168.3.7:35455/douyu/431460
