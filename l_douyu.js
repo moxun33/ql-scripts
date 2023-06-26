@@ -311,15 +311,15 @@ const pickUrl = (urlInfo) => {
     `斗鱼${!all ? "【一起看】" : ""}`,
     `直播url解析执行完毕，共${jsonList.length}个`
   );
-  const genTitle = (obj) =>
-    `#EXTINF:-1 group-title="${obj.group}-pr" tvg-id="${obj.room_id}", ${obj.name}`;
+  const genTitle = (obj,groupSuffix='') =>
+    `#EXTINF:-1 group-title="${obj.group}${groupSuffix}" tvg-id="${obj.room_id}", ${obj.name}`;
   const m3u_list = ["#EXTM3U"],
     m3uPrList = ["#EXTM3U"];
   for (const i in jsonList) {
     const obj = jsonList[i],
       url = pickUrl(obj);
     m3uPrList.push(
-      genTitle(obj),
+      genTitle(obj,'-pr'),
       `${
         process.env.LIVE_PROXY
           ? process.env.LIVE_PROXY
