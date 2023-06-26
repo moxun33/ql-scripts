@@ -272,7 +272,7 @@ const pickUrl = (urlInfo) => {
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
-  for (let i = 0; i <3; i++) {
+  for (let i = 0; i <rooms.length; i++) {
     const room = rooms[i],
       key = room.room_id;
 
