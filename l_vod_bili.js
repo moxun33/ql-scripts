@@ -34,7 +34,7 @@ async function encWbi(params_in) {
     {},
     true
   );
-//  console.log(data);
+  //  console.log(data);
   const wbi_img = data.wbi_img;
   const me = getMixinKey(
     wbi_img.img_url.split("/").pop().split(".").shift() +
@@ -49,7 +49,7 @@ async function encWbi(params_in) {
   const w_rid = createHash("md5")
     .update(Ae + me)
     .digest("hex");
-   return { w_rid, wts };
+  return { w_rid, wts };
 }
 //查询用户投稿最新的一个视频明细
 async function getUserVideos(mid) {
@@ -75,16 +75,17 @@ async function getUserVideos(mid) {
   return res;
 }
 (async () => {
-  const userIds = (process.env.BILIBILI_USER_IDS || "").split(",").filter(Boolean),
+  let userIds = (process.env.BILIBILI_USER_IDS || "")
+      .split(",")
+      .filter(Boolean),
     bvBaseUrl = "https://www.bilibili.com/video/",
     fsAtAll = "<at user_id='all'>所有人</at> ";
   if (!userIds.length) {
-    throw new Error('没有Up的Id')
+    throw new Error("没有Up的Id");
   }
-
+  userIds = [...new Set(userIds)];
   const msgs = [];
   for (const userId of userIds) {
-
     const res = await getUserVideos(userId);
     console.log(JSON.stringify(res));
     if (
@@ -102,12 +103,12 @@ async function getUserVideos(mid) {
         ).toLocaleString()} 更新了视频 【${video.title}】 地址：${
           bvBaseUrl + video.bvid
         }`;
-        console.log(text,userId)
+        console.log(text, userId);
         msgs.push(text);
       }
     }
   }
   if (!msgs.length) return;
   console.log(msgs);
-  await notify.sendNotify( "B站Up主视频更新通知 "+fsAtAll, msgs.join("\n"));
+  await notify.sendNotify("B站Up主视频更新通知 " + fsAtAll, msgs.join("\n"));
 })();
