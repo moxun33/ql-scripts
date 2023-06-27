@@ -15,22 +15,26 @@ const COMM_CONF = {
 const fireFetch = async (url, opts = {}, isJson = false) => {
   try {
     const heads = opts.headers || opts.Headers || {};
-    const res = await fetch(url, {
-      // agent: HttpsProxyAgent(COMM_CONF.PROXY_URL),
+    const resp = await fetch(url, {
+      //  agent: HttpsProxyAgent(COMM_CONF.PROXY_URL),
       timeout: 30000,
       ...opts,
       mode: "same-origin",
       credentials: "same-origin",
       headers: {
         "User-Agent": COMM_CONF.MOBILE_USER_AGENT,
-        "Content-Type": COMM_CONF.URLENCODED_FORM_TYPE,
+        ...(opts.method &&
+          opts.method.toLowerCase() !== "get" && {
+            "Content-Type": COMM_CONF.URLENCODED_FORM_TYPE,
+          }),
         ...heads,
       },
-    }).then(async (res) => {
-      const text = await res.text();
-      // console.log(res.status, "fetch status");
-      return isJson && isJSONValid(text) ? JSON.parse(text) : text;
     });
+
+    if (opts.raw) return resp;
+    const text = await resp.text();
+    // console.log(res.status, "fetch status");
+    const res= isJson && isJSONValid(text) ? JSON.parse(text) : text;
 
     return res;
   } catch (e) {
@@ -226,5 +230,6 @@ module.exports = {
   getM3uTvgAttr,
   parseM3uLines,
   fileSizeUnit,
-  today,delay
+  today,
+  delay,
 };

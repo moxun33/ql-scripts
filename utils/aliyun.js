@@ -2,7 +2,7 @@
  * Created by wxun on 2023/3/17 19:16.
  * description: s_aliyun
  */
-const { fireFetch, fileSizeUnit} = require("./utils");
+const { fireFetch, fileSizeUnit } = require("./utils");
 const { QlApi } = require("./qlApi");
 class AliyunDrive {
   constructor() {
@@ -19,7 +19,7 @@ class AliyunDrive {
   //统一请求, 更新token和signin除外
   async _fetch(url, opts = {}, isJson = true) {
     let token = this.userInfo?.access_token;
-    if (!token) {
+    if (!token && !opts.ignoreToken) {
       const info = await this.updateAccesssToken();
       token = info.access_token;
     }
@@ -60,7 +60,7 @@ class AliyunDrive {
 
   //更新qinglong变量
   async updateQlEnv(info = {}, refresh_token, remark = "") {
-    if(!info.name) return;
+    if (!info.name) return;
     // 更新环境变量
 
     let params = {
@@ -186,7 +186,7 @@ class AliyunDrive {
   }
   //清空指定目录
   //toTrash 0: 直接彻底删除 1: 移除到回收站
-  async clearFolder(id,toTrash=false) {
+  async clearFolder(id, toTrash = false) {
     const files = await this.listFiles(id);
 
     if (!files.length) return { files, responses: [] };
@@ -201,7 +201,7 @@ class AliyunDrive {
         },
         id: f.file_id,
         method: "POST",
-        url: toTrash?"/recyclebin/trash":'/file/delete',
+        url: toTrash ? "/recyclebin/trash" : "/file/delete",
       };
     });
     const body = {
@@ -220,9 +220,16 @@ class AliyunDrive {
     return res;
   }
   //计算文件列表的总大小
-  sumFilesSize(files=[]){
-return files.reduce((total,cur)=>cur.size+total,0)
-
+  sumFilesSize(files = []) {
+    return files.reduce((total, cur) => cur.size + total, 0);
+  }
+  //根据阿里云盘分享id获取文件目录
+  async getFilesByShareId(share_id) {
+    if (!share_id) return {};
+    return this._fetch(
+      `/adrive/v3/share_link/get_share_by_anonymous?share_id=${share_id}`,
+      { ignoreToken: true, method: "POST", body: JSON.stringify({ share_id }) }
+    );
   }
 }
 
