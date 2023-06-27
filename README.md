@@ -16,6 +16,7 @@ ql repo https://github.com/moxun33/ql-scripts.git "l_|s_|u_" "" "utils" "main"
 - 阿里云盘签到，设置环境变量``aliyunRefreshToken``, 获取方法参考 https://github.com/mrabit/aliyundriveDailyCheck
 - 阿里云盘清空指定目录，设置环境变量``aliyunRefreshToken``（refresh_token）和``aliyunClearFolder``（目录id）
 - B站up主投稿更新提醒，设置环境变量``BILI_USER_IDS`` 用英文逗号隔开多个ID
+- ``Tacit0924``的阿里云盘分享合集链接监测并利用``Tiny File Manager``更新``Xioya``中文件``alishare_list.txt``对应的分享链接
 ## 青龙面板需要安装的依赖
 ```json
 {
