@@ -46,7 +46,7 @@ const extractShareLine = (name, content) => {
     oldFolderId = myLineRes[2];
   if (shareId === oldShareId) {
     console.log(
-      `${user}的阿里云盘分享链接没有变化，无需编辑${alishareListFile}`
+      `${user}的阿里云盘分享合集链接没有变化，无需编辑${alishareListFile}`
     );
     return;
   }
