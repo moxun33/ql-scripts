@@ -28,7 +28,7 @@ const extractShareLine = (name, content) => {
   const ali = new AliyunDrive(),
     shareId = shareLink.split("/").pop();
   const shareRes = await ali.getFilesByShareId(shareId);
-  //  console.log(shareRes, shareLink);
+  console.log(shareRes, shareLink);
   const isMatch =
     shareRes.creator_name === "Tac***924" &&
     shareRes.share_name?.includes("更新中");
