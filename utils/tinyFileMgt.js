@@ -40,7 +40,7 @@ class TinyFileMgt {
       if (!pathname) return false;
       const plist = pathname.split("/").filter(Boolean);
       const p = plist.slice(0, Math.max(plist.length - 1, 0)).join("/"),
-        url = `${this.origin}/index.php?p=${p}&edit=${plist.pop()}`,
+        url = `${this.origin}/index.php?p=${p}&edit=${plist[plist.length - 1]}`,
         token = await this.getCsrfToken(),
         data = {
           ajax: true,
@@ -48,13 +48,22 @@ class TinyFileMgt {
           type: "save",
           token,
         };
-      return fireFetch(url, {
+
+      const resp = await fireFetch(url, {
+        raw: true,
         method: "POST",
-        headers: { cookie: this.cookie },
+        headers: {
+          cookie: this.cookie,
+          "Content-Type": "application/json; charset=UTF-8",
+        },
         body: JSON.stringify(data),
       });
+      console.log(`Tiny File Manager 编辑文件${pathname}响应：${resp.status}`);
+      const res = await resp.text();
+
+      return +res === 1;
     } catch (e) {
-      console.log(e);
+      console.log("Tiny File Manager 编辑异常：", e);
       return false;
     }
   }
