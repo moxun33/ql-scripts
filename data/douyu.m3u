@@ -1,7 +1,1281 @@
 #EXTM3U
-#EXTINF:-1 group-title="斗鱼" tvg-id="9249162", 【UHD杜比视界】【极清4K】7.1声道杜比全景声
-http://openhls-tct.douyucdn2.cn/dyliveflv3/9249162r3CrMAqsA.flv?txSecret=e891cdc34d44653277dfe3e10094d41b&txTime=6499313f&token=h5-douyu-0-9249162-7b8c8fde3528d4fa6e604503bab5a10c&did=10000000000000000000000000001501&origin=tct&vhost=play3&sid=353949807
+#EXTINF:-1 group-title="斗鱼" tvg-id="9249162", 【UHD杜比视界】【4K HDR】Dolby Atmos
+http://openflv-huos.douyucdn2.cn/live/9249162rBHN5tFDe.flv
 #EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4549169", 【橙記Orange丶】「橙記」「最人气港剧直播间」
-http://openhls-tct.douyucdn2.cn/dyliveflv1/4549169rZnGC6aia.m3u8?txSecret=d44ad7c728e44f6a3c44cef177fa2856&txTime=64993140&token=h5-douyu-0-4549169-82b78f0c62f1847c2fc2fcaacaec13a4&did=10000000000000000000000000001501&origin=tct&vhost=play1&sid=341233384
+http://openflv-huos.douyucdn2.cn/live/4549169rZnGC6aia.m3u8
 #EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="431460", 【baby丶贝贝】【贝贝】AI补帧 军旅 历史 喜剧 动作
-http://openhls-tct.douyucdn2.cn/dyliveflv1/431460rrhSOIDkva.m3u8?txSecret=6d5cc0d6a4ee3768f0df63302d732931&txTime=64993141&token=h5-douyu-0-431460-9f59ab59975bec331eedb7e43a24e590&did=10000000000000000000000000001501&origin=tct&vhost=play1&sid=346288213
+http://openflv-huos.douyucdn2.cn/live/431460rrhSOIDkva.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="434971", 【活捉一只小怡寶】❤️怡寶❤️ 港台 科幻 动作 喜剧
+http://openflv-huos.douyucdn2.cn/live/434971rCzlUSPTTV.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3928", 【萌小鬼】【小鸽陪看】华语热门影视剧
+http://openflv-huos.douyucdn2.cn/live/3928r9p0BHMDG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="96577", 【UU娇哒哒呀】❤️小U❤️丧尸 鬼片 恐怖 惊悚 电影
+http://openflv-huos.douyucdn2.cn/live/96577rAw9S7yCBoA.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="920389", 【小雪宝cr】❤️张无忌❤赵敏
+http://openflv-huos.douyucdn2.cn/live/920389rKYHP2bIec.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7537296", 【周杰伦颜老师】❤️周杰伦❤️音乐电影MV神级现场演唱会
+http://openflv-huos.douyucdn2.cn/live/7537296rJTOVyqN9.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="323876", 【Rainsunn】【小宇60帧】动作 喜剧 灾难 超清陪看
+http://openflv-huos.douyucdn2.cn/live/323876r9pZ4MV0eM.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="747764", 【伊太刀刀】【女神金】60帧 蓝光原画 刀刀陪看
+http://openflv-huos.douyucdn2.cn/live/747764r51t1x5VMY.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6863367", 【爱情公寓vip】❄️❤️胡一菲❤❄️挂机勿扰
+http://openflv-huos.douyucdn2.cn/live/6863367rHUX03X3m.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="263824", 【吃奶滴虫】❤️奶虫❤️恐怖 丧尸 鬼片 灾难科幻
+http://openflv-huos.douyucdn2.cn/live/263824ruQLFrnDLG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9586235", 【小雪宝的爱情公寓】❤️张无忌❤️赵敏❤️
+http://openflv-huos.douyucdn2.cn/live/9586235rn0H5WVkC.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="74374", 【Poison丶冰冰】❤️冰冰❤️恐怖经典喜剧和你一起
+http://openflv-huos.douyucdn2.cn/live/74374rew2XG4hgXu.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11404041", 【爱情公寓vip006】❤️韦小宝❤️小桂子❤️
+http://openflv-huos.douyucdn2.cn/live/11404041r6rIRjq5.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1735337", 【菜园小饼QvQ】❤️小饼❤️偶尔打游戏的电影直播间
+http://openflv-huos.douyucdn2.cn/live/1735337rwXmtZwL1.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7925840", 【一个萌萌小鸭】❤鸭鸭❤下午两点见
+http://openflv-huos.douyucdn2.cn/live/7925840rlIjkywwA.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9461178", 【岚晚湾】该女主播曾获自己和自己玩儿大赛一等奖
+http://openflv-huos.douyucdn2.cn/live/9461178rvMe8ePL1.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7305938", 【是云宝呢】很高兴认识你  7305938
+http://openflv-huos.douyucdn2.cn/live/7305938rYtpyWj9s.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3186217", 【十七岁的道姑】【斗鱼音乐】MV 华语 热歌 经典 流行
+http://openflv-huos.douyucdn2.cn/live/3186217rlPOXO5Ti.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="329667", 【我们可爱的程程】【斗鱼最强女团】Kpop女团点播直播间
+http://openflv-huos.douyucdn2.cn/live/329667rY8B1Fp0YW.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3870925", 【竹叶的熊猫】斗鱼音乐MV频道&nbsp;车载音乐
+http://openflv-huos.douyucdn2.cn/live/3870925rVUN3NgMG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="52787", 【春卷大师】【花卷陪看】豆瓣高评分电影
+http://openflv-huos.douyucdn2.cn/live/52787rc6U56sIbZq_1024p.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="315457", 【吃米滴虫】【香港赌片】喜剧、黑帮、动作、武侠、经典
+http://openflv-huos.douyucdn2.cn/live/315457rYgPR3LxvN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1226741", 【粤语电影丶】【粤语电影】吴孟达 达叔 周星驰 经典
+http://openflv-huos.douyucdn2.cn/live/1226741rariQdYzc.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4246519", 【Only丶邵氏】【邵氏影院】经典武侠 动作 老电影你懂的
+http://openflv-huos.douyucdn2.cn/live/4246519rSp7fQYXz.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5033502", 【小粤兒】【话事人】粤语【周星驰】【林正英】
+http://openflv-huos.douyucdn2.cn/live/5033502rDD7SBglG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2935323", 【丶小跟班丿瑶瑶】【瑶瑶】童年阴影 鬼片 恐怖 惊悚
+http://openflv-huos.douyucdn2.cn/live/2935323rQ44MKOAU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1377142", 【丢了魂的凌儿】哈哈一笑 烦恼全消
+http://openflv-huos.douyucdn2.cn/live/1377142rF51P65EP.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="17732", 【7师傅】清晨醒脑！T-ARA根本停不下来！
+http://openflv-huos.douyucdn2.cn/live/17732rtara.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7701735", 【菜园小饼QwQ】❤小饼❤蓝光 胡八一 经典电视剧
+http://openflv-huos.douyucdn2.cn/live/7701735rFioDpHHj.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4373285", 【傲娇的超级赛亚人】傲娇的超级赛亚人的直播间
+http://openflv-huos.douyucdn2.cn/live/4373285rp7BLWY4M.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3700024", 【小姐姐不记得】❤️下饭神剧❤️
+http://openflv-huos.douyucdn2.cn/live/3700024rOQIwC29d.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1360303", 【梅西大圣】【经典影视韩国车模小刚歌】
+http://openflv-huos.douyucdn2.cn/live/1360303rpq6QMiIA.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1409682", 【一条小姽婳】【姽婳】九亿少男的梦
+http://openflv-huos.douyucdn2.cn/live/1409682rYjbdbpJi.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6672229", 【桐谷和人K】美服冲分之旅
+http://openflv-huos.douyucdn2.cn/live/6672229rB1ZQVIn7.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="508118", 【网神影厅】【多多陪看】经典  动作 科幻 二战
+http://openflv-huos.douyucdn2.cn/live/508118rIJpYILDan.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="413573", 【宇哥Rebirth】【宇哥】总有你没看过的经典
+http://openflv-huos.douyucdn2.cn/live/413573rKeB3lEijU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2436390", 【v刺猬猪v】译制国语影片荟萃
+http://openflv-huos.douyucdn2.cn/live/2436390rj1NBexxN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9242659", 【猫丶記】【猫猫陪看】ッ超清、超经典
+http://openflv-huos.douyucdn2.cn/live/9242659rDv2nQlP0.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10672106", 【yue00月儿】不不一样的风格
+http://openflv-huos.douyucdn2.cn/live/10672106rCPdP8qr.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7495810", 【安韵家丶萝卜君】愿所有善良都被温柔以待！感谢大家的喜爱！
+http://openflv-huos.douyucdn2.cn/live/7495810r5e7H9LNc.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9129814", 【拖着鞋的老拖】【港片细品】主创视角 挖掘深度的魅力
+http://openflv-huos.douyucdn2.cn/live/9129814ra3wDTHFx.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10198644", 【好萌的企鹅393】【西游】由爱故生怨，怨恨纠缠
+http://openflv-huos.douyucdn2.cn/live/10198644rpXYpBTA.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2535105", 【齐如安希达】【高分经典】美好源于一颗善良感恩的心
+http://openflv-huos.douyucdn2.cn/live/2535105r38ETHNrx.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3811092", 【苟或不是狗货】【电影天堂】优秀电影展播
+http://openflv-huos.douyucdn2.cn/live/3811092ro8zuoT52.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8861179", 【晚晚Vivi】晚晚一起看频道
+http://openflv-huos.douyucdn2.cn/live/8861179rSorPHWXC.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1772685", 【城丶城】娱乐 和平区
+http://openflv-huos.douyucdn2.cn/live/1772685riHt2TMgn.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9974197", 【小derder哟】韩国小姐姐嘎嘣脆
+http://openflv-huos.douyucdn2.cn/live/9974197rhlCVAChu.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11433506", 【听风的雨230】50个648新区开荒
+http://openflv-huos.douyucdn2.cn/live/11433506rJevr0Co.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10783449", 【残疾人一玩游戏】自*娱*自*乐
+http://openflv-huos.douyucdn2.cn/live/10783449rKl5ahzC.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10815131", 【静静发呆0000】【阿呆】静静发呆休闲放松轻音乐
+http://openflv-huos.douyucdn2.cn/live/10815131rN0DpkBC.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9651860", 【好福气来了】无敌炸洋芋
+http://openflv-huos.douyucdn2.cn/live/9651860r5ytWu4O8.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9674665", 【邂逅荌静旳淺笑】最近好听的歌单 9674665
+http://openflv-huos.douyucdn2.cn/live/9674665rDXQetZtJ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9824094", 【大米饭影视】【喜剧电影】最全搞笑喜剧，从这一刻开始
+http://openflv-huos.douyucdn2.cn/live/9824094rTkhggWvy.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9127438", 【天柱男孩】小度播声优
+http://openflv-huos.douyucdn2.cn/live/9127438rELnS1PvG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5982597", 【卖爆鱼的小姑娘】荒野大镖客⁠
+http://openflv-huos.douyucdn2.cn/live/5982597r00ZxZh7r.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3922675", 【回头OvO】[老陈]3*4已出 有车位可上车
+http://openflv-huos.douyucdn2.cn/live/3922675ryX7ptKWc.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9387499", 【主播拍个肚皮】斗鱼下饭娱乐主播直播间
+http://openflv-huos.douyucdn2.cn/live/9387499r5VvQvxeK.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9262563", 【若轻云之蔽月兮】不羡鸳鸯不羡仙啊
+http://openflv-huos.douyucdn2.cn/live/9262563rRr0hMTll.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9838414", 【檬檬姐377】电视剧 电影 歌曲
+http://openflv-huos.douyucdn2.cn/live/9838414rZJW6BK1E.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6916081", 【搞笑天堂岛】搞笑天堂岛
+http://openflv-huos.douyucdn2.cn/live/6916081r8OFP0jux.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="85894", 【进击的神乐】【神乐】华语 经典 电影 沈腾 周杰伦
+http://openflv-huos.douyucdn2.cn/live/85894rmovieChow.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="122402", 【进击の神乐】【周星驰】星爷 华语 成龙 电影 神乐
+http://openflv-huos.douyucdn2.cn/live/122402rK7MO9bXSq.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="252802", 【狂仔酷炫】【贝爷影厅】经典 科幻 动作 灾难 巨兽
+http://openflv-huos.douyucdn2.cn/live/252802rmhtXUVKVq.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="20415", 【少女可乐橙】✨电影 欧美 科幻 经典✨
+http://openflv-huos.douyucdn2.cn/live/20415rnWbjg6Ex1K.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="218859", 【UnaDirezione】【林正英】僵尸 女鬼 弹幕 护体
+http://openflv-huos.douyucdn2.cn/live/218859rzEr3oZuqR.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2838296", 【韓美兮】✨曾小贤✨胡一菲✨第三季✨
+http://openflv-huos.douyucdn2.cn/live/2838296rPe3peiyl.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4332", 【狂拽酷炫】【贝爷MAX厅】科幻 动作 经典 喜剧
+http://openflv-huos.douyucdn2.cn/live/4332rSxt7lW1cTCl.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="36337", 【酷炫小剧场】【贝爷影厅】欧美 日韩 国产 2号厅
+http://openflv-huos.douyucdn2.cn/live/36337rSWMEBupLDZ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11639123", 【卿祛病】易小川 赵高 原音原版！！
+http://openflv-huos.douyucdn2.cn/live/11639123rM1bKxMj.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3337730", 【gtfobae666】【欢迎光临直播间】
+http://openflv-huos.douyucdn2.cn/live/3337730rtWFQOoTn.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6566671", 【超甜小野喵】粤语电影⭐周星驰 林正英 经典喜剧 白话
+http://openflv-huos.douyucdn2.cn/live/6566671rZmlSnJM8.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6778282", 【東南西北方不敗】贾队长~原版独播、
+http://openflv-huos.douyucdn2.cn/live/6778282rbsnOJVm8.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10084875", 【搞笑一家人丶刺儿头】⭐修复版⭐国配经典⭐
+http://openflv-huos.douyucdn2.cn/live/10084875rI00n1yx.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="299854", 【贾贵队长真男神】鼎香楼的故事
+http://openflv-huos.douyucdn2.cn/live/299854rQpvAGW60f.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6648727", 【家有儿女杨紫下饭剧】开心情景剧-超清去片头片尾
+http://openflv-huos.douyucdn2.cn/live/6648727r72GUgYbQ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9638983", 【爱情公寓CP贤菲】全程高能，爆笑如雷
+http://openflv-huos.douyucdn2.cn/live/9638983rUOonsjvW.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9639508", 【新三国蓝光4K】经典超清情景剧
+http://openflv-huos.douyucdn2.cn/live/9639508rLs6kFrYd.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5472438", 【小瑟瑟西游专场】〖小瑟瑟西游房〗三部曲86版+续集+后传
+http://openflv-huos.douyucdn2.cn/live/5472438rj4Raz7Hz.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7642724", 【米尼影院】【米尼影院】经典电视剧
+http://openflv-huos.douyucdn2.cn/live/7642724r0hXs4nvY.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9650860", 【龙飞凤舞宝藏号】【龙门】天山勾地火，宝塔镇蛇妖
+http://openflv-huos.douyucdn2.cn/live/9650860rxfI8jasU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7253343", 【喷子OAO】最爱贾萌萌
+http://openflv-huos.douyucdn2.cn/live/7253343rHFQUmMoV.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11483118", 【千恨凝】千恨凝的直播间
+http://openflv-huos.douyucdn2.cn/live/11483118rLeLutbl.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9236042", 【小小甜的骑士】【吐槽】吐槽一下，快乐一天
+http://openflv-huos.douyucdn2.cn/live/9236042r0oSSw55H.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6332732", 【老王陪你看动漫】片源多多，欢迎点播
+http://openflv-huos.douyucdn2.cn/live/6332732rysvXHsuv.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6369954", 【恨鐵】顺风为主 其他情喜影剧集锦为辅 随机连播
+http://openflv-huos.douyucdn2.cn/live/6369954r8uPDIcgC.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2516864", 【网友小青】【刘德华】庆祝华仔出道40周年
+http://openflv-huos.douyucdn2.cn/live/2516864rW6W7JBy4.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9650849", 【黄粱一梦l蓦然回首】【美食】舌尖上的火锅，美食不可辜负
+http://openflv-huos.douyucdn2.cn/live/9650849rfaF4tvhY.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11654506", 【格子小帅1234】情景喜剧24小时轮播
+http://openflv-huos.douyucdn2.cn/live/11654506rGwJ51oP.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9292492", 【非一般的视觉体验】【笑场】喜剧电影专场
+http://openflv-huos.douyucdn2.cn/live/9292492ruYKOtm7V.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11683049", 【他山之事】【经典喜剧】 11683049
+http://openflv-huos.douyucdn2.cn/live/11683049rb3EuCFg.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8066352", 【祁乐丶】【爆笑】从无到有，一路开心
+http://openflv-huos.douyucdn2.cn/live/8066352rEQbHhn6t.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11125111", 【斯内克你的益达】张伟吕小布
+http://openflv-huos.douyucdn2.cn/live/11125111rtVqmWnl.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7421687", 【说好的我们一起白嫖呢】【沙雕】五毛特效，大战恶龙
+http://openflv-huos.douyucdn2.cn/live/7421687rqjtI8CmD.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9392610", 【傲娇一喵喵】韩式搞怪（路人成为C位中心）
+http://openflv-huos.douyucdn2.cn/live/9392610rNE4f8dqE.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11274276", 【有故事的范同学】11274276的直播间
+http://openflv-huos.douyucdn2.cn/live/11274276raYxkj0Y.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11451908", 【Leon6101】情满帝斯顿
+http://openflv-huos.douyucdn2.cn/live/11451908rdC4dohj.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10645968", 【LOL主播酱呀】你们快乐嘛？
+http://openflv-huos.douyucdn2.cn/live/10645968rxF2vuxf.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11353513", 【HSG丶Yami樱琪】爆笑虫子-24小时卡通屋
+http://openflv-huos.douyucdn2.cn/live/11353513r9fOH6dN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7194142", 【你看见我U盘没】如果卡碟是断网主播看到了会修
+http://openflv-huos.douyucdn2.cn/live/7194142rg8r07alq.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="338759", 【傲娇的虾虾】金庸武侠、古装神剧
+http://openflv-huos.douyucdn2.cn/live/338759rsiGuCYR82.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3439096", 【当燕双鹰遇见李元芳】杀死燕双鹰，活捉狄仁杰！
+http://openflv-huos.douyucdn2.cn/live/3439096rcCtsfEYS.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11618658", 【回忆总是陌路丶】[回忆港剧]卧底 枪战 悬疑破案 就刚啊
+http://openflv-huos.douyucdn2.cn/live/11618658ra6iboup.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11651155", 【Re爱吃小龙虾】[范闲]吟诗作对，诗神附体~~
+http://openflv-huos.douyucdn2.cn/live/11651155rRwpekoW.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11543347", 【自在仙丶望月者】一个环境证据顶十个证人 空穴来风未必无因
+http://openflv-huos.douyucdn2.cn/live/11543347rISFMXjz.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11553944", 【小黛兮丶】[金庸经典]他自狠来他自恶我自一口真气足
+http://openflv-huos.douyucdn2.cn/live/11553944roMs1spy.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4346416", 【爱画画的奶糖】sSs女团好多漂亮小姐姐又猛！
+http://openflv-huos.douyucdn2.cn/live/4346416ryBb8zVvI.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6027991", 【当幽兰剑遇上链子刀】元芳到底看不看
+http://openflv-huos.douyucdn2.cn/live/6027991rGtrNiK2R.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5875025", 【当铁手团遇到光复社】【神剧】【燕双鹰】【狄仁杰】
+http://openflv-huos.douyucdn2.cn/live/5875025rvxwwEvn2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8157860", 【甘凌宝宝】【番号】入万军丛中，取上将头颅
+http://openflv-huos.douyucdn2.cn/live/8157860rePLeZgNH.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7655471", 【脑袋大1937】《武侠剧》
+http://openflv-huos.douyucdn2.cn/live/7655471rSlkcSckJ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8107217", 【魚的左手】高帧连播[成龙/李连杰]
+http://openflv-huos.douyucdn2.cn/live/8107217rxm7Znpqf.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10946883", 【Hi情鸽occ】【亮有一计~】
+http://openflv-huos.douyucdn2.cn/live/10946883rI90ZdUZ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7575350", 【佳佳的全世界】【逃出监狱】兄弟情，是真的
+http://openflv-huos.douyucdn2.cn/live/7575350rcOvuChnp.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3379942", 【南波儿的柠檬】【成龙】给我一把板凳，我可以打10个！
+http://openflv-huos.douyucdn2.cn/live/3379942roQvYXFqr.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9290755", 【这夜空中最亮的星】【步惊云】金鳞岂是池中物，一遇风云便化龙
+http://openflv-huos.douyucdn2.cn/live/9290755rD9L6Ct3F.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11487373", 【用户66576676】随便播播！ 11487373
+http://openflv-huos.douyucdn2.cn/live/11487373r1SfZbJq.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7810803", 【胸弟团丶嫣嫣】【使徒】做兄弟,在心中
+http://openflv-huos.douyucdn2.cn/live/7810803r2EU7DYIJ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8366759", 【Miss北月】【嘎子】我不偷狗了！
+http://openflv-huos.douyucdn2.cn/live/8366759rqqcHirYn.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9292499", 【冯人苑】【邦德】再帮我一个忙，让我消失
+http://openflv-huos.douyucdn2.cn/live/9292499rWHwYPYUF.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9738876", 【天笑演播厅】欢迎观看精彩影视
+http://openflv-huos.douyucdn2.cn/live/9738876rRAWPPlo8.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8721095", 【过往1908】【李小龙】以无法为有法，以无限为有限
+http://openflv-huos.douyucdn2.cn/live/8721095rbncmXoM8.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10771089", 【侃片说剧】［侃片说剧］悬疑 励志 动作 喜剧片
+http://openflv-huos.douyucdn2.cn/live/10771089rSVJli3I.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="310926", 【久了旧知】【恐怖电影】 僵尸 丧尸 灾难片
+http://openflv-huos.douyucdn2.cn/live/310926rq711O65Kh.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11649079", 【烟雨抚风】[烟雨法政] 人会说谎，证据不会
+http://openflv-huos.douyucdn2.cn/live/11649079r2xjBZF7.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11678039", 【财神爷来了呀】[提刑官]假的就是假的，是经不起检验的
+http://openflv-huos.douyucdn2.cn/live/11678039rLdc3UZd.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11578014", 【灬魔丶力灬】想听听我的故事吗？元芳你怎么看？
+http://openflv-huos.douyucdn2.cn/live/11578014rc6xzD7x.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11606410", 【微醺的月色鹿】[洗冤鹿]只有心无杂念 才能目不斜视
+http://openflv-huos.douyucdn2.cn/live/11606410rFSMGjfv.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11544610", 【嫒沵芯卟浍变】「狄仁杰」元芳怎么看
+http://openflv-huos.douyucdn2.cn/live/11544610riYC90vA.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11578904", 【绛橘色的落丶】证据说事 破案还靠证据 [绛橘刑侦港剧]
+http://openflv-huos.douyucdn2.cn/live/11578904rZXsXsYH.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6091425", 【永远快乐的小美女】❤️经典影视台❤️
+http://openflv-huos.douyucdn2.cn/live/6091425rQeVxCl6n.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="922564", 【卖女孩滴小姑凉】【悍匪】技术学院
+http://openflv-huos.douyucdn2.cn/live/922564r16kGeCIHB.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3395113", 【叶wl子】狄仁杰：元芳，搬板凳来，给主播点点关注
+http://openflv-huos.douyucdn2.cn/live/3395113ryJJaNcMW.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6581531", 【宝姐x】♥ 港剧 动漫 美剧❤️
+http://openflv-huos.douyucdn2.cn/live/6581531rduKUBHs3.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7476264", 【老王陪你看电视】片源多多，欢迎点播 7476264
+http://openflv-huos.douyucdn2.cn/live/7476264rbptUJJSj.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9965018", 【小雨有点甜丶】狄大人：元芳到底看不看
+http://openflv-huos.douyucdn2.cn/live/9965018r27d0BQQB.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6906628", 【小毅主播q】(小毅）林正英，女鬼，僵尸，护体
+http://openflv-huos.douyucdn2.cn/live/6906628r7C64HCKn.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="138959", 【芒果酱Mangoo】【刑侦】饿不饿，要不要下一碗面吃呀
+http://openflv-huos.douyucdn2.cn/live/138959rtlnbR7dyU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7882691", 【菜叔巭硬】【小趴菜】艺术成分很高
+http://openflv-huos.douyucdn2.cn/live/7882691rCF6QdVqc.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8945323", 【张二千11】【屠龙】凛冬将至，夜王之争
+http://openflv-huos.douyucdn2.cn/live/8945323ryHy4jdYz.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8323493", 【米苏苏ya】【鉴证】刑侦破案，线索追凶
+http://openflv-huos.douyucdn2.cn/live/8323493rzJHmJ4H9.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="931984", 【24192593】看经典影视,品百味人生&rarr;李元芳
+http://openflv-huos.douyucdn2.cn/live/931984r08RhhgCQd.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1165374", 【鱼宝好困】【恐怖】经典 恐怖 鬼怪 剧场
+http://openflv-huos.douyucdn2.cn/live/1165374r1mVTiqxH.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9019945", 【美娘家的猪猪】【卓sir】我想当卧底！当座馆！
+http://openflv-huos.douyucdn2.cn/live/9019945rgKB6FRpX.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5802446", 【小小亭长】专业烧脑 一个安静的直播间
+http://openflv-huos.douyucdn2.cn/live/5802446rfVepOBPK.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9290734", 【我也想要一个千反田】【美食纪录片】一起了解中华美食的奥秘！
+http://openflv-huos.douyucdn2.cn/live/9290734rfhlccEA7.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9682807", 【民间鬼故事系列】深夜直播间 9682807
+http://openflv-huos.douyucdn2.cn/live/9682807rHxbYjtRN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7823577", 【若非从前声声慢】大人真乃神人也
+http://openflv-huos.douyucdn2.cn/live/7823577rhaf6DUEp.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10859591", 【易说影视】易说影视的直播间
+http://openflv-huos.douyucdn2.cn/live/10859591rBJwOZu2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="426517", 【晓晓666666】晓妞动漫花园o(∩_∩)o
+http://openflv-huos.douyucdn2.cn/live/426517rcmdsUEIFV.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11168482", 【未以灬】每日玩游戏
+http://openflv-huos.douyucdn2.cn/live/11168482rNNNEsGL.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9886799", 【雨落漠城】做做任务啥的
+http://openflv-huos.douyucdn2.cn/live/9886799roysoyIPF.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11235028", 【用户745991828】用户745991828的直播间
+http://openflv-huos.douyucdn2.cn/live/11235028ruBwgbre.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10159456", 【拾荒1F1F】凹深渊ing123
+http://openflv-huos.douyucdn2.cn/live/10159456rAk2iatN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1174353", 【苹果Zei甜】【动漫】超燃 怀旧 经典
+http://openflv-huos.douyucdn2.cn/live/1174353ryq4yuxQR.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7528160", 【很优美】✨爱你孤身走暗巷！爱你不跪的模样✨
+http://openflv-huos.douyucdn2.cn/live/7528160rqiRoTgaU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1487654", 【龍組队长天昊】与斗鱼一起，续光未来！
+http://openflv-huos.douyucdn2.cn/live/1487654rorcf3RdI.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5377297", 【柠檬的酸灬】江户川柯南，是一个蒸蛋。
+http://openflv-huos.douyucdn2.cn/live/5377297rjO0PfGtj.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1569773", 【甜漫妮666】【回首往事】仨房间画面同步显示
+http://openflv-huos.douyucdn2.cn/live/1569773r1KTfq1cD.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6484910", 【名侦探柯南之银色子弹】【柯南】外表看似小孩，智慧却过于常人
+http://openflv-huos.douyucdn2.cn/live/6484910r773RqY3Y.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2287949", 【成龙历险纪】还有一件事
+http://openflv-huos.douyucdn2.cn/live/2287949rAlPn96sj.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3949681", 【菠萝屋的海绵宝宝】大星与海绵方块
+http://openflv-huos.douyucdn2.cn/live/3949681rpWadpnBP.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1218414", 【我砸晕了牛顿奥】♥卡面来打♥
+http://openflv-huos.douyucdn2.cn/live/1218414rbXf5WvJ5.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7256376", 【多发几个思雨】【童年往事】仨房间画面同步显示点播
+http://openflv-huos.douyucdn2.cn/live/7256376r15x9amAN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6610883", 【魔术师丶西索】【Hunter】动漫 热血 老贼 冒险
+http://openflv-huos.douyucdn2.cn/live/6610883rla81puzq.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="997925", 【草帽丶海贼团】草帽丶海贼团的直播间
+http://openflv-huos.douyucdn2.cn/live/997925rCsHbrHxNN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8231658", 【cym009】熟悉的小当家她来了
+http://openflv-huos.douyucdn2.cn/live/8231658rRFgURt8U.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8762358", 【金色办卡】美味！蟹黄堡
+http://openflv-huos.douyucdn2.cn/live/8762358r1bNvOwt2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6528409", 【林朗Am】乌鸦坐飞机-黑虎阿福
+http://openflv-huos.douyucdn2.cn/live/6528409rzVtP7OJb.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5189447", 【名侦探柯南丶美琪】【银色子弹】我是一名侦探！
+http://openflv-huos.douyucdn2.cn/live/5189447rPeV2GY6T.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1783144", 【柱子Yang】万年如一柯播南，各位给点电费吧
+http://openflv-huos.douyucdn2.cn/live/1783144rovsu9yH2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7286439", 【卿离倾心】☆卡卡罗特☆
+http://openflv-huos.douyucdn2.cn/live/7286439rsYbJy57e.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3125411", 【Snow丶风信】逐风者-刚满级防骑 B13本开刷
+http://openflv-huos.douyucdn2.cn/live/3125411rSfItSLwl.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2987298", 【老孙聊游戏】★★★★★老孙聊游戏：怀旧游戏
+http://openflv-huos.douyucdn2.cn/live/2987298r5W41s2H6.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10956818", 【奥兹华斯】童年怀旧动画轮播
+http://openflv-huos.douyucdn2.cn/live/10956818rN89WUMh.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7050342", 【残存0】【三笠】根本不存在解不开的迷！
+http://openflv-huos.douyucdn2.cn/live/7050342rp218dDka.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7620081", 【我不懂dota2】【动漫合集】皮克斯、Conan看不停
+http://openflv-huos.douyucdn2.cn/live/7620081r5Ns1d5bW.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5692901", 【壹丨哥】[ 天天娱乐 ]
+http://openflv-huos.douyucdn2.cn/live/5692901r4cfpNhMb.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="216397", 【妖l幻羽】台配国语日漫
+http://openflv-huos.douyucdn2.cn/live/216397r6ZSAqzKSy.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11417096", 【在沵背后】鱼丸 看动画片，多多关注支持
+http://openflv-huos.douyucdn2.cn/live/11417096rip4HMtP.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11184164", 【林小二动画】各位看官走过路边进来坐坐
+http://openflv-huos.douyucdn2.cn/live/11184164r8uor7gU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11698996", 【小米邹和哎哟韦】问谁能拒绝4k画质治愈系动漫宫崎骏
+http://openflv-huos.douyucdn2.cn/live/11698996rnabL3Xr.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11178171", 【晓飞做动漫】晓飞做动漫的直播间
+http://openflv-huos.douyucdn2.cn/live/11178171rqPbCasK.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11700243", 【讨厌芹菜761】讨厌芹菜的直播间
+http://openflv-huos.douyucdn2.cn/live/11700243rDY1E4KI.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="772654", 【帝诺哥】直播做动画，零基础就能做，你也可以哦！
+http://openflv-huos.douyucdn2.cn/live/772654rm8clVxfKG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2427922", 【沐羽芊儿】治愈系-放松身心休息下吧
+http://openflv-huos.douyucdn2.cn/live/2427922rJWq2b46A.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11595245", 【再不减肥就胖成球了】恰饭了恰饭
+http://openflv-huos.douyucdn2.cn/live/11595245rdCDdjba.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10646699", 【天才大熊猫啊】搞笑段子日常更新 点点关注
+http://openflv-huos.douyucdn2.cn/live/10646699rsexdcPx.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11491958", 【梦尽310】梦尽310的直播间
+http://openflv-huos.douyucdn2.cn/live/11491958rE5IAHPo.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11645048", 【灬梅子丶】总得拼一拼，对不对？ 师姐[梅子]
+http://openflv-huos.douyucdn2.cn/live/11645048rqrqVwTA.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9826611", 【老王陪你看大片】片源多多 欢迎点播
+http://openflv-huos.douyucdn2.cn/live/9826611r04maXt5g.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9650792", 【和平方法】9650792的直播间
+http://openflv-huos.douyucdn2.cn/live/9650792rYutAIDRi.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="276200", 【蓝翔新三国】【蓝翔】弹幕天团、下饭神剧[请勿刷屏]
+http://openflv-huos.douyucdn2.cn/live/276200rUcto31I2Q.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6566658", 【睡不着的小圆子】⭐⭐不进来看看嘛
+http://openflv-huos.douyucdn2.cn/live/6566658rHbUoyWU8.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5062195", 【安慕兮超好喝】✨韦小宝✨鹿鼎公✨韦爵爷✨小桂子✨
+http://openflv-huos.douyucdn2.cn/live/5062195rPsYNtuhd.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7459925", 【蓝翔老三国】【蓝翔】经典电视剧
+http://openflv-huos.douyucdn2.cn/live/7459925rjxKcfdq1.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11649972", 【沐沐超甜丫】谁不知道，三年清知府，十万雪花银呀！
+http://openflv-huos.douyucdn2.cn/live/11649972r2h0CKpV.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11391949", 【丨灬释怀灬丨】元芳入职前毁天灭地，入职后天天维权获利。
+http://openflv-huos.douyucdn2.cn/live/11391949rqzlxIya.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="260322", 【懒猫是只喵】懒猫 美食家 点播
+http://openflv-huos.douyucdn2.cn/live/260322rLERwzkrHC.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9071554", 【大麦青汁Fl】【纪晓岚】莫说百无一用是书生
+http://openflv-huos.douyucdn2.cn/live/9071554rmZUDXmCR.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6582435", 【師落】〖師落〗蒹葭苍苍  白露为霜
+http://openflv-huos.douyucdn2.cn/live/6582435rsclwXdij.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5522351", 【疯狂小潴潴】【超清2】热门港剧天地
+http://openflv-huos.douyucdn2.cn/live/5522351rmA6JCgaO.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10348728", 【702放映厅】原版配乐⭐许三多 迷茫必看⭐
+http://openflv-huos.douyucdn2.cn/live/10348728rkr3BfLE.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10019937", 【七落SevenFall】【犯罪】【真实案例】【刑侦】
+http://openflv-huos.douyucdn2.cn/live/10019937rXcOrM16.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9633542", 【庆余年丶范闲丶王启年】范闲4K超清、下饭神剧
+http://openflv-huos.douyucdn2.cn/live/9633542rbJ4EpVWG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4105989", 【聚聚聚一个月】【倍速播放】快乐会加倍！
+http://openflv-huos.douyucdn2.cn/live/4105989rFvZhe9OI.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7623292", 【鯋鱼辰辰】【电视剧】本直播间由天使点播提供技术支持
+http://openflv-huos.douyucdn2.cn/live/7623292r9YXDQUsh.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8600645", 【用户0036218064】【德善】所谓胡同就是，用时间来造就朋友
+http://openflv-huos.douyucdn2.cn/live/8600645r19vFdIJH.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9548850", 【飘洋过海来】欢声笑语过大年
+http://openflv-huos.douyucdn2.cn/live/9548850ruR2u9Vlm.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7356023", 【一把钢刀镇斗虞】全网最清晰林正英僵尸道长
+http://openflv-huos.douyucdn2.cn/live/7356023r2AjAVwu0.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5127679", 【老衲智真】懒懒壁虎的直播间
+http://openflv-huos.douyucdn2.cn/live/5127679robDL0npD.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8953746", 【都是奔奔的错丶】【六小龄童】你挑着担，我牵着马
+http://openflv-huos.douyucdn2.cn/live/8953746rRG9WreG9.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="2726977", 【不愿透露姓氏的林百万】【刘华强】你这呱保熟吗
+http://openflv-huos.douyucdn2.cn/live/2726977rKXFmyxmb.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3756989", 【ryandradian】【樊胜美】天下无不散宴席,除了你自己
+http://openflv-huos.douyucdn2.cn/live/3756989rbivZlRg2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6861249", 【孤独的牧羊仁】【怀旧】姜子牙，孙悟空打妖怪的故事
+http://openflv-huos.douyucdn2.cn/live/6861249rP93NsOkx.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8787737", 【东大林俊杰】【闯关D】今日鲜儿要上山，敬请神灵多包涵
+http://openflv-huos.douyucdn2.cn/live/8787737rXIkJLKHc.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9176009", 【爱喝养乐多的派大星】【火线】电视剧版厨戏痞，正在放映
+http://openflv-huos.douyucdn2.cn/live/9176009rzU87s7Nw.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9650783", 【是晓葑呀】【古董】我们鉴的不是器物，而是人心
+http://openflv-huos.douyucdn2.cn/live/9650783rGQBO9XE2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5249466", 【MQings】谷立方直播
+http://openflv-huos.douyucdn2.cn/live/5249466rWrs13zH4.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9650782", 【是个小可爱iiii】【饭店】我们把装蒜当美学来修炼的
+http://openflv-huos.douyucdn2.cn/live/9650782rZfi5bD0z.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8507023", 【梦媛家的小杰哥】【严守一】太传统不好，太饭桶更不好
+http://openflv-huos.douyucdn2.cn/live/8507023rmKMbjyAu.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8595134", 【洋先生FT】钱债易还,情债难偿!
+http://openflv-huos.douyucdn2.cn/live/8595134rCAg9IWqN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10760490", 【胶星影画】【纯经典】影视剧、纪录片、游戏
+http://openflv-huos.douyucdn2.cn/live/10760490rw9sI7zZ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11695742", 【用户81398548】随便看剧情古装
+http://openflv-huos.douyucdn2.cn/live/11695742rru2LZUL.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3739680", 【长安德莱文】长安丶德莱文
+http://openflv-huos.douyucdn2.cn/live/3739680rCORxEwix.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="8223733", 【旺安影视】传承红色经典，弘扬爱国精神
+http://openflv-huos.douyucdn2.cn/live/8223733rzTDghjlE.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4627432", 【kura_yun】kura_yun的直播间
+http://openflv-huos.douyucdn2.cn/live/4627432rpddxwc48.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11279861", 【线条小狗a】我就是要做最高的赵高！！
+http://openflv-huos.douyucdn2.cn/live/11279861rlUWJMTr.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="11651489", 【花开跟开花】【花开】问世间情是何物，直教生死相许..
+http://openflv-huos.douyucdn2.cn/live/11651489r3qzVIuf.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="4290711", 【疯狂尛瀦瀦】【超清1】经典港剧天地
+http://openflv-huos.douyucdn2.cn/live/4290711relCpIiNx.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6911044", 【师落】〖師落〗家有诤子 不败其家
+http://openflv-huos.douyucdn2.cn/live/6911044rydOZlny2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5261342", 【牛奶味的梦猪猪】【超清3】人气港剧天地
+http://openflv-huos.douyucdn2.cn/live/5261342r1fyrpgj7.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7489563", 【大片片说小片】【庆帝】云淡风轻正闲处，鲜衣怒马少年时
+http://openflv-huos.douyucdn2.cn/live/7489563rRGzU6hqK.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="308752", 【微醺小白】【朱棣】笑天下可笑之人
+http://openflv-huos.douyucdn2.cn/live/308752rILapyzHsL.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7550220", 【酒酒酒酒酒染】【康熙】张国立在线扫H除恶
+http://openflv-huos.douyucdn2.cn/live/7550220rJvisu8FU.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="23808", 【电竞阆苑】故事里的事儿！ 23808
+http://openflv-huos.douyucdn2.cn/live/23808rliQtqIycZy.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5429211", 【经典搞笑电视剧】【经典搞笑电视剧】轮播♥高清
+http://openflv-huos.douyucdn2.cn/live/5429211rrMKGr8CB.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="6706214", 【夏夏夏夏夜丶】【冤案】夫斯乃上蔡布衣，闾巷之黔首
+http://openflv-huos.douyucdn2.cn/live/6706214rEXPkVcRd.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9650836", 【可达鸭联络员学某】【雍正】人无伤虎意,虎有吃人心
+http://openflv-huos.douyucdn2.cn/live/9650836rb7XhCeNQ.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="5448413", 【胡椒粉的胡歌】【胡椒粉的胡歌】 你清高，你了不起！
+http://openflv-huos.douyucdn2.cn/live/5448413rjQgdHEGG.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3113309", 【往事vs随风1】美丽的孔雀公主
+http://openflv-huos.douyucdn2.cn/live/3113309rAqwJIv6u.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7473576", 【i前尘忆梦】7473576的直播间
+http://openflv-huos.douyucdn2.cn/live/7473576r1Nz0ZVhN.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="10906963", 【koanluowei】不可能！我二弟天下无敌！
+http://openflv-huos.douyucdn2.cn/live/10906963rtaS9wX6.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1584198", 【橙沫小幺妹】【大秦】秦人不暇自哀，而后人哀之
+http://openflv-huos.douyucdn2.cn/live/1584198riaC7gvUa.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="3758762", 【诃德先生】【宋江】梁园虽好,不是久恋之家
+http://openflv-huos.douyucdn2.cn/live/3758762ruUQdOpxc.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9649681", 【百晓生说剧】【百晓生】经典武侠解说
+http://openflv-huos.douyucdn2.cn/live/9649681rTGvZZi4y.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1046540", 【xg6106100】四大名著（原版）
+http://openflv-huos.douyucdn2.cn/live/1046540r7a68hC3c.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9795096", 【用户9825736704】附近50米，你们有3个共同好友
+http://openflv-huos.douyucdn2.cn/live/9795096rfjqNKHZ2.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="1885999", 【一吻即逝万花随意】【经典】【电视剧】一起看 1885999
+http://openflv-huos.douyucdn2.cn/live/1885999rz0AB9dKm.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7552568", 【a萌小翘臀】【隋唐】与君共饮盏中酒，几人哀伤几人愁
+http://openflv-huos.douyucdn2.cn/live/7552568radktzbiB.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="9802821", 【A丶都市夜未央】新三国演绎
+http://openflv-huos.douyucdn2.cn/live/9802821rxsmgk4Zy.m3u8
+#EXTINF:-1 group-title="斗鱼【一起看】" tvg-id="7812810", 【Sy一渣男李元芳】范闲：我问你个事，你是刺客吗
+http://openflv-huos.douyucdn2.cn/live/7812810rBbN4tROj.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9220456", 【万合出品】【万合天宜】王大锤情怀上线
+http://openflv-huos.douyucdn2.cn/live/9220456r6BtxAozw.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9038894", 【李允儿er的助眠小窝】喜欢不要忘记关注哦
+http://openflv-huos.douyucdn2.cn/live/9038894rTNS8eOeX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="238643", 【顾止最爱的小胖宝贝】三倍快乐多重快乐（1000+视频）
+http://openflv-huos.douyucdn2.cn/live/238643rncrDDHpcN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9986305", 【来呀官人V】来呀官人，都是你的梦
+http://openflv-huos.douyucdn2.cn/live/9986305r8N0XMFhQ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9439712", 【科学放映室】带你体验宇宙时空之旅
+http://openflv-huos.douyucdn2.cn/live/9439712rDVi8o2Sg.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9336286", 【我为奥迪上黄金】这里全是名场面~
+http://openflv-huos.douyucdn2.cn/live/9336286rM843tQ6U.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8791622", 【尽整没用D】发现放映室
+http://openflv-huos.douyucdn2.cn/live/8791622ruQ8yop0D.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8657920", 【哇哇哇妹】【综艺】搞笑影视综艺解说时间到了！
+http://openflv-huos.douyucdn2.cn/live/8657920rnHimmdYF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9572351", 【蓝光乐队】蓝光乐队翻唱大合集！
+http://openflv-huos.douyucdn2.cn/live/9572351re7KVQxg1.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9382873", 【秀才侃娱乐】秀才侃娱乐
+http://openflv-huos.douyucdn2.cn/live/9382873rejA3hAQr.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9970047", 【风云I人物志】老牌香港明星的最全八卦~
+http://openflv-huos.douyucdn2.cn/live/9970047r0eaXnfge.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8666258", 【小姐姐Bie跑哦】小姐姐Bie跑哦的直播间
+http://openflv-huos.douyucdn2.cn/live/8666258rIHtSeZLb.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="296836", 【猪肉熟了】日本最新资讯速递
+http://openflv-huos.douyucdn2.cn/live/296836rRc4zbPs1E.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8828811", 【北大落说大片】恐怖电影，北大落说大片
+http://openflv-huos.douyucdn2.cn/live/8828811rDkxpUE1d.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9629943", 【音乐台长】音乐台长的直播间
+http://openflv-huos.douyucdn2.cn/live/9629943rcltGlmYl.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2894528", 【锦书致南辞阿】锦书致南辞
+http://openflv-huos.douyucdn2.cn/live/2894528r48AL3XJZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9662856", 【胖段段fre】影视绝美混剪轮播
+http://openflv-huos.douyucdn2.cn/live/9662856reLJRQWuH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9624581", 【娱乐扒叔】娱乐扒叔的直播间
+http://openflv-huos.douyucdn2.cn/live/9624581rejErsHZ0.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9329242", 【前任电影】前任电影的直播间
+http://openflv-huos.douyucdn2.cn/live/9329242rL9kMqK15.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1449125", 【飞碟说官方】【飞碟说】一分钟了解知识
+http://openflv-huos.douyucdn2.cn/live/1449125rghN7DcVN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9393577", 【沉郁观影】沉郁观影 带您看奇案
+http://openflv-huos.douyucdn2.cn/live/9393577rByAiF1d5.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9541736", 【3秒爱上学习V】变的沙雕起来了！！
+http://openflv-huos.douyucdn2.cn/live/9541736rKdSgggGi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8881729", 【9iota】那些6到让我们窒息的操作！
+http://openflv-huos.douyucdn2.cn/live/8881729rgtKbq8r7.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8850453", 【油兔不二字幕组】【娱乐】歪果仁的奇葩生活
+http://openflv-huos.douyucdn2.cn/live/8850453rlzqWHNhM.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="563536", 【DS女老诗】【DS女老诗】萌系萝莉 辛辣吐槽
+http://openflv-huos.douyucdn2.cn/live/563536rNCv7s6FNL.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8475821", 【哈利影视】好看影视剧
+http://openflv-huos.douyucdn2.cn/live/8475821rgQo62dhS.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8807568", 【竹儿公公】【高甜KISS】苏到爆炸的吻戏合集
+http://openflv-huos.douyucdn2.cn/live/8807568rw7Ton1iT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8867878", 【腹黑电影】带您进入腹黑电影的电影世界
+http://openflv-huos.douyucdn2.cn/live/8867878rlX5MDGQo.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9629717", 【三代鹿人v】最会“夸人”的三代鹿人来斗鱼啦
+http://openflv-huos.douyucdn2.cn/live/9629717rIKKv9ry6.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9527761", 【冷孝洪】来欣赏别墅咯
+http://openflv-huos.douyucdn2.cn/live/9527761r15BkBuCX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9388557", 【一颗咕咕星】卡牌大师！花式切牌，有点东西
+http://openflv-huos.douyucdn2.cn/live/9388557r0tjvcfI6.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9630581", 【fans圈娱乐】fans圈娱乐的直播间
+http://openflv-huos.douyucdn2.cn/live/9630581rwoNr5cwc.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9323164", 【电影七十二变】超魔性换脸直播间，别错过~
+http://openflv-huos.douyucdn2.cn/live/9323164rUaWYG5Dg.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9477805", 【酒痴东梦a】“酒痴东梦带你看全球政治经济变化”
+http://openflv-huos.douyucdn2.cn/live/9477805rypm4lwku.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="753342", 【老人家小熊猫君】老人家-小熊猫君
+http://openflv-huos.douyucdn2.cn/live/753342rASPXMVIEi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9371552", 【可乐撩电影】9371552的直播间
+http://openflv-huos.douyucdn2.cn/live/9371552r6aD8tsAv.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8891883", 【好像视说故事】好像视说故事电影推荐
+http://openflv-huos.douyucdn2.cn/live/8891883rZT9uKO05.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8862216", 【王俊凯的资源组】王俊凯的资源组的直播间
+http://openflv-huos.douyucdn2.cn/live/8862216rf8O2q5j0.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2519745", 【淮秀帮官方】【恶搞】一样的电影，不一样的feel
+http://openflv-huos.douyucdn2.cn/live/2519745reBFn2nsq.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8726221", 【猫眼电影】猫眼电影影视的直播间
+http://openflv-huos.douyucdn2.cn/live/8726221r4UtPkDG8.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9753585", 【Psyman塞门】解说-厨神当道 地狱厨房 天桥骄子
+http://openflv-huos.douyucdn2.cn/live/9753585rAUI5HbfW.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8712204", 【目及WATCHER】目及-疯狂安利下饭剧
+http://openflv-huos.douyucdn2.cn/live/8712204r2Vt3q1CX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9564845", 【娱乐新番】没命了直播间！
+http://openflv-huos.douyucdn2.cn/live/9564845rw8kM4W1c.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8868213", 【YIKa777】带您进入YIKa777的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/8868213rcFeXI39F.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8896723", 【噬元兽影视】【噬元兽】小姐姐带你看剧吖
+http://openflv-huos.douyucdn2.cn/live/8896723rupRh6FRN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9023539", 【周队长captain】周队长电影解说
+http://openflv-huos.douyucdn2.cn/live/9023539rmIQKWiMS.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8978669", 【总之看电影】带您进入总之的电影世界
+http://openflv-huos.douyucdn2.cn/live/8978669rOUM19DJB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9564230", 【咆哮丶土拨鼠】带您进入咆哮丶土拨鼠的鬼畜现场
+http://openflv-huos.douyucdn2.cn/live/9564230rGIrBfWBm.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8658051", 【在下小苏Su】带您进入在下小苏Su的日常
+http://openflv-huos.douyucdn2.cn/live/8658051rNGBakK5M.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="751316", 【趣评测李杰灵】趣评测李杰灵的直播间~
+http://openflv-huos.douyucdn2.cn/live/751316ro1MZTfcia.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="6476693", 【双笙陈元汐】原创歌手双笙陈元汐入驻斗鱼啦
+http://openflv-huos.douyucdn2.cn/live/6476693r0rgvNQlH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9565677", 【本主儿】本主儿的直播间
+http://openflv-huos.douyucdn2.cn/live/9565677rMnBDMojl.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9623057", 【翦瞳秋】翦瞳秋的直播间
+http://openflv-huos.douyucdn2.cn/live/9623057rkIP48jfH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="218044", 【百小僧】斗鱼主播排行榜
+http://openflv-huos.douyucdn2.cn/live/218044rKWzA4QN3h.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9634199", 【暮肆Mousse】暮小肆的放飞日常
+http://openflv-huos.douyucdn2.cn/live/9634199rBzYtOxvI.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9631914", 【吾恩5nn】吾恩的音乐世界
+http://openflv-huos.douyucdn2.cn/live/9631914r3kXo5kMG.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="4564166", 【弹吉他的Miumiu】吉他的音乐教学
+http://openflv-huos.douyucdn2.cn/live/4564166rbwEELIZN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8764282", 【粤男有话儿】直男粤语爆笑综艺reaction
+http://openflv-huos.douyucdn2.cn/live/8764282rBaU4RDwB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8837963", 【神迹小霸霸】神迹小霸霸的直播间
+http://openflv-huos.douyucdn2.cn/live/8837963ri2Y3IgVO.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9649913", 【扒圈圈V】用户67075445的直播间
+http://openflv-huos.douyucdn2.cn/live/9649913ra4qn8pzV.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9685652", 【Rabbit每日爆料】Rabbit每日爆料的直播间
+http://openflv-huos.douyucdn2.cn/live/9685652rOpHjOeh6.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="865331", 【鞋荐JMJ】缺实战鞋吗，送你一双
+http://openflv-huos.douyucdn2.cn/live/865331rWiBadkvGB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8733680", 【shhher】shhher的直播间
+http://openflv-huos.douyucdn2.cn/live/8733680ryWgC8zzT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9442836", 【会火娱乐】会火-娱乐先知 海量资讯内容等你来看
+http://openflv-huos.douyucdn2.cn/live/9442836rLWsHlYYE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9404678", 【舞者胡哥】舞者胡哥的直播间
+http://openflv-huos.douyucdn2.cn/live/9404678rs4NTclPz.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9539063", 【名人物语DY】名人传奇！来啊，涨知识啊！☺️
+http://openflv-huos.douyucdn2.cn/live/9539063rCRYia35F.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8887438", 【肥宅小草】架子鼓美少女
+http://openflv-huos.douyucdn2.cn/live/8887438rKoquIdvr.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9169624", 【功夫联盟2020】【功夫梦王小虎】拳拳到肉，实拍功夫
+http://openflv-huos.douyucdn2.cn/live/9169624r615Zstg5.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9186596", 【山下智博official】山下智博超精彩的日常分享
+http://openflv-huos.douyucdn2.cn/live/9186596rYj5U8Dyd.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9575463", 【木JJ】木JJv的直播间
+http://openflv-huos.douyucdn2.cn/live/9575463rSqwSDOun.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9662853", 【蔡恩雨Priscilla】【蔡恩雨Priscilla】的音乐世界
+http://openflv-huos.douyucdn2.cn/live/9662853rJ4b19NDC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2925563", 【理娱打挺疼】娱乐明星一手讯息，理娱打挺疼
+http://openflv-huos.douyucdn2.cn/live/2925563r7Jyl2T9U.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="317409", 【爱玩客iVankr】爱玩客小姐姐播一会
+http://openflv-huos.douyucdn2.cn/live/317409ruLtBnFGoE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9525473", 【Nino学长】Nino学长的直播间
+http://openflv-huos.douyucdn2.cn/live/9525473rC8KHkQQR.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5077166", 【我是YOLO啊】玩纸牌的yolo
+http://openflv-huos.douyucdn2.cn/live/5077166rGeB8H5m6.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8779139", 【峰video】【峰video】思维力升级实验室
+http://openflv-huos.douyucdn2.cn/live/8779139r5Zmv8S9O.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9650451", 【SH11N】十音来斗鱼啦~！
+http://openflv-huos.douyucdn2.cn/live/9650451rEgiXIES2.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9568196", 【桃红梨白专栏】桃红梨白专栏的直播间
+http://openflv-huos.douyucdn2.cn/live/9568196rA6xLY3Bf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9687221", 【倓张TanZ】鞋迷的极致追求
+http://openflv-huos.douyucdn2.cn/live/9687221rklfucxvZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8871095", 【学徒郭昱麟】这里有你想要的 8871095
+http://openflv-huos.douyucdn2.cn/live/8871095ryRFT9M79.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8933612", 【竹内亮导演】《好久不见，武汉》
+http://openflv-huos.douyucdn2.cn/live/8933612rzdFXXdcX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9671758", 【佛曰影视】佛曰影视的直播间
+http://openflv-huos.douyucdn2.cn/live/9671758rOiZqwN9i.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8862198", 【不会骑马的健身少年】带您进入不会骑马的健身少年的日常
+http://openflv-huos.douyucdn2.cn/live/8862198reqUqZenK.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3617935", 【XCin888】XCin，你的私人球鞋顾问
+http://openflv-huos.douyucdn2.cn/live/3617935r4oFgDnwC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9476806", 【爱星影视】爱星影视的直播间
+http://openflv-huos.douyucdn2.cn/live/9476806rMkZKvU4w.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8635497", 【星空茶茶】星空茶茶的直播间
+http://openflv-huos.douyucdn2.cn/live/8635497rlxSOkGFy.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9567755", 【WANJINNY】WANJINNY的直播间
+http://openflv-huos.douyucdn2.cn/live/9567755rXD7p7pjD.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8974130", 【享看电影】带您进入享看电影的世界
+http://openflv-huos.douyucdn2.cn/live/8974130rdgxZrS6q.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9583975", 【王子和史蒂文】哈哈哈哈哈哈哈 9583975
+http://openflv-huos.douyucdn2.cn/live/9583975rH6TpsSeM.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9055742", 【泽静】祝各位如虎添翼
+http://openflv-huos.douyucdn2.cn/live/9055742rcOpMf3SS.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9606954", 【小太V】小太的amv制作与展示
+http://openflv-huos.douyucdn2.cn/live/9606954rNMWJwi2Z.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="11199147", 【小木鱼de妈妈】小木鱼de妈妈的直播间
+http://openflv-huos.douyucdn2.cn/live/11199147raijAPxd.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1557288", 【耗子像个战神】耗子男人爆炸帅
+http://openflv-huos.douyucdn2.cn/live/1557288ramy2dNjQ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8759268", 【epcdiy】程序员易劈西的直播间
+http://openflv-huos.douyucdn2.cn/live/8759268rYWztUKpa.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9626732", 【海男Rexv】带您进入海男Rexv的时尚天堂
+http://openflv-huos.douyucdn2.cn/live/9626732r10G7FFp3.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1558490", 【阿卓丨a丶zhuo】阿卓丨a丶zhuo
+http://openflv-huos.douyucdn2.cn/live/1558490rGMsU6ck7.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8864291", 【颜雪落落落】颜雪落的直播间
+http://openflv-huos.douyucdn2.cn/live/8864291rrpeZnmnm.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9412454", 【轩邈Elias】轩邈Elias的直播间
+http://openflv-huos.douyucdn2.cn/live/9412454ryKWnnKXL.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9472141", 【锋哥聊商机】锋哥聊商机的直播间
+http://openflv-huos.douyucdn2.cn/live/9472141rpt4KmD4h.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9565765", 【TFBOYS饭团】TFBOYS饭团官博的直播间
+http://openflv-huos.douyucdn2.cn/live/9565765r6sZTB4ux.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2758565", 【牛叔说电影】【牛叔】N分钟带你看完大片
+http://openflv-huos.douyucdn2.cn/live/2758565rVIROeQiW.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3637778", 【特辑电影院】【特辑电影】有骨气酒楼营业中
+http://openflv-huos.douyucdn2.cn/live/3637778raLSXdOdu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="4258555", 【小片片说大片】【片片】片荒的时候看片片
+http://openflv-huos.douyucdn2.cn/live/4258555r3isvDdlq.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3508304", 【科幻Fans布玛】【科幻Fans】精彩科幻影视，解说连连看
+http://openflv-huos.douyucdn2.cn/live/3508304rpUuuhcPe.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9734098", 【OneGuy丶】口音贼重的解说直播间
+http://openflv-huos.douyucdn2.cn/live/9734098r9sJfcLQJ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2164691", 【发条张的电影最TOP】电影最TOP
+http://openflv-huos.douyucdn2.cn/live/2164691r7j6RRITc.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9419771", 【史君说剧】【史君说剧】史君说尽天下好剧
+http://openflv-huos.douyucdn2.cn/live/9419771rW4ZjCXlA.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8986636", 【吸奇侠】已更新！聊聊武侠与江湖
+http://openflv-huos.douyucdn2.cn/live/8986636rlzsOI4IJ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5800628", 【晚风吹过灬】【青铜樽】万般难计较，都在命中来
+http://openflv-huos.douyucdn2.cn/live/5800628rNypDEaZF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="7796193", 【1900影剧室】【1900影剧室】精讲剧场
+http://openflv-huos.douyucdn2.cn/live/7796193r8EZnKgOh.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10011547", 【小片片说大片二台】【小片片】国产经典剧集专属直播间
+http://openflv-huos.douyucdn2.cn/live/10011547rF6yF8lG.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8014467", 【星君说电影】已更新！星君带你看大片
+http://openflv-huos.douyucdn2.cn/live/8014467rbtMSgFCD.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9643264", 【3说电影】美剧解说精彩不断
+http://openflv-huos.douyucdn2.cn/live/9643264rGumYzXFV.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="11376997", 【pzj961】pzj961的直播间1112
+http://openflv-huos.douyucdn2.cn/live/11376997rBh9NLmF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8869614", 【蔡老板家的长工丶】长工带你一起来追剧
+http://openflv-huos.douyucdn2.cn/live/8869614rdAyiW6Ay.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9456028", 【宇宙探索飞船】宇宙的尽头是什么？
+http://openflv-huos.douyucdn2.cn/live/9456028rSZBUF2aC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9650131", 【老秦说秦】【红雷】经典电视剧精讲
+http://openflv-huos.douyucdn2.cn/live/9650131reD3oOMlj.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9487003", 【历史经典烩】四大经典/水浒系列
+http://openflv-huos.douyucdn2.cn/live/9487003rW6vgUU40.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9653063", 【一个机智张张】【令狐冲】什么是江湖
+http://openflv-huos.douyucdn2.cn/live/9653063rtKXoTJAu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1713615", 【漫威君】漫威迷集合
+http://openflv-huos.douyucdn2.cn/live/1713615rwURp1ZkT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3472959", 【Svip丶YoYo】梁山好汉都在此
+http://openflv-huos.douyucdn2.cn/live/3472959rNrIJPmWV.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2660125", 【JustXiaIt嘻咦啊看】【速看】爆笑解说，欢乐百分百！
+http://openflv-huos.douyucdn2.cn/live/2660125rvXDffKPT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8741860", 【工藤新医heart】解说：各类精彩国产悬疑推理剧集
+http://openflv-huos.douyucdn2.cn/live/8741860ryvgR03nu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9660127", 【小司马说剧】【雍正、杨贵妃】剧集精讲
+http://openflv-huos.douyucdn2.cn/live/9660127rD1y9waBz.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9461990", 【贤于葛格】【贤于葛格】最会讲电影的贤于来啦
+http://openflv-huos.douyucdn2.cn/live/9461990rfwqvW4bh.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1979257", 【骑毛驴的八戒】金田一真人版持续放送
+http://openflv-huos.douyucdn2.cn/live/1979257r0jzJn3bj.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3643605", 【一目十影】【一目十影】温情解说经典电影
+http://openflv-huos.douyucdn2.cn/live/3643605rjOhjsvUX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1224356", 【奥雷卡尔克斯】【奥雷】带你看遍奇葩老电影
+http://openflv-huos.douyucdn2.cn/live/1224356rp2GKZRgi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9649701", 【铁血影视汇】【经典武侠】时代的记忆！
+http://openflv-huos.douyucdn2.cn/live/9649701rgZK2m7R6.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9687733", 【老王忆经典】【老王】经典电影看不停
+http://openflv-huos.douyucdn2.cn/live/9687733r7CVG5IVx.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8850682", 【尉迟杰影评】【速看】深度解读各种冷门佳作！
+http://openflv-huos.douyucdn2.cn/live/8850682rhYgpBcmp.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9644669", 【史君观影】【史君观影】国产刑侦电视剧太精彩了
+http://openflv-huos.douyucdn2.cn/live/9644669rWotpUeCe.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8344251", 【东倾电影】我只担心一件事，我怕我配不上所受的苦难
+http://openflv-huos.douyucdn2.cn/live/8344251rN6lkAHsB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9627172", 【猎奇笔记本】【影视/动作】那些操作猛如虎的精彩瞬间
+http://openflv-huos.douyucdn2.cn/live/9627172ruSQsSQGS.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1524969", 【松轩说电影】【松轩】速看大片，体味人生
+http://openflv-huos.douyucdn2.cn/live/1524969rEGc6PNQo.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9388938", 【好剧看不停】武神常山赵子龙是也
+http://openflv-huos.douyucdn2.cn/live/9388938rSIdQpMMN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9485398", 【楠者电影】楠者电影，最会讲电影的人
+http://openflv-huos.douyucdn2.cn/live/9485398r6k07t5qw.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9994377", 【老鱼说剧】【铁三角】斗嘴的日常
+http://openflv-huos.douyucdn2.cn/live/9994377rkAMNQuAX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2413555", 【独立鱼电影】【独立鱼】鱼叔荐好片 爱看你就来
+http://openflv-huos.douyucdn2.cn/live/2413555rSGYJjGIu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9410946", 【长片短解】长片短解，精彩的电影都有
+http://openflv-huos.douyucdn2.cn/live/9410946rgo2uAZ5p.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9661369", 【贝爷求生影视】荒野求生纪录片小天地
+http://openflv-huos.douyucdn2.cn/live/9661369rAJKTASIN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="421222", 【逗米说电影】逗米说电影的直播间
+http://openflv-huos.douyucdn2.cn/live/421222rXrgaQkBhH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9614847", 【墨逗电影】燃爆全网的动作大片都在这里！！！！！！！
+http://openflv-huos.douyucdn2.cn/live/9614847rGsmcDjew.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9388931", 【热影连连看】大秦国要搞大事
+http://openflv-huos.douyucdn2.cn/live/9388931rmoOlm37T.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9348282", 【九叔说电影v】【科幻】九叔带你看大片！
+http://openflv-huos.douyucdn2.cn/live/9348282ru6iiS00g.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8651489", 【影视集装箱】【宇哥】极限惊悚，无限反转
+http://openflv-huos.douyucdn2.cn/live/8651489rwlTfKb3w.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10535867", 【浩贤说电影】浩贤说电影的直播间
+http://openflv-huos.douyucdn2.cn/live/10535867rMcSkq5z.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8443438", 【五分钟电影汇】剪辑让电影变得更有趣！
+http://openflv-huos.douyucdn2.cn/live/8443438r7iLtrX0i.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8413092", 【挖沟连彭沟长】挖沟连彭沟长的直播间
+http://openflv-huos.douyucdn2.cn/live/8413092r7Jq7hgcW.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9665298", 【邸生】邸生讲解的童年经典
+http://openflv-huos.douyucdn2.cn/live/9665298rJxq0sdqx.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8795274", 【求求扣扣困困】快乐男孩解说经典
+http://openflv-huos.douyucdn2.cn/live/8795274rHxsFVZXS.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9647834", 【指缝里看电影】指缝君看大片
+http://openflv-huos.douyucdn2.cn/live/9647834riLxM9hMf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2161818", 【俗哥看电影】俗哥看电影的直播间
+http://openflv-huos.douyucdn2.cn/live/2161818rdh9CDWYy.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10475459", 【阎君说剧】济公/聊斋的故事
+http://openflv-huos.douyucdn2.cn/live/10475459rW04Xua4.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8834003", 【纪录片之家字幕组】看遍世界各地的纪录片
+http://openflv-huos.douyucdn2.cn/live/8834003ruUwP4VzO.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9167273", 【老电影故事】老电影故事的直播间
+http://openflv-huos.douyucdn2.cn/live/9167273rvhgqQN6d.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1039732", 【QLIMES】奇怪的知识又又又增加了
+http://openflv-huos.douyucdn2.cn/live/1039732rVkmgsHrH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1842621", 【安小闫说电影x】【安小闫说电影】每日电影解说更新
+http://openflv-huos.douyucdn2.cn/live/1842621rwcMct7F1.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8808506", 【哇萨比抓马WD】【速看】超精彩的电影解说，等你来看！
+http://openflv-huos.douyucdn2.cn/live/8808506rm8ULQG7F.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3985805", 【电影刘油果】老刘带你看大片
+http://openflv-huos.douyucdn2.cn/live/3985805rEvlN8L6r.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3194372", 【宇宙无敌韩三金】最新奇幻电影解说-宇宙无敌韩三金
+http://openflv-huos.douyucdn2.cn/live/3194372rsP3mzTVC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9660704", 【童乐说电影】童乐说电影
+http://openflv-huos.douyucdn2.cn/live/9660704rCVFDVTCP.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="6747916", 【林林林林林啊丶】无聊播播播0.0
+http://openflv-huos.douyucdn2.cn/live/6747916r0NSzRtmf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3715426", 【胶片看电影】用细致的角度观察电影
+http://openflv-huos.douyucdn2.cn/live/3715426reYpNBO57.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5192695", 【冬粮说故事】【冬粮】解析电影 品评人生
+http://openflv-huos.douyucdn2.cn/live/5192695rBIXUEYwi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8662915", 【天才简史】是天才还是穿越
+http://openflv-huos.douyucdn2.cn/live/8662915rXz5pBOl3.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9562616", 【看电影了没V】【看电影了没】深度讲解电影
+http://openflv-huos.douyucdn2.cn/live/9562616r9AmjH82z.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9788756", 【罗叔说戏】下饭必看直播间
+http://openflv-huos.douyucdn2.cn/live/9788756rW8J3ejUB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2039501", 【火龙果讲电影本人】【火龙果讲电影】超爽的电影解说
+http://openflv-huos.douyucdn2.cn/live/2039501rDtZb5Zzg.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2104744", 【宇哥讲电影】已更新：宇哥带你几分钟看完一部好电影
+http://openflv-huos.douyucdn2.cn/live/2104744rqnBJBfrt.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2680501", 【文曰小强】听完发现这些书白读了~
+http://openflv-huos.douyucdn2.cn/live/2680501ruAak8bKu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5067952", 【鸡哥聊电影】【鸡哥】一部电影就是一个人生
+http://openflv-huos.douyucdn2.cn/live/5067952rW3BuCggm.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9422144", 【怪味爆米花电影】墨西哥大毒枭的传奇往事
+http://openflv-huos.douyucdn2.cn/live/9422144rHr1ptZwK.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10329752", 【小猪搞笑精选】小猪搞笑精选
+http://openflv-huos.douyucdn2.cn/live/10329752r7sz9RfV.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10319545", 【不二真探】超精彩电影解说
+http://openflv-huos.douyucdn2.cn/live/10319545r4UUq9Ak.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9338867", 【贰哥电影】贰哥带你看电影
+http://openflv-huos.douyucdn2.cn/live/9338867rKuPr42zs.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8830082", 【听wo姐说】听wo姐说
+http://openflv-huos.douyucdn2.cn/live/8830082rKadaCAoX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9607934", 【果冻萌萌的丶】林正英混剪 各类电影剪辑混剪盘点系列
+http://openflv-huos.douyucdn2.cn/live/9607934r3h2bt3C3.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5424258", 【涛浪浪电影】涛浪浪说电影集锦
+http://openflv-huos.douyucdn2.cn/live/5424258r0yMflTsr.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9734042", 【小侠来了】【小侠】带你看电影
+http://openflv-huos.douyucdn2.cn/live/9734042rLhJ00Ioz.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3714736", 【菠萝说电影】菠萝说电影
+http://openflv-huos.douyucdn2.cn/live/3714736r7rK2nKQE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10411518", 【快哥说老片】经典老电影，那种非常经典的
+http://openflv-huos.douyucdn2.cn/live/10411518rwjuaCud.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8778280", 【二哈讲电影】【二哈】几分钟看完各种恐怖大片
+http://openflv-huos.douyucdn2.cn/live/8778280rmtod2tpf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8805720", 【玫瑰叔品评】玫瑰叔品评
+http://openflv-huos.douyucdn2.cn/live/8805720rz5sOAdaR.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9272077", 【莫扎金】【麻瓜学院】一起来感受魔法
+http://openflv-huos.douyucdn2.cn/live/9272077rH3AtcyXq.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8706652", 【电影黑匣子】【电影黑匣子】用心去解读每一部电影
+http://openflv-huos.douyucdn2.cn/live/8706652rkUluNNqF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9386057", 【伯乐说电影V】来看一只熊解说电影
+http://openflv-huos.douyucdn2.cn/live/9386057rnWXJFFZY.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8837964", 【据说放映室】很有趣的电影解说
+http://openflv-huos.douyucdn2.cn/live/8837964rpFgMHKqy.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8413226", 【快看张不止】【快看张不止】带你看各国悬疑电影
+http://openflv-huos.douyucdn2.cn/live/8413226rvTnDCejX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9437349", 【大壮撞电影】大壮撞电影
+http://openflv-huos.douyucdn2.cn/live/9437349rZ3z8ADyd.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8286679", 【神烦xp】【神烦xp】十分钟传递影视情感
+http://openflv-huos.douyucdn2.cn/live/8286679recd9m9ts.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8799435", 【阿成漫漫看】斗鱼最温情电影解说
+http://openflv-huos.douyucdn2.cn/live/8799435rrCVOIXfi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9396672", 【小马哥说电影】小马哥说电影的直播间
+http://openflv-huos.douyucdn2.cn/live/9396672rDg0Lu8WR.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="752376", 【槽槽说电影】槽槽有槽点看电影
+http://openflv-huos.douyucdn2.cn/live/752376rEjokOAnO4.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10348735", 【喜人电影】【喜人电影】讲解最新海外高分大片
+http://openflv-huos.douyucdn2.cn/live/10348735rqCNr5hJ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9390955", 【小岛讲电影】【恐怖电影】小岛理解下的恐怖电影
+http://openflv-huos.douyucdn2.cn/live/9390955rhjA0ZISU.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9447717", 【流心影者】老司机扯电影的直播间
+http://openflv-huos.douyucdn2.cn/live/9447717rPqwRGsk1.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9368016", 【小丽说电影】小丽说电影每日更新
+http://openflv-huos.douyucdn2.cn/live/9368016rLDVNpKx9.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8413908", 【小乔讲电影】小姐姐小乔讲电影
+http://openflv-huos.douyucdn2.cn/live/8413908rxjtyvHG8.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8529736", 【将军侃片】将军侃片的直播间
+http://openflv-huos.douyucdn2.cn/live/8529736rDe2f3rs9.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9559158", 【火龙果说电影】【更新】最全斗牌、麻将剧集解说
+http://openflv-huos.douyucdn2.cn/live/9559158rQTKu3HX1.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8317926", 【刘老师说电影】【刘老师】每天爆笑解说不断
+http://openflv-huos.douyucdn2.cn/live/8317926rsSFtXixH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9639225", 【电影迷小雅】迷小雅最新爽剧解说
+http://openflv-huos.douyucdn2.cn/live/9639225rqvRNWK9e.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="610972", 【都市夜魔人老王】扑朔迷离的案件里隐藏着什么？
+http://openflv-huos.douyucdn2.cn/live/610972r9HKB14eec.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="4808115", 【sweet夏有甜】【雍正康熙】帝王故事连连看
+http://openflv-huos.douyucdn2.cn/live/4808115rfsIdzhLg.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10010651", 【牛叔说电影二台】【牛叔2台】欢迎来到牛叔的悬疑世界
+http://openflv-huos.douyucdn2.cn/live/10010651rIE5VTBD.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2337939", 【老烟斗鬼故事】【悬疑】都市猎奇传说、恐怖故事
+http://openflv-huos.douyucdn2.cn/live/2337939rtp9c4wWx.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9171887", 【胆子不小的郑吉祥】【悬疑】古今中外犯罪录
+http://openflv-huos.douyucdn2.cn/live/9171887rEksfHT7k.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="297689", 【堇姑娘】史剧解说洪武年间大案
+http://openflv-huos.douyucdn2.cn/live/297689r6yLjxpcN7.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9075333", 【怪兽马提尼电影】【悬疑】午夜惊悚乐园，点上关注带你探险！
+http://openflv-huos.douyucdn2.cn/live/9075333r2TcxQOOO.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9037784", 【阿苏电影】高分悬疑电影解说
+http://openflv-huos.douyucdn2.cn/live/9037784rkfwBRdCB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="7422897", 【劉星星呀】睡前故事会
+http://openflv-huos.douyucdn2.cn/live/7422897ryucaNRKy.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2632223", 【刘哔电影】刘哔讲电影，东北话解说嘎嘎强
+http://openflv-huos.douyucdn2.cn/live/2632223r7BoLVAhb.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9601429", 【悬疑MOVIE】1000部悬疑电影
+http://openflv-huos.douyucdn2.cn/live/9601429rR1sVASlr.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8722254", 【鬼兄奇谈】【鬼兄奇谈】午夜故事，提神醒脑，清清凉凉
+http://openflv-huos.douyucdn2.cn/live/8722254rUee1dUQN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9123570", 【代娱说美剧】经典美剧解说，悬疑科幻惊悚
+http://openflv-huos.douyucdn2.cn/live/9123570rQMaX2Lzi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8415464", 【小涛讲电影V】一个只讲恐怖电影的电影解说
+http://openflv-huos.douyucdn2.cn/live/8415464rI7Jkyhao.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9280384", 【爱好恐怖片的美男子】【恐怖片】专注恐怖片赏析与原创解说！！！
+http://openflv-huos.douyucdn2.cn/live/9280384rRAwA6t3e.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8343640", 【Fy丶不乖】【老白】经典美剧，致敬（小雅授权）
+http://openflv-huos.douyucdn2.cn/live/8343640rsPIPZBdh.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8705754", 【谁语说电影】【谁语Whospeak】精彩电影解说
+http://openflv-huos.douyucdn2.cn/live/8705754r28N2suHb.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8788687", 【菇菇说过】【悬疑烧脑】欢迎来到侦探宇宙
+http://openflv-huos.douyucdn2.cn/live/8788687rtsq5aTao.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9736479", 【有部电影儿】有部电影儿的直播间
+http://openflv-huos.douyucdn2.cn/live/9736479rHYET4stG.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9065082", 【我是一只西瓜啊】走进“柯”学，西瓜讲柯南的案件~
+http://openflv-huos.douyucdn2.cn/live/9065082rwrmvIVYY.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9174097", 【英大吉来了】英大吉的奇闻&amp;故事档案
+http://openflv-huos.douyucdn2.cn/live/9174097rmdFLyIri.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9746763", 【探奇录】《探奇录-案件篇》
+http://openflv-huos.douyucdn2.cn/live/9746763rjo9SsNNd.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9442889", 【小小鹿老师】小小鹿的恐怖故事馆（故事内容仅为小说）
+http://openflv-huos.douyucdn2.cn/live/9442889r8e3GF4UZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10401481", 【斗鱼恐怖游戏合集】恐怖游戏全看【主播视频轮播】
+http://openflv-huos.douyucdn2.cn/live/10401481r6qo9d2J.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9754849", 【海森堡事件录】真实、惊悚事件录
+http://openflv-huos.douyucdn2.cn/live/9754849rKWFS343G.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8772060", 【科幻战舰】科幻战舰，为你带来好看的科幻片
+http://openflv-huos.douyucdn2.cn/live/8772060reO2XyeZE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8887432", 【竹公子有礼了】超美竹公子来说书
+http://openflv-huos.douyucdn2.cn/live/8887432rjsIUPn0n.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8790357", 【勤时铭悦】【经典悬疑烧脑剧解说】你值得拥有
+http://openflv-huos.douyucdn2.cn/live/8790357rPiqklZi1.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9440339", 【大坑侦探社】【大坑】悬疑推理视频解说
+http://openflv-huos.douyucdn2.cn/live/9440339rv8oTVMbp.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9561992", 【博然讲电影】带您走进博然的电影世界
+http://openflv-huos.douyucdn2.cn/live/9561992rMqglrNTf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="6361974", 【爱吃素的汉尼拔VV】恐怖悬疑小故事精彩解说
+http://openflv-huos.douyucdn2.cn/live/6361974r3V5Jmo58.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8936207", 【雪輝TnT】【午夜消暑】伊藤润二恐怖漫画血亏解说专场
+http://openflv-huos.douyucdn2.cn/live/8936207rAzMisu2v.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8706084", 【怪事屋】脑洞大到飞起，猜到结局算我输！！
+http://openflv-huos.douyucdn2.cn/live/8706084rpnDc745T.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8829915", 【搞笑院长】带您进入搞笑院长的电影世界
+http://openflv-huos.douyucdn2.cn/live/8829915rC50zjL8u.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9431727", 【蓝星人一ET】【蓝星人】颠覆你想象的神秘未解谜团
+http://openflv-huos.douyucdn2.cn/live/9431727ri6p9xpjA.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9475113", 【是不是Pro】海龟汤 情景推理
+http://openflv-huos.douyucdn2.cn/live/9475113rzgRhA21N.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10401475", 【高能恐怖片段君】游戏剧情系列/恐怖/主机/通关
+http://openflv-huos.douyucdn2.cn/live/10401475rg0AcsDP.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9406359", 【世界纪录大全】世界纪录大全的直播间
+http://openflv-huos.douyucdn2.cn/live/9406359rSWjPJCT2.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9314689", 【小青放映社】杰森、人皮脸，各种杀人魔解说，你敢看吗？
+http://openflv-huos.douyucdn2.cn/live/9314689rFlws3p3M.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8661456", 【奇趣研究】奇趣研究的直播间
+http://openflv-huos.douyucdn2.cn/live/8661456r24DNpRfa.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8821917", 【看不见的罗杰】【罗杰】高分悬疑推理电影盘点解读
+http://openflv-huos.douyucdn2.cn/live/8821917rQWvfcnF8.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9606419", 【夏夜柚子树】【柚子树】悬疑电影大观园
+http://openflv-huos.douyucdn2.cn/live/9606419rgKJjIOs8.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8700367", 【励志少年派】超燃超治愈超励志短片：你是最棒的！
+http://openflv-huos.douyucdn2.cn/live/8700367rjH31M2FA.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9409723", 【奇妙博物馆】奇妙故事的博物馆，看完不亏
+http://openflv-huos.douyucdn2.cn/live/9409723rQMWHAyBP.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8325511", 【崽崽撩电影】【崽崽】创意电影脑洞大开
+http://openflv-huos.douyucdn2.cn/live/8325511r6jfjHUVJ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9736161", 【龙哥盘电影】全是恐怖片的解说直播间
+http://openflv-huos.douyucdn2.cn/live/9736161r21t1wZcl.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9541423", 【光影故事汇】带您进入光影故事汇的电影世界
+http://openflv-huos.douyucdn2.cn/live/9541423rkapdLInP.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9336437", 【麦绿素dustdream】【麦绿素】几分钟带你完整看电影（尽量）
+http://openflv-huos.douyucdn2.cn/live/9336437r2isofZ82.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9477915", 【龙又z】你知道人的一生有多长吗？
+http://openflv-huos.douyucdn2.cn/live/9477915rzMyE7Ll9.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9820039", 【猫叔说电影】总有一部让你觉得很哇塞的电影
+http://openflv-huos.douyucdn2.cn/live/9820039rGpWzSeib.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9455937", 【11No巴蒂11】热门新片/新剧解说直播间
+http://openflv-huos.douyucdn2.cn/live/9455937rtotq5W4U.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9433806", 【小羊放映室】搞笑/悬疑，经典电影解说轮播！
+http://openflv-huos.douyucdn2.cn/live/9433806r8UHuGcEF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9409722", 【人生回答机本机】【短剧】最奇异的人生问题
+http://openflv-huos.douyucdn2.cn/live/9409722rVjQcFEcB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10297898", 【小猪优版剧院】跟着小猪一起看【热剧联播】
+http://openflv-huos.douyucdn2.cn/live/10297898rMkwfc9B.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9297412", 【不思异剧场】脑洞大开的悬疑短剧【不思异】
+http://openflv-huos.douyucdn2.cn/live/9297412rRpKiLyBF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9356937", 【莱纳电影】带您进入莱纳电影的电影世界
+http://openflv-huos.douyucdn2.cn/live/9356937rDFDpNz9w.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9443129", 【动物启示录】人性的本质是什么样的？
+http://openflv-huos.douyucdn2.cn/live/9443129r1ro3bmTF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10279570", 【我是怪异君V】怪异君来了！悬疑世界
+http://openflv-huos.douyucdn2.cn/live/10279570r1RoF44g.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9365118", 【正直的陈易】陈易的奇闻趣事直播间
+http://openflv-huos.douyucdn2.cn/live/9365118rt5f0vbAB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9440460", 【唯一讲述者】带您走进唯一讲述者的电影世界
+http://openflv-huos.douyucdn2.cn/live/9440460rcVMcT6vi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9505584", 【周墨看电影】带您走进周墨的电影世界
+http://openflv-huos.douyucdn2.cn/live/9505584rANbVqChj.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9580477", 【火宗君丶】世界最神秘的事你整明白了没？
+http://openflv-huos.douyucdn2.cn/live/9580477rz6vhcQxu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9401473", 【悉奇】搜集世界上悉奇的案件和恐怖故事
+http://openflv-huos.douyucdn2.cn/live/9401473rsGzAqa0M.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9501818", 【冯二宸】冯二宸   影视鉴赏
+http://openflv-huos.douyucdn2.cn/live/9501818rnrt207f7.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9479775", 【醉我天涯zwty】带您进入醉我天涯的影视世界
+http://openflv-huos.douyucdn2.cn/live/9479775ruPjY3x8Y.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8915074", 【虫哥说电影】【虫哥】魔性吐槽童年回忆
+http://openflv-huos.douyucdn2.cn/live/8915074raRY4YgvR.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9338839", 【侃片大师兄】【科幻片】最专业的科幻片解说
+http://openflv-huos.douyucdn2.cn/live/9338839rlpxhb8Xq.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9026377", 【开心嘴炮】【吐槽】疯狂吐槽辣眼雷剧
+http://openflv-huos.douyucdn2.cn/live/9026377riRwYCy1a.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9222870", 【老邪说电影】【吐槽】烂片的克星，老邪入驻啦
+http://openflv-huos.douyucdn2.cn/live/9222870rzlqENK2I.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5354713", 【培根悖论唠唠嗑】悬疑烧脑影视大合集！
+http://openflv-huos.douyucdn2.cn/live/5354713rTr6wr3K0.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8656759", 【大蓝雀】【大蓝雀】最新神剧爆笑解说
+http://openflv-huos.douyucdn2.cn/live/8656759rFvud6YRW.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8694831", 【郭云神奇】郭云神奇的神奇解说
+http://openflv-huos.douyucdn2.cn/live/8694831rnkwyJjY7.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8783035", 【沫子瞪片】万花丛中过 独宠你一个
+http://openflv-huos.douyucdn2.cn/live/8783035ri1jZp5ce.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8461020", 【low君热剧】low君带你发掘更多好剧！
+http://openflv-huos.douyucdn2.cn/live/8461020rqfN5qIQR.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8611011", 【话很多的小姐姐们】吐槽安利各种剧
+http://openflv-huos.douyucdn2.cn/live/8611011rGoIGvwsR.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9665696", 【我是瓜皮儿本人a】欢迎来到超级英雄的世界
+http://openflv-huos.douyucdn2.cn/live/9665696rL2YHGBEQ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8867276", 【我是一只粽子啊啊】来看声音比电影好听的粽子
+http://openflv-huos.douyucdn2.cn/live/8867276rd8oBJNei.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2441228", 【流小豆】流小豆   爆笑配音动画
+http://openflv-huos.douyucdn2.cn/live/2441228rhEsg7IgS.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1833459", 【树根龙门阵】树根摆龙门阵
+http://openflv-huos.douyucdn2.cn/live/1833459rqtVaYoZo.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1739752", 【剧透大爆炸】【皮特】前方高能，小心剧透！
+http://openflv-huos.douyucdn2.cn/live/1739752rB1HGRg2F.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9389239", 【当下频道】当下频道的当下世界
+http://openflv-huos.douyucdn2.cn/live/9389239rXdFJ2Gak.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9425669", 【电视这个圈儿】电视这个圈儿的直播间
+http://openflv-huos.douyucdn2.cn/live/9425669rOvb2HdKU.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9481059", 【盘点委员】盘点委员的直播间
+http://openflv-huos.douyucdn2.cn/live/9481059rLJalcUQd.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9566210", 【罐装老K】罐装老K的直播间
+http://openflv-huos.douyucdn2.cn/live/9566210r5thtklJT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9837291", 【PP看动漫】【樱木花道灌篮】PP动漫精彩解说
+http://openflv-huos.douyucdn2.cn/live/9837291r8MP7lh5R.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9018297", 【开心锤锤动漫】开心锤锤，开心快乐每一天！
+http://openflv-huos.douyucdn2.cn/live/9018297rWKXGFrC5.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9446706", 【芙芙家的洗碗君】【洗碗君】 解说 爷青回！
+http://openflv-huos.douyucdn2.cn/live/9446706reZDnFihf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="6434857", 【周扒片】周扒片深度解说
+http://openflv-huos.douyucdn2.cn/live/6434857roaJBZhvZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9393501", 【九冢嵬】九冢嵬的直播间
+http://openflv-huos.douyucdn2.cn/live/9393501rrp4MDzud.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9484105", 【拳叔二次元】【拳叔】那些经典的动漫
+http://openflv-huos.douyucdn2.cn/live/9484105rGclvxthE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9641152", 【章的亲弟弟】战斗吧！热血动漫全看
+http://openflv-huos.douyucdn2.cn/live/9641152rJ6d4o5Bd.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9505575", 【中二日记搞笑动画】中二日记搞笑日常更新
+http://openflv-huos.douyucdn2.cn/live/9505575rtsaFgYiE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2925610", 【茶啊二中官方】【茶啊二中】好看的动画
+http://openflv-huos.douyucdn2.cn/live/2925610roYXTiuvU.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="3705472", 【机智帅气的一炫君】机智帅气的一炫君的直播间
+http://openflv-huos.douyucdn2.cn/live/3705472r9aqv1u2f.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9527700", 【小陶气说动漫】【正在解说光头琦玉】饭点陪聊
+http://openflv-huos.douyucdn2.cn/live/9527700rHiDBZADz.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9391292", 【真香动漫解说】生物全部变异成为顶级食材，少年化身成恶魔
+http://openflv-huos.douyucdn2.cn/live/9391292r6KkkgD0D.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1952680", 【圈踢动漫】漫威与DC，精彩有声漫画
+http://openflv-huos.douyucdn2.cn/live/1952680rKTWzeFFj.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9312460", 【蛋泥动画】原创惊悚恐怖动画
+http://openflv-huos.douyucdn2.cn/live/9312460rzjqO5JRg.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="2365", 【绿阿掌】爆笑解说各种动漫
+http://openflv-huos.douyucdn2.cn/live/2365rVlMpS146ADt.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5354705", 【我叫萌迪迪V】【萌迪迪】经典系列
+http://openflv-huos.douyucdn2.cn/live/5354705r9oeuVeuV.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9409703", 【岚FLL】带您进入岚FL的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9409703r4DhQO8XB.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9771247", 【植物椿de房间】植物椿de房间的直播间
+http://openflv-huos.douyucdn2.cn/live/9771247rBBJdYcZf.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9065302", 【暴躁少女零九】柯南探案解说中
+http://openflv-huos.douyucdn2.cn/live/9065302rYo86Lf3Q.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9568700", 【雨忆动漫】【一拳超人】高燃解说！！！
+http://openflv-huos.douyucdn2.cn/live/9568700rs1hm8yJ3.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9235284", 【LOUIS樱】初音 弱音 原神 崩3MMD
+http://openflv-huos.douyucdn2.cn/live/9235284rjAfWmIsp.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10076641", 【王者好气阿】原创剧情动画
+http://openflv-huos.douyucdn2.cn/live/10076641rnDyb6OE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8912038", 【动漫唯美風】二次元放映室，有呐味儿了!
+http://openflv-huos.douyucdn2.cn/live/8912038rQ6KOXtBp.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9734515", 【夜与白鲸V】童年经典动漫讲解
+http://openflv-huos.douyucdn2.cn/live/9734515ruCVS4WT5.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9542676", 【阿轩速看】最强拳王——刃牙速看
+http://openflv-huos.douyucdn2.cn/live/9542676rflrlIIcC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9091049", 【草泥泥影院】【草泥泥影院】每日解说欧美高分动画
+http://openflv-huos.douyucdn2.cn/live/9091049r5zc7wQSK.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8813596", 【Fatal飞雪】带您进入Fatal飞雪的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/8813596rO8ToCzD3.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9191790", 【果冻lui】听听歌，看绝美动漫场景
+http://openflv-huos.douyucdn2.cn/live/9191790rO6eLDT1v.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9445279", 【米粒儿动漫】【小叮当】童年经典动画片
+http://openflv-huos.douyucdn2.cn/live/9445279rjZIXVaeT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9822277", 【17号说动漫】17号说动漫热血解说
+http://openflv-huos.douyucdn2.cn/live/9822277r0wekPXbw.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9401305", 【绘说篮球C】最好看的搞笑篮球动漫
+http://openflv-huos.douyucdn2.cn/live/9401305rftrwPcMm.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9211287", 【小林家的旗女仆】来看我跳舞(*^▽^*)（每周更新）
+http://openflv-huos.douyucdn2.cn/live/9211287rO9gK0IWp.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="613850", 【涛哥测评】涛哥玩吃鸡
+http://openflv-huos.douyucdn2.cn/live/613850rQgTZn05vu.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="1060418", 【Co视文化】Co视因你而精彩
+http://openflv-huos.douyucdn2.cn/live/1060418rKXLffg7A.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9650181", 【搞笑动漫大本营】动漫搞笑配音
+http://openflv-huos.douyucdn2.cn/live/9650181r6z7POQd7.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9624330", 【政宗君de情敵】二次元放映室，喜欢二次元，关注我就对了!
+http://openflv-huos.douyucdn2.cn/live/9624330rj3HskSOZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8661526", 【二次元fans鹿鹿】二次元fans鹿鹿~鹿鹿陪你看动漫！
+http://openflv-huos.douyucdn2.cn/live/8661526r8oqPJpfc.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5187099", 【动漫推荐i】动漫推荐官方直播间
+http://openflv-huos.douyucdn2.cn/live/5187099ruduV0kNE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9461930", 【屁屁鸭家族LOVE】屁屁鸭和他的朋友们
+http://openflv-huos.douyucdn2.cn/live/9461930rjBEVd9mK.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9406600", 【5毒士】带您进入5毒士的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9406600rR2HCT62A.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9522315", 【戴萌兔】戴萌兔的模玩手办展示
+http://openflv-huos.douyucdn2.cn/live/9522315rBROeJiwZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9401905", 【芳芳说故事】芳芳说故事每日更新
+http://openflv-huos.douyucdn2.cn/live/9401905rrcKvPr6I.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9489079", 【刘也变z】【刘也变】搞笑的超能力者
+http://openflv-huos.douyucdn2.cn/live/9489079rEjdeNWyt.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="4400816", 【讲故事的角马】讲故事的角马 一起看电影
+http://openflv-huos.douyucdn2.cn/live/4400816rPwkEfFkm.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9429545", 【UP主DJC】动漫二次元#补番推荐#
+http://openflv-huos.douyucdn2.cn/live/9429545rjtGpCnIh.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9931766", 【野格影视】来看热血动漫
+http://openflv-huos.douyucdn2.cn/live/9931766rU6lMWx3R.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="5907076", 【已知艺术家漫画解说】【漫画解说】漫威宇宙解读
+http://openflv-huos.douyucdn2.cn/live/5907076rm9yFLyEL.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9028721", 【小馒头叫包几】动漫新番看这里，包子解说
+http://openflv-huos.douyucdn2.cn/live/9028721rXMEtzo7q.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9542831", 【猫八解说】猫八解说的直播间
+http://openflv-huos.douyucdn2.cn/live/9542831reg8iKMd6.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9547575", 【鑫酱盘动漫】鑫酱盘动漫的直播间
+http://openflv-huos.douyucdn2.cn/live/9547575rR2cJsHZT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="4285043", 【血小板呐呐】喜欢二次元动漫就点进来吧
+http://openflv-huos.douyucdn2.cn/live/4285043rkGeyZ8kI.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9392433", 【TUOK肖恩】9392433的直播间
+http://openflv-huos.douyucdn2.cn/live/9392433rorLNUwnc.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9280356", 【0小行家0】小行家的MMD直播间
+http://openflv-huos.douyucdn2.cn/live/9280356rlVL9G374.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9050486", 【卡皮君本人】那些年一起追的宝可梦
+http://openflv-huos.douyucdn2.cn/live/9050486r9pb8gdkE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9742136", 【动画大师姐】动画大师姐的直播间
+http://openflv-huos.douyucdn2.cn/live/9742136rGiiF63PC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9611771", 【白鱼Sakana】带您进入白鱼Sakana的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9611771rureBUtSv.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8849703", 【狂野的种马小说家】日本惊悚恐怖漫画大师伊藤润二
+http://openflv-huos.douyucdn2.cn/live/8849703r7Cre3eFy.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9192852", 【一颗糖糖canddy】动漫精彩混剪，令人极为舒适的踩点衔接
+http://openflv-huos.douyucdn2.cn/live/9192852rGMKT0bVH.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9191358", 【程情寫意】9191358的直播间
+http://openflv-huos.douyucdn2.cn/live/9191358rLjha3VZe.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8867233", 【野灿baka】【野灿baka】一起追番
+http://openflv-huos.douyucdn2.cn/live/8867233rLuTojsJi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8833450", 【SAO东西又再说SAO话】老sao的沙雕动漫解说
+http://openflv-huos.douyucdn2.cn/live/8833450rqVs5xtdv.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8829706", 【滑稽中二梦V】带您进入滑稽中二梦V的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/8829706rQFC7le73.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9199976", 【御魔君】【动漫盘点+老番补番】动漫片段24h轮播
+http://openflv-huos.douyucdn2.cn/live/9199976rtb9cFmtE.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9548279", 【三新动漫】三新动漫的直播间
+http://openflv-huos.douyucdn2.cn/live/9548279rkmiSzslo.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9564766", 【sekai的光子】你也爱看动漫吗？
+http://openflv-huos.douyucdn2.cn/live/9564766rU5HjnVEN.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9204381", 【MJ小林大人嗷】心情不好的时候治愈你
+http://openflv-huos.douyucdn2.cn/live/9204381rRH77FJnX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="10349501", 【专业圣斗士】专业圣斗士的直播间
+http://openflv-huos.douyucdn2.cn/live/10349501rEiR4PiG.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9193179", 【羽翼天使的挽歌】经典日漫，剧情向剪辑
+http://openflv-huos.douyucdn2.cn/live/9193179rlo7TdupZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9639735", 【学姐圆】学姐圆的直播间
+http://openflv-huos.douyucdn2.cn/live/9639735rk5gq1hne.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9501159", 【我的超能力女友】我的超能力女友的直播间
+http://openflv-huos.douyucdn2.cn/live/9501159rAFSvhDyF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9720895", 【柠柠柠萌菌】柠柠柠萌菌的直播间
+http://openflv-huos.douyucdn2.cn/live/9720895r6gOEeLiz.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9484187", 【千代语默】千代语默的动漫世界
+http://openflv-huos.douyucdn2.cn/live/9484187rkW559vzs.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9192932", 【mad葉月Mashiro灬】二次元放映室！综漫衔接的魅力！
+http://openflv-huos.douyucdn2.cn/live/9192932ro4aSR1pn.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9398828", 【锅盖哒】和火影有关的一切
+http://openflv-huos.douyucdn2.cn/live/9398828rQ0JG6RnD.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9460834", 【SKYE魏】SKYE魏-手机绘画
+http://openflv-huos.douyucdn2.cn/live/9460834rl0spg84B.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9396762", 【少年阿虎233】带您进入少年阿虎的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9396762rD5ME6753.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9450942", 【铁头与橘子】铁头与橘子（每周更新一起看霸总）
+http://openflv-huos.douyucdn2.cn/live/9450942r1jwaFDud.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9360149", 【是脑洞君君君】【动漫】记录你的王者峡谷生活~
+http://openflv-huos.douyucdn2.cn/live/9360149rINOXIwyi.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9047933", 【三斤呦】三斤呦的直播间
+http://openflv-huos.douyucdn2.cn/live/9047933rOWJAOSiZ.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9455567", 【淼漫迷】【经典动漫】 9455567
+http://openflv-huos.douyucdn2.cn/live/9455567rBqTzoeph.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9729740", 【杰克大魔王V】大魔王的直播间V
+http://openflv-huos.douyucdn2.cn/live/9729740rrz8Ni3PO.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9064711", 【十里说】冷门动漫解说
+http://openflv-huos.douyucdn2.cn/live/9064711raW8Yaufn.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9495613", 【爱讲神话的小志】讲神话的小志
+http://openflv-huos.douyucdn2.cn/live/9495613rd3MJHStC.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9749339", 【TSSS映画】TSSS映画的直播间
+http://openflv-huos.douyucdn2.cn/live/9749339r2wPg8O4F.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="8970851", 【KBShinya】KB唱歌时间
+http://openflv-huos.douyucdn2.cn/live/8970851rThVdrdtx.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9665484", 【是有超超】【有超超】那些童年回忆的动画
+http://openflv-huos.douyucdn2.cn/live/9665484rQKffeboK.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9367188", 【鸡蛋高V】带您进入鸡蛋高的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9367188rVS4DEFlv.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9546169", 【庄尼兔拟音实验室】庄尼兔拟音实验室的直播间
+http://openflv-huos.douyucdn2.cn/live/9546169r8coGOIxT.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9458345", 【潜伏sc】带您进入潜伏的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9458345r4et4Nexr.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9184833", 【德井鱼】张开嘴吃我安利啦
+http://openflv-huos.douyucdn2.cn/live/9184833rkTUulNoV.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9013989", 【卡密密尼】大哥大姐们，看看我吧！
+http://openflv-huos.douyucdn2.cn/live/9013989rH6C3kxS0.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9442980", 【永无叙V】带您进入永无叙的动漫小屋
+http://openflv-huos.douyucdn2.cn/live/9442980rgM3eG5uX.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9517351", 【叶墨的百妖馆】叶墨的百妖馆的直播间
+http://openflv-huos.douyucdn2.cn/live/9517351rxeq37Mim.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9188696", 【小三笠笠酱】前方高能 我也就看了几百遍
+http://openflv-huos.douyucdn2.cn/live/9188696rNrdIYOoF.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9481340", 【齐司礼】齐司礼的直播间
+http://openflv-huos.douyucdn2.cn/live/9481340rfJqxL4Q3.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9415020", 【是小x同学呀】是小x同学呀  原创动画的世界
+http://openflv-huos.douyucdn2.cn/live/9415020rxTV2mYyL.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9516137", 【大兵动画】沙雕日常笑不停
+http://openflv-huos.douyucdn2.cn/live/9516137r1xn0fpOK.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="857979", 【鹿老尸】鹿老尸的直播间
+http://openflv-huos.douyucdn2.cn/live/857979rSmPZKUoip.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="9406663", 【钢铁西游I】最牛的特效，没有想不到
+http://openflv-huos.douyucdn2.cn/live/9406663rfl5u7Brt.m3u8
+#EXTINF:-1 group-title="斗鱼【原创IP】" tvg-id="102114", 【虾米大模王】Hello~大家好~！我是小虾米！
+http://openflv-huos.douyucdn2.cn/live/102114rTJeJTVAVh.m3u8

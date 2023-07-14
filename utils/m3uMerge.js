@@ -16,10 +16,10 @@ const huyaM3u = fs
   .readFileSync(path.resolve(__dirname, "../data/huya.m3u"))
   .toString();
 const allM3u =
-  douyuPrM3u +
+  douyuM3u +
   biliM3u.replace("#EXTM3U", "") +
   huyaM3u.replace("#EXTM3U", "") +
-  douyuM3u.replace("#EXTM3U", "");
+  douyuPrM3u.replace("#EXTM3U", "");
 const date = new Date();
 //fs.writeFileSync(path.join(__dirname,`../data/bl-dy-hy-${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}.m3u`), allM3u)
 fs.writeFileSync(path.resolve(__dirname, `../data/all.m3u`), allM3u);

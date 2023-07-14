@@ -18,6 +18,8 @@ const { Env } = require("./utils/ql");
 const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
+    'openflv-huos.douyucdn2.cn',
+    'dyp2p-huos.douyucdn2.cn',//m3u8 only
   "hls1a-akm.douyucdn.cn", //m3u8 海外
   "hls3a-akm.douyucdn.cn", //m3u8 海外
   "hlsa-akm.douyucdn.cn", //m3u8 海外
@@ -176,8 +178,7 @@ function getRKey(url = "") {
 //解析url
 const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
-  let data = await getRateStream(prevInfo.initInfo);
-  /* if (prevInfo.error !== 0) {
+   if (prevInfo.error !== 0) {
     if (prevInfo.error === 102) {
       console.log("房间不存在");
     } else if (prevInfo.error === 104) {
@@ -185,19 +186,20 @@ const getRoomLiveUrls = async (rid) => {
     } else {
       console.log("重新获取 url key");
 
+      let data = await getRateStream(prevInfo.initInfo);
 
       prevInfo.key = getRKey(data.url);
     }
-  }*/
-  prevInfo.key = getRKey(data.url);
+  }
+ // prevInfo.key = getRKey(data.url);
   let real_url = { room_id: rid };
 
   // console.log(data);
   if (prevInfo.key) {
-    const liveUrlObj = new URL(data.url || `http://${CUR_DOMAIN}`);
+    const liveUrlObj = new URL(`http://${CUR_DOMAIN}`/*data.url || `http://${CUR_DOMAIN}`*/);
     const key = prevInfo.key?.replace("_900", ""),
       dir = liveUrlObj.pathname.split("/").filter(Boolean).shift() || "live",
-      query = liveUrlObj.search;
+      query = liveUrlObj.search||'?uuid=';
     //暂时使用临时url，2小时失效，配合定时器2小时运行一次
     real_url["m3u8"] = `${liveUrlObj.origin}/${dir}/${key}.m3u8${query}`;
     real_url["flv"] = `${liveUrlObj.origin}/${dir}/${key}.flv${query}`;
