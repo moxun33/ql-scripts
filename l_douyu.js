@@ -1,6 +1,6 @@
 /*
  解析斗鱼 url
- cron 0 6 0/2 * * * l_douyu.js
+ cron 0 6 0/6 * * * l_douyu.js
 */
 const {
   isJSONValid,
@@ -31,7 +31,7 @@ const DOMAINS = [
   "akm-tct.douyucdn.cn", //failed
 ];
 const CUR_DOMAIN = DOMAINS[0];
-
+const DEFAULT_MEDIA_TYPE='m3u8'
 async function getDid() {
   try {
     const timeStamp = new Date().getTime();
@@ -297,7 +297,7 @@ const pickUrl = (urlInfo) => {
         roomInfo["room"]["room_name"];
     // console.log(name);
     json.name = name || "未知名称";
-    json.mediaType = room.mediaType || "m3u8";
+    json.mediaType = room.mediaType || DEFAULT_MEDIA_TYPE;
     json.group = `斗鱼${room.game_name ? "【" + room.game_name + "】" : ""}`;
     console.log("房间解析结果:", json);
     jsonList.push(json);
