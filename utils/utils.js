@@ -34,7 +34,7 @@ const fireFetch = async (url, opts = {}, isJson = false) => {
     if (opts.raw) return resp;
     const text = await resp.text();
     // console.log(res.status, "fetch status");
-    const res= isJson && isJSONValid(text) ? JSON.parse(text) : text;
+    const res = isJson && isJSONValid(text) ? JSON.parse(text) : text;
 
     return res;
   } catch (e) {
@@ -59,6 +59,16 @@ const isJSONValid = (str) => {
     return false;
   }
 };
+
+//去掉所有的html标记
+function delHtmlTag(str, trim = false) {
+  const txt = String(str).replace(/<[^>]+>/g, "");
+  return trim
+    ? txt
+        .replace(/\n/g, "")
+        .replace(/\s/g, "") || ""
+    : txt;
+}
 
 //提取html文本的目标字符串
 const matchHtmlText = (html, reg, defData = "") => {
@@ -232,4 +242,5 @@ module.exports = {
   fileSizeUnit,
   today,
   delay,
+  delHtmlTag,
 };
