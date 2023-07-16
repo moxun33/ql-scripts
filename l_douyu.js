@@ -20,6 +20,7 @@ const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
     'openflv-huos.douyucdn2.cn',
     'dyp2p-huos.douyucdn2.cn',//m3u8 only
+    'dyp2p-huoscs.douyucdn2.cn',//m3u8 only
   "hls1a-akm.douyucdn.cn", //m3u8 海外
   "hls3a-akm.douyucdn.cn", //m3u8 海外
   "hlsa-akm.douyucdn.cn", //m3u8 海外
