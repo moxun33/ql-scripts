@@ -160,7 +160,7 @@ const getAllAreas = async () => {
     {},
     true
   );
-  if (!(res.code == 0 && Array.isArray(res.data))) return [];
+  if (!(res.code === 0 && Array.isArray(res.data))) return [];
   let lists = [];
   for (let i = 0; i < res.data.length; i++) {
     const subs = Array.isArray(res.data[i].list) ? res.data[i].list : [];
@@ -203,16 +203,11 @@ const getAreaRooms = async (pid, id, name = "") => {
 };
 //获取直播的房间
 //all=false只获取影音馆
-const getRooms = async all => {
-  const baseUrl =
-      "https://api.live.bilibili.com/xlive/web-interface/v1/second/getList",
-    genUrl = (pid, id, p = 1) =>
-      `${baseUrl}?platform=web&parent_area_id=${
-        all ? pid : "10"
-      }&area_id=all?pid:'33'&sort_type=online&page=${p}`;
+const getAllRooms = async all => {
+
   const areas = all
     ? await getAllAreas()
-    : [{ id: "33", parent_id: "10", name: "影音馆" }];
+    : [{ id: "33", parent_id: "10", name: "影音馆" },{ id: "646", parent_id: "10", name: "影音馆" }];
   const rooms = [];
   for (let i = 0; i < areas.length; i++) {
     const obj = areas[i],
@@ -227,9 +222,8 @@ const getRooms = async all => {
   const all = process?.env?.BILIBILI_ALL,
     DEF_ROOMS = [{ roomid: 23125843 }],
     jsonList = [],
-    dynamicRooms = await getRooms(all),
+    dynamicRooms = await getAllRooms(all),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
-
   for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.roomid;
