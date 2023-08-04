@@ -31,7 +31,7 @@ const DOMAINS = [
   "hdltc1.douyucdn.cn", //failed
   "akm-tct.douyucdn.cn", //failed
 ];
-const CUR_DOMAIN = DOMAINS[0];
+const CUR_DOMAIN = DOMAINS[1];
 const DEFAULT_MEDIA_TYPE='m3u8'
 async function getDid() {
   try {

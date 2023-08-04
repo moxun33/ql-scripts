@@ -207,7 +207,7 @@ const getAllRooms = async all => {
 
   const areas = all
     ? await getAllAreas()
-    : [{ id: "33", parent_id: "10", name: "影音馆" },{ id: "646", parent_id: "10", name: "影音馆" }];
+    : [{ id: "33", parent_id: "10", name: "影音馆" },{ id: "624", parent_id: "10", name: "搞笑" }];
   const rooms = [];
   for (let i = 0; i < areas.length; i++) {
     const obj = areas[i],
