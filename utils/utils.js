@@ -7,6 +7,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 const COMM_CONF = {
   PROXY_URL: "http://127.0.0.1:18888",
   URLENCODED_FORM_TYPE: "application/x-www-form-urlencoded;charset=utf-8;",
+  USER_AGENT:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
   MOBILE_USER_AGENT:
     "Mozilla/5.0 (Linux; U; Android 4.0.3; zh-CN; vivo X9i Build/N2G47H) AppleWebKit/537.36 (KHTML,like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.9.3.973 Mobile Safari/537.36",
 };
@@ -63,11 +64,7 @@ const isJSONValid = (str) => {
 //去掉所有的html标记
 function delHtmlTag(str, trim = false) {
   const txt = String(str).replace(/<[^>]+>/g, "");
-  return trim
-    ? txt
-        .replace(/\n/g, "")
-        .replace(/\s/g, "") || ""
-    : txt;
+  return trim ? txt.replace(/\n/g, "").replace(/\s/g, "") || "" : txt;
 }
 
 //提取html文本的目标字符串

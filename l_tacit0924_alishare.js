@@ -10,8 +10,8 @@ const { Env } = require("./utils/ql");
 const { YunpanOne } = require("./utils/yunpan_one");
 const { AliyunDrive } = require("./utils/aliyun");
 const { TinyFileMgt } = require("./utils/tinyFileMgt");
-const { fireFetch, delHtmlTag } = require("./utils/utils");
-const fs = require("fs");
+const { fireFetch, delHtmlTag, COMM_CONF } = require("./utils/utils");
+//const fs = require("fs");
 const fetch = require("node-fetch");
 
 const qlEnv = new Env("更新Xiaoya的Tacit0924的阿里分享链接");
@@ -26,7 +26,11 @@ const extractShareLine = (name, content) => {
 const DOCS_URL = "http://t.cn/A698TLWZ";
 //获取阿里云盘文档入口
 const getAliDocsEntry = async () => {
-  const html = await fireFetch(DOCS_URL);
+  const html = await fireFetch(DOCS_URL, {
+    headers: {
+      "User-Agent": COMM_CONF.USER_AGENT,
+    },
+  });
   const text = delHtmlTag(html),
     matches = text.match(/https:\/\/docs.qq.com\/d\/doc\/\w+/i) || [""],
     url = matches[0];
@@ -35,10 +39,14 @@ const getAliDocsEntry = async () => {
 };
 //从文档获取分享合集链接
 const getHubShareLink = async () => {
-  const html = await fetch("https://docs.qq.com/doc/DQmx1WEdTRXpGeEZ6").then(r=>r.text());
+  const html = await fireFetch("https://docs.qq.com/doc/DQmx1WEdTRXpGeEZ6", {
+    headers: {
+      "User-Agent": COMM_CONF.USER_AGENT,
+    },
+  });
   const text = delHtmlTag(html),
     matches = text.match(/https:\/\/www.aliyundrive.com\/s\/\w+/i) || [""];
-  fs.writeFileSync('./t-alishare-qq-docs.loca.html',html)
+  //fs.writeFileSync('./t-alishare-qq-docs.loca.html',html)
   //第一个链接就是合集分享链接
   console.log("阿里云盘合集分享链接：", matches[0]);
   return matches[0];
@@ -88,7 +96,7 @@ const getHubShareLink = async () => {
   //console.log(edited,787)
   if (!edited) throw new Error(`编辑${alishareListFile}失败`);
   const msgs = [`编辑${alishareListFile}成功`],
-      fsAtAll = "<at user_id='all'>所有人</at> ";
+    fsAtAll = "<at user_id='all'>所有人</at> ";
   console.log(msgs.join(";"));
   await notify.sendNotify(
     "更新Xiaoya的Tacit0924的阿里分享链接" + fsAtAll,
