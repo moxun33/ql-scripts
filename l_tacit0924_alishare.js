@@ -11,6 +11,8 @@ const { YunpanOne } = require("./utils/yunpan_one");
 const { AliyunDrive } = require("./utils/aliyun");
 const { TinyFileMgt } = require("./utils/tinyFileMgt");
 const { fireFetch, delHtmlTag } = require("./utils/utils");
+const fs = require("fs");
+const fetch = require("node-fetch");
 
 const qlEnv = new Env("更新Xiaoya的Tacit0924的阿里分享链接");
 const notify = qlEnv.isNode() ? require("./utils/sendNotify") : "";
@@ -33,9 +35,10 @@ const getAliDocsEntry = async () => {
 };
 //从文档获取分享合集链接
 const getHubShareLink = async () => {
-  const html = await fireFetch("https://docs.qq.com/doc/DQmx1WEdTRXpGeEZ6");
+  const html = await fetch("https://docs.qq.com/doc/DQmx1WEdTRXpGeEZ6").then(r=>r.text());
   const text = delHtmlTag(html),
     matches = text.match(/https:\/\/www.aliyundrive.com\/s\/\w+/i) || [""];
+  fs.writeFileSync('./t-alishare-qq-docs.loca.html',html)
   //第一个链接就是合集分享链接
   console.log("阿里云盘合集分享链接：", matches[0]);
   return matches[0];
