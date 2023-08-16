@@ -34,9 +34,9 @@ const fireFetch = async (url, opts = {}, isJson = false) => {
 
     if (opts.raw) return resp;
     const text = await resp.text();
-    // console.log(res.status, "fetch status");
-    const res = isJson && isJSONValid(text) ? JSON.parse(text) : text;
 
+    const res = isJson && isJSONValid(text) ? JSON.parse(text) : text;
+  //  console.log(resp.status, url,"fetch status");
     return res;
   } catch (e) {
     console.error(e, "fetch error");

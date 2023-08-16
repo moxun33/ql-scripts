@@ -11,7 +11,7 @@ const { YunpanOne } = require("./utils/yunpan_one");
 const { AliyunDrive } = require("./utils/aliyun");
 const { TinyFileMgt } = require("./utils/tinyFileMgt");
 const { fireFetch, delHtmlTag, COMM_CONF } = require("./utils/utils");
-//const fs = require("fs");
+const fs = require("fs");
 const fetch = require("node-fetch");
 
 const qlEnv = new Env("更新Xiaoya的Tacit0924的阿里分享链接");
@@ -32,20 +32,24 @@ const getAliDocsEntry = async () => {
     },
   });
   const text = delHtmlTag(html),
-    matches = text.match(/https:\/\/docs.qq.com\/d\/doc\/\w+/i) || [""],
+    reg = /https:\/\/docs.qq.com\/d\/doc\/\w+/i,
+    matches = text.match(reg) || [""],
     url = matches[0];
   console.log("阿里云分享文档入口：", url);
+  // fs.writeFileSync('./t-alishare-entry-qq-docs.local.html',html)
+
   return url;
 };
 //从文档获取分享合集链接
 const getHubShareLink = async () => {
+  getAliDocsEntry();
   const html = await fireFetch("https://docs.qq.com/doc/DQmx1WEdTRXpGeEZ6", {
     headers: {
       "User-Agent": COMM_CONF.USER_AGENT,
     },
   });
   const text = delHtmlTag(html),
-    matches = text.match(/https:\/\/www.aliyundrive.com\/s\/\w+/i) || [""];
+    matches = html.match(/https:\/\/www.aliyundrive.com\/s\/\w+/i) || [""];
   //fs.writeFileSync('./t-alishare-qq-docs.loca.html',html)
   //第一个链接就是合集分享链接
   console.log("阿里云盘合集分享链接：", matches[0]);
@@ -68,7 +72,12 @@ const getHubShareLink = async () => {
   const isMatch =
     shareRes.creator_name === "Tac***924" &&
     shareRes.share_name?.includes("更新中");
-  if (!isMatch) throw new Error(` 阿里云盘分享链接${shareLink}不匹配`);
+  if (!isMatch) {
+    console.log(shareRes);
+    throw new Error(
+      ` 阿里云盘分享链接${shareLink}不匹配:【${shareRes.message}】`
+    );
+  }
   //根据tiny file manager 自动更新 分享链接
   const tfm = new TinyFileMgt(
       process.env.TINY_FILE_MANAGER_HOST || "http://192.168.3.7:5555"
