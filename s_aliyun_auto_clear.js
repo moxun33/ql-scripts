@@ -44,13 +44,12 @@ const { fileSizeUnit } = require("./utils/utils");
         }\n`;
         sendMessage = sendMessage + rt;
       };
-     await cc('6506921dba962501f65c49ffa603eb7f0975f73b')
-      /* for (const o of folderIds) {
+      for (const o of folderIds) {
         const ids = String(o.value || o).split(",");
         for (let i = 0; i < ids.length; i++) {
           await  cc(ids[i]);
         }
-      }*/
+      }
 
       console.log(sendMessage);
       console.log("\n");
