@@ -196,7 +196,7 @@ function pow1024(num) {
  * @returns {string|*}
  */
 const fileSizeUnit = (size) => {
-  if (!size) return "";
+  if (!size) return "0KB";
   return size < 1024
     ? size + " B"
     : size < pow1024(2)

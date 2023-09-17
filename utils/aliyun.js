@@ -11,31 +11,36 @@ class AliyunDrive {
   tokenURL = "https://auth.aliyundrive.com/v2/account/token";
   signinURL = "https://member.aliyundrive.com/v1/activity/sign_in_list";
   baseApi = "https://api.aliyundrive.com";
-  //用户信息
+  userApi = "https://user.aliyundrive.com";
+  //用户认证信息
+  authInfo = {};
+  //用户账号信息
   userInfo = {};
 
   //qinglong 接口
   qlApi;
   //统一请求, 更新token和signin除外
-  async _fetch(url, opts = {}, isJson = true) {
-    let token = this.userInfo?.access_token;
+  async _fetch(url, opts = {}) {
+    let token = this.authInfo?.access_token;
     if (!token && !opts.ignoreToken) {
       const info = await this.updateAccesssToken();
       token = info.access_token;
     }
-
+    if (token && !this.userInfo.phone && !opts.ignoreUserInfo) {
+      await this.getUserInfo();
+    }
     const heads = opts?.headers || {};
     return fireFetch(
-      this.baseApi + url,
+      opts.fullUrl ? url : this.baseApi + url,
       {
         ...opts,
         headers: {
           "Content-Type": "application/json;charset=UTF-8",
           ...heads,
-          Authorization: `${this.userInfo?.token_type} ${token}`,
+          Authorization: `${this.authInfo?.token_type} ${token}`,
         },
       },
-      isJson
+      true
     );
   }
 
@@ -96,7 +101,7 @@ class AliyunDrive {
       true
     )
       .then((d) => {
-        this.userInfo = d;
+        this.authInfo = d;
         const { code, message } = d;
         if (code) {
           if (
@@ -107,6 +112,7 @@ class AliyunDrive {
           else errorMessage.push(message);
           return Promise.reject(errorMessage.join(", "));
         }
+
         return d;
       })
       .catch((e) => {
@@ -127,7 +133,7 @@ class AliyunDrive {
         method: "POST",
         body: JSON.stringify(queryBody),
         headers: {
-          Authorization: `${this.userInfo?.token_type} ${this.userInfo?.access_token}`,
+          Authorization: `${this.authInfo?.token_type} ${this.authInfo?.access_token}`,
           "Content-Type": "application/json",
         },
       },
@@ -165,11 +171,15 @@ class AliyunDrive {
         return Promise.reject(sendMessage.join(", "));
       });
   }
-  //获取目录文件
-  async listFiles(folderId) {
-    if (!folderId) return [];
+  //获取目录文件, ！！！兼容升级后的账号：备份盘和资源库
+  async listFiles(
+    folderId,
+    drive_id = this.authInfo?.default_drive_id,
+    times = 0
+  ) {
+    if (!folderId || times > 1) return [];
     const body = {
-      drive_id: this.userInfo?.default_drive_id,
+      drive_id,
       parent_file_id: folderId,
       limit: 100,
       all: false,
@@ -177,19 +187,51 @@ class AliyunDrive {
       fields: "*",
       order_by: "updated_at",
       order_direction: "ASC",
+      video_thumbnail_process: "video/snapshot,t_1000,f_jpg,ar_auto,w_256",
+      image_thumbnail_process: "image/resize,w_256/format,avif",
+      image_url_process: "image/resize,w_1920/format,avif",
     };
     const res = await this._fetch("/adrive/v3/file/list", {
       method: "post",
       body: JSON.stringify(body),
     });
-    return Array.isArray(res.items) ? res.items : [];
+    if (res.code) {
+      console.log(res.code, res.message);
+    }
+    return Array.isArray(res.items) && res.items.length
+      ? res.items
+      : this.listFiles(folderId, this.userInfo.resource_drive_id, times + 1);
+  }
+  //获取文件信息, ！！！兼容升级后的账号：备份盘和资源库
+  async getFileInfo(id, drive_id = this.authInfo?.default_drive_id, times = 0) {
+    if (!id || times > 1) return {};
+    const body = { drive_id, file_id: id },
+      res = await this._fetch("/adrive/v3/file/list", {
+        method: "post",
+        body: JSON.stringify(body),
+      });
+    return res.name
+      ? res
+      : this.getFileInfo(id, this.userInfo.resource_drive_id, times + 1);
+  }
+  //获取用户账号信息
+  async getUserInfo() {
+    const body = {},
+      res = await this._fetch(this.userApi + "/v2/user/get", {
+        method: "post",
+        body: JSON.stringify(body),
+        fullUrl: true,
+        ignoreUserInfo: true,
+      });
+    this.userInfo = res || {};
+    return res || {};
   }
   //清空指定目录
   //toTrash 0: 直接彻底删除 1: 移除到回收站
   async clearFolder(id, toTrash = false) {
     const files = await this.listFiles(id);
 
-    if (!files.length) return { files, responses: [] };
+    //if (!files.length) return { files, responses: [] };
     const filesReq = files.map((f) => {
       return {
         body: {
@@ -208,20 +250,18 @@ class AliyunDrive {
       requests: filesReq,
       resource: "file",
     };
-    const res = await this._fetch(
-      "/v2/batch",
-      {
-        method: "POST",
-        body: JSON.stringify(body),
-      },
-      true
-    );
+    const res = await this._fetch("/v2/batch", {
+      method: "POST",
+      body: JSON.stringify(body),
+    });
     res.files = files;
     return res;
   }
   //计算文件列表的总大小
   sumFilesSize(files = []) {
-    return files.reduce((total, cur) => cur.size + total, 0);
+    return files
+      .filter((o) => o.type === "file")
+      .reduce((total, cur) => cur.size + total, 0);
   }
   //根据阿里云盘分享id获取文件目录
   async getFilesByShareId(share_id) {

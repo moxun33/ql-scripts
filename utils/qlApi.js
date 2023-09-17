@@ -8,7 +8,7 @@ const { genUrlSearch, fireFetch } = require("./utils");
 
 class QlApi {
    QL_URL = "http://127.0.0.1:5700";
-  //QL_URL = "http://pi.mo:5700";
+  //QL_URL = "http://192.168.3.7:5700";
   CLIENT_ID = process.env.CLIENT_ID;
   CLIENT_SECRET = process.env.CLIENT_SECRET;
 
