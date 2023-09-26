@@ -56,6 +56,7 @@ async function getUserVideos(mid) {
   const _params = {
       mid,
       ps: 1,
+      tid: 0,
       pn: 1,
       order: "pubdate",
       index: 1,
@@ -69,7 +70,12 @@ async function getUserVideos(mid) {
 
   const res = await fireFetch(
     "https://api.bilibili.com/x/space/wbi/arc/search" + genUrlSearch(params),
-    {},
+    {
+      headers: {
+        Cookie: "buvid3=EE5F259E-7991-B3E7-86C5-ADD93B4FF21F20680infoc",
+        "user-agent": Date.now(),
+      },
+    },
     true
   );
   return res;
