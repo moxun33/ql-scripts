@@ -1,5 +1,5 @@
 /*
-  cron 0 11 9 * * * s_juejin.js
+  cron  11 9 * * * s_juejin.js
   掘金社区
   更新时间:2022-66-14
   活动入口：https://juejin.cn/user/center/signin

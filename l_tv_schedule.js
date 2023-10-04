@@ -1,6 +1,6 @@
 /*
 电视剧播出表通知
-cron  0 31 11 * * *  l_tv_schedule.js
+cron   31 11 * * *  l_tv_schedule.js
 */
 /**
  * Created by wxun on 2023/3/19 16:49.

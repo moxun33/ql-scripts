@@ -1,6 +1,6 @@
 /*
 更新Xiaoya的Tacit0924的阿里分享合集链接
-cron  0 13 0/1 * * *  l_tacit0924_alishare.js
+cron   13 0/1 * * *  l_tacit0924_alishare.js
 */
 /**
  * Created by wxun on 2023/6/27 16:49.
