@@ -42,7 +42,7 @@ const getAliDocsEntry = async () => {
 };
 //从文档获取分享合集链接
 const getHubShareLink = async () => {
-  getAliDocsEntry();
+//  getAliDocsEntry();
   const html = await fireFetch("https://docs.qq.com/doc/DQmx1WEdTRXpGeEZ6", {
     headers: {
       "User-Agent": COMM_CONF.USER_AGENT,
