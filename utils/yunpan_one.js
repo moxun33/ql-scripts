@@ -42,7 +42,7 @@ class YunpanOne {
      if (!target) return "";
     //第一个阿里云盘分享链接就是总链接
     const html = target.attributes?.contentHtml ?? "",
-      matches = html.match(/https:\/\/www.aliyundrive.com\/s\/\w+/i);
+      matches = html.match(/https:\/\/www.alipan.com\/s\/\w+/i);
     return matches?.length?matches[0]:''
   }
 }

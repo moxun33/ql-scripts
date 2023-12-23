@@ -49,7 +49,7 @@ const getHubShareLink = async () => {
     },
   });
   const text = delHtmlTag(html),
-    matches = html.match(/https:\/\/www.aliyundrive.com\/s\/\w+/i) || [""];
+    matches = html.match(/https:\/\/www.alipan.com\/s\/\w+/i) || [""];
   //fs.writeFileSync('./t-alishare-qq-docs.loca.html',html)
   //第一个链接就是合集分享链接
   console.log("阿里云盘合集分享链接：", matches[0]);
@@ -62,7 +62,9 @@ const getHubShareLink = async () => {
   shareLink = await getHubShareLink();
   if (!shareLink) {
     const ypo = new YunpanOne(user.replace("0", ""));
+
     shareLink = await ypo.getLatestAliShareLink();
+
   }
 
   if (!shareLink) throw new Error(`没有提取到${user}的阿里云盘分享链接`);
@@ -70,8 +72,7 @@ const getHubShareLink = async () => {
   shareId = shareLink.split("/").pop();
   const shareRes = await ali.getFilesByShareId(shareId);
   const isMatch =
-    shareRes.creator_name === "Tac***924" &&
-    shareRes.share_name?.includes("更新中");
+    shareRes.creator_id ==='a1e440f96917420a933273ec685d8f17';// "Tac***924";
   if (!isMatch) {
     console.log(shareRes);
     throw new Error(
