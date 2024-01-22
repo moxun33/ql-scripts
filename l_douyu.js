@@ -18,9 +18,9 @@ const { Env } = require("./utils/ql");
 const { sendNotify } = require("./utils/sendNotify");
 const $ = new Env("斗鱼【直播】");
 const DOMAINS = [
-    'openflv-huos.douyucdn2.cn',
-    'dyp2p-huos.douyucdn2.cn',//m3u8 only
-    'dyp2p-huoscs.douyucdn2.cn',//m3u8 only
+  "openflv-huos.douyucdn2.cn",
+  "dyp2p-huos.douyucdn2.cn", //m3u8 only
+  "dyp2p-huoscs.douyucdn2.cn", //m3u8 only
   "hls1a-akm.douyucdn.cn", //m3u8 海外
   "hls3a-akm.douyucdn.cn", //m3u8 海外
   "hlsa-akm.douyucdn.cn", //m3u8 海外
@@ -32,7 +32,7 @@ const DOMAINS = [
   "akm-tct.douyucdn.cn", //failed
 ];
 const CUR_DOMAIN = DOMAINS[1];
-const DEFAULT_MEDIA_TYPE='m3u8'
+const DEFAULT_MEDIA_TYPE = "m3u8";
 async function getDid() {
   try {
     const timeStamp = new Date().getTime();
@@ -175,11 +175,34 @@ function getRKey(url = "") {
   const pUrl = url || "";
   return pUrl.split("?").shift().split("/").pop().split(".").shift();
 }
+// 使用小程序的接口解析直播地址
+const getRoomLiveUrlsByMini = async (rid) => {
+  try {
+    const id = rid || "9249162";
+    const apiUrl = "https://wxapp.douyucdn.cn/api/nc/stream/roomPlayer";
+    const postData = `room_id=${id}&big_ct=cph-androidmpro&did=10000000000000000000000000001501&mt=2&rate=0`;
 
+    const options = {
+      method: "POST",
+      body: postData,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    };
+
+    const res = await fireFetch(apiUrl, options, true);
+    if (res.error !== 0 || !res.data?.live_url) {
+      return null;
+    }
+    return res.data.live_url;
+  } catch (e) {
+    console.log(e.message);
+  }
+};
 //解析url
 const getRoomLiveUrls = async (rid) => {
   const prevInfo = await getRoomPreviewInfo(rid);
-   if (prevInfo.error !== 0) {
+  if (prevInfo.error !== 0) {
     if (prevInfo.error === 102) {
       console.log("房间不存在");
     } else if (prevInfo.error === 104) {
@@ -192,15 +215,21 @@ const getRoomLiveUrls = async (rid) => {
       prevInfo.key = getRKey(data.url);
     }
   }
- // prevInfo.key = getRKey(data.url);
+  // prevInfo.key = getRKey(data.url);
   let real_url = { room_id: rid };
-
+  const miniLiveUrl = await getRoomLiveUrlsByMini(rid);
+  if (miniLiveUrl) {
+    real_url["m3u8"] = miniLiveUrl;
+    return real_url;
+  }
   // console.log(data);
   if (prevInfo.key) {
-    const liveUrlObj = new URL(`http://${CUR_DOMAIN}`/*data.url || `http://${CUR_DOMAIN}`*/);
+    const liveUrlObj = new URL(
+      `http://${CUR_DOMAIN}` /*data.url || `http://${CUR_DOMAIN}`*/
+    );
     const key = prevInfo.key?.replace("_900", ""),
       dir = liveUrlObj.pathname.split("/").filter(Boolean).shift() || "live",
-      query = liveUrlObj.search||'?uuid=';
+      query = liveUrlObj.search || "?uuid=";
     //暂时使用临时url，2小时失效，配合定时器2小时运行一次
     real_url["m3u8"] = `${liveUrlObj.origin}/${dir}/${key}.m3u8${query}`;
     real_url["flv"] = `${liveUrlObj.origin}/${dir}/${key}.flv${query}`;
@@ -271,11 +300,13 @@ const pickUrl = (urlInfo) => {
 (async () => {
   const all = process?.env?.DOUYU_ALL,
     jsonList = [],
-    DEF_ROOMS = [{ room_id: "9249162", mediaType: "m3u8" }],
+    DEF_ROOMS = [
+      { game_name: "一起看", room_id: "9249162", mediaType: "m3u8" },
+    ],
     dynamicRooms = await (all ? getAllLiveRooms() : getYqkLiveRooms()),
     rooms = [...DEF_ROOMS, ...dynamicRooms];
 
-  for (let i = 0; i <rooms.length; i++) {
+  for (let i = 0; i < rooms.length; i++) {
     const room = rooms[i],
       key = room.room_id;
 
@@ -314,7 +345,7 @@ const pickUrl = (urlInfo) => {
     `斗鱼${!all ? "【一起看】" : ""}`,
     `直播url解析执行完毕，共${jsonList.length}个`
   );
-  const genTitle = (obj,groupSuffix='') =>
+  const genTitle = (obj, groupSuffix = "") =>
     `#EXTINF:-1 group-title="${obj.group}${groupSuffix}" tvg-id="${obj.room_id}", ${obj.name}`;
   const m3u_list = ["#EXTM3U"],
     m3uPrList = ["#EXTM3U"];
@@ -322,7 +353,7 @@ const pickUrl = (urlInfo) => {
     const obj = jsonList[i],
       url = pickUrl(obj);
     m3uPrList.push(
-      genTitle(obj,'-pr'),
+      genTitle(obj, "-pr"),
       `${
         process.env.LIVE_PROXY
           ? process.env.LIVE_PROXY
